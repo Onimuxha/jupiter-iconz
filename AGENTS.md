@@ -4,6 +4,32 @@ A production-ready full-stack React application template with integrated Express
 
 While the starter comes with a express server, only create endpoint when strictly neccesary, for example to encapsulate logic that must leave in the server, such as private keys handling, or certain DB operations, db...
 
+## Update .svg icons that convert from [SVG viewer](https://www.svgviewer.dev/) in File [DesignTools](packages/jupiter-icons/src/categories/DesignTools.ts)
+- ## Example
+
+### 1. PhotoShop
+- ### Photoshop Icon - Before:
+
+```
+.st0{fill:#001E36;}  /* Generic class name */
+.st1{fill:#31A8FF;}  /* Generic class name */
+```
+- ### Photoshop Icon - After:
+```
+#photoshop-icon .ps-bg{fill:#001E36;}    /* Scoped to specific icon */
+#photoshop-icon .ps-text{fill:#31A8FF;}  /* Scoped to specific icon */
+```
+### 2. Figma
+- ### Figma Icon - Before: (Used `CSS classes` like your original)
+```
+<style>.st0{fill:#0acf83}</style>
+<path class="st0" d="..."/>
+```
+- ### Figma Icon -After ( Used direct `fill` attributes)
+```
+<path fill="#0ACF83" d="..."/>  <!-- Color directly in the element -->
+```
+
 ## Tech Stack
 
 - **PNPM**: Prefer pnpm

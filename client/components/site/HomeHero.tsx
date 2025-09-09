@@ -9,7 +9,7 @@ const heroList = ["React", "TypeScript", "VSCode", "Photoshop", "GitHub", "Figma
 
 export function HomeHero() {
   return (
-    <section className="border-b border-border/60 bg-[radial-gradient(60%_80%_at_50%_0%,hsl(var(--accent)_/_24%),transparent)]">
+    <section className="border-b border-border/60 bg-[radial-gradient(60%_80%_at_50%_0%,hsl(var(--accent)_/_24%),transparent)] pt-28">
       <div className="mx-auto max-w-6xl px-4 py-12 md:py-20">
         <div className="grid items-center gap-10 md:grid-cols-2">
           <div>
