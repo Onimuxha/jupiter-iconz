@@ -29,6 +29,7 @@ export default defineConfig(({ mode }) => ({
       "jupiter-icons": path.resolve(__dirname, "./packages/jupiter-icons/src/index.ts"),
     },
   },
+  base: '/',
 }));
 
 function expressPlugin(): Plugin {
