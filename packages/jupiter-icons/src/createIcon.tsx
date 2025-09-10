@@ -45,7 +45,7 @@ export function createIcon(name: string, svgContent: string) {
 
   IconComponent.displayName = name;
   return IconComponent;
-}
+}1
 
 function normalizeSvg(svg: string) {
   // Ensure the root <svg> fills the wrapper size

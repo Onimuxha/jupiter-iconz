@@ -26,6 +26,20 @@ export const VSCode = all["VSCode"];
 export const Slack = all["Slack"];
 export const Photoshop = all["Photoshop"];
 export const Figma = all["Figma"];
+export const AlpineJs = all["AlpineJs"];
+export const D3Js = all["D3Js"];
+export const ThreeJs = all["ThreeJs"];
+export const NestJs = all["NestJs"];
+export const MeteorJs = all["MeteorJs"];
+export const JestJs = all["JestJs"];
+export const ElectronJs = all["ElectronJs"];
+export const NextJs = all["NextJs"];
+export const GatsbyJs = all["GatsbyJs"];
+export const NuxtJs = all["NuxtJs"];
+export const ExpressJs = all["ExpressJs"];
+export const BackboneJs = all["BackboneJs"];
+export const ReduxJs = all["ReduxJs"];
+export const Jquery = all["Jquery"];
 
 // Category datasets for docs site usage
 export const Categories = {
