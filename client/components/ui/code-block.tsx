@@ -123,7 +123,7 @@ export const CodeBlock = ({
       </div>
 
       {/* Code content */}
-      <div className="relative overflow-auto max-h-96 scrollbar-thin scrollbar-track-slate-800 scrollbar-thumb-slate-600 hover:scrollbar-thumb-slate-500">
+      <div className="relative overflow-auto max-h-96 no-scrollbar">
         <SyntaxHighlighter
           language={activeLanguage}
           style={atomDark}

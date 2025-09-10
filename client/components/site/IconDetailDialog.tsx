@@ -25,7 +25,7 @@ export function IconDetailDialog(props: IconDetailProps) {
   const [size, setSize] = useState(48);
   const [copied, setCopied] = useState(false);
 
-  const jsxCode = `import { ${name} } from "jupiter-icons";\n\n<${name} size={24} />`;
+  const jsxCode = `import { ${name} } from "jupiter-iconz";\n\n<${name} size={24} />`;
   const svgMin = useMemo(() => svgContent.trim(), [svgContent]);
 
   const downloadSvg = () => {

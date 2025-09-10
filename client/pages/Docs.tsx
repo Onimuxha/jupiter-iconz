@@ -2,17 +2,18 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
+import { CodeBlock } from "@/components/ui/code-block";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { Highlighter } from "@/components/ui/highlighter";
 
 export default function Docs() {
   return (
     <div className="min-h-screen bg-white dark:bg-black">
       <SiteHeader />
-      
+
       <main className="mx-auto max-w-4xl px-6 pt-32 pb-20">
         {/* Hero */}
-        <motion.section 
+        <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="mb-16 text-center"
@@ -44,14 +45,22 @@ export default function Docs() {
               ))}
             </TabsList>
 
+            {/* Quickstart Tab */}
             <TabsContent value="quickstart" className="mt-8">
               <div className="space-y-6">
                 <StepCard title="Install">
-                  <CodeBlock>npm install jupiter-icons</CodeBlock>
+                  <CodeBlock
+                    language="bash"
+                    filename="terminal"
+                    code={`npm install jupiter-iconz`}
+                  />
                 </StepCard>
-                
+
                 <StepCard title="Import and use">
-                  <CodeBlock>{`import { Photoshop, VSCode } from "jupiter-icons";
+                  <CodeBlock
+                    language="jsx"
+                    filename="App.tsx"
+                    code={`import { Photoshop, VSCode } from "jupiter-iconz";
 
 export default function App() {
   return (
@@ -59,28 +68,52 @@ export default function App() {
       <Photoshop size={24} />
       <VSCode size={48} className="ml-2" />
     </div>
-  );
-}`}</CodeBlock>
+);`}
+                    highlightLines={[2, 5]}
+                  />
                 </StepCard>
               </div>
             </TabsContent>
 
+            {/* Usage Tab */}
             <TabsContent value="usage" className="mt-8">
               <div className="space-y-6">
+                <Card title="Usage black or white icons with dark mode and light mode">
+                  <CodeBlock
+                    language="jsx"
+                    filename="Example.tsx"
+                    code={`<GitHubDark size={32} className="dark:invert" /> `}
+                  />
+                </Card>
+                <p className="capitalize">recommanded to use <Highlighter action="underline" color="#FF9800">Dark vision</Highlighter> for dark mode and light mode for better visibility</p> 
+
                 <Card title="Sizing and accessibility">
-                  <CodeBlock>{`<Photoshop size={32} aria-label="Adobe Photoshop" />`}</CodeBlock>
+                  <CodeBlock
+                    language="jsx"
+                    filename="Example.tsx"
+                    code={`<Photoshop size={32} aria-label="Adobe Photoshop" />`}
+                  />
                 </Card>
-                
+
                 <Card title="Click handlers">
-                  <CodeBlock>{`<VSCode onClick={() => alert('clicked')} />`}</CodeBlock>
+                  <CodeBlock
+                    language="jsx"
+                    filename="Example.tsx"
+                    code={`<VSCode onClick={() => alert('clicked')} />`}
+                  />
                 </Card>
-                
+
                 <Card title="Custom styling">
-                  <CodeBlock>{`<Figma className="opacity-50 hover:opacity-100" />`}</CodeBlock>
+                  <CodeBlock
+                    language="jsx"
+                    filename="Example.tsx"
+                    code={`<Figma className="opacity-50 hover:opacity-100" />`}
+                  />
                 </Card>
               </div>
             </TabsContent>
 
+            {/* API Tab */}
             <TabsContent value="api" className="mt-8">
               <Card title="createIcon(name, svgContent)">
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
@@ -96,19 +129,19 @@ export default function App() {
         </motion.div>
 
         {/* Footer */}
-        <motion.div 
+        <motion.div
           className="mt-16 flex items-center justify-center gap-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
         >
-          <a 
-            href="/" 
+          <a
+            href="/"
             className="text-gray-500 hover:text-black dark:hover:text-white transition-colors"
           >
             ← Back to Home
           </a>
-          <Button 
+          <Button
             variant="outline"
             className="border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-900"
           >
@@ -116,7 +149,7 @@ export default function App() {
           </Button>
         </motion.div>
       </main>
-      
+
       <SiteFooter />
     </div>
   );
@@ -145,29 +178,5 @@ function Card({ title, children }: { title: string; children: React.ReactNode })
       <h3 className="font-medium text-black dark:text-white mb-3">{title}</h3>
       {children}
     </motion.div>
-  );
-}
-
-function CodeBlock({ children }: { children: React.ReactNode }) {
-  const [copied, setCopied] = useState(false);
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText(children as string);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 1500);
-  };
-
-  return (
-    <div className="group relative">
-      <button
-        onClick={handleCopy}
-        className="absolute top-2 right-2 text-xs px-2 py-1 bg-gray-800 text-gray-300 rounded opacity-0 group-hover:opacity-100 transition-opacity"
-      >
-        {copied ? "Copied" : "Copy"}
-      </button>
-      <pre className="bg-gray-50 dark:bg-gray-950 border border-gray-200 dark:border-gray-800 rounded-md p-4 text-sm overflow-auto">
-        <code>{children}</code>
-      </pre>
-    </div>
   );
 }

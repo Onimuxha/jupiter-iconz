@@ -13,7 +13,7 @@ Live app (dev): `/` homepage, `/docs` documentation.
 
 ```
 packages/
-  jupiter-icons/            # Icon component library (source)
+  jupiter-iconz/            # Icon component library (source)
 client/                     # Docs website (SPA) built with Vite + React Router
 server/                     # Express server used during dev
 shared/                     # Shared types
@@ -42,10 +42,10 @@ pnpm start        # Starts the built server
 
 ## Using the icon package
 
-Once published to npm as `jupiter-icons`:
+Once published to npm as `jupiter-iconz`:
 
 ```tsx
-import { Photoshop, VSCode } from "jupiter-icons";
+import { Photoshop, VSCode } from "jupiter-iconz";
 
 export default function Example() {
   return (
@@ -70,7 +70,7 @@ Props supported by every icon component:
 Icons are defined by category files under:
 
 ```
-packages/jupiter-icons/src/categories/
+packages/jupiter-iconz/src/categories/
   Programming.ts
   Websites.ts
   Apps.ts
@@ -89,12 +89,12 @@ interface IconData {
 }
 ```
 
-The component factory lives at `packages/jupiter-icons/src/createIcon.tsx` and safely renders colorful SVG using `dangerouslySetInnerHTML` with width/height normalization.
+The component factory lives at `packages/jupiter-iconz/src/createIcon.tsx` and safely renders colorful SVG using `dangerouslySetInnerHTML` with width/height normalization.
 
 To add an icon:
 
 1) Pick a category file (or create a new one) and append a new `IconData` with original brand SVG (no color stripping).
-2) Export the component name by adding it to `packages/jupiter-icons/src/index.ts` (it auto‑builds components from the data set and re‑exports named icons).
+2) Export the component name by adding it to `packages/jupiter-iconz/src/index.ts` (it auto‑builds components from the data set and re‑exports named icons).
 
 ## Accessibility
 
@@ -103,7 +103,7 @@ To add an icon:
 
 ## Publishing the package to npm
 
-The repository includes source TypeScript in `packages/jupiter-icons`. To publish a compiled package, use `tsup` (or Vite library mode). Suggested setup:
+The repository includes source TypeScript in `packages/jupiter-iconz`. To publish a compiled package, use `tsup` (or Vite library mode). Suggested setup:
 
 1) Install build tool in the root repo:
 
@@ -111,7 +111,7 @@ The repository includes source TypeScript in `packages/jupiter-icons`. To publis
 pnpm add -D tsup typescript
 ```
 
-2) Create `packages/jupiter-icons/tsup.config.ts` (example):
+2) Create `packages/jupiter-iconz/tsup.config.ts` (example):
 
 ```ts
 import { defineConfig } from "tsup";
@@ -126,11 +126,11 @@ export default defineConfig({
 });
 ```
 
-3) Update `packages/jupiter-icons/package.json`:
+3) Update `packages/jupiter-iconz/package.json`:
 
 ```json
 {
-  "name": "jupiter-icons",
+  "name": "jupiter-iconz",
   "version": "0.1.0",
   "private": false,
   "type": "module",
@@ -149,8 +149,8 @@ export default defineConfig({
 4) Build & publish from the root:
 
 ```bash
-pnpm --filter jupiter-icons build
-npm publish ./packages/jupiter-icons --access public
+pnpm --filter jupiter-iconz build
+npm publish ./packages/jupiter-iconz --access public
 ```
 
 (Ensure you are logged in to npm and `name` is available.)

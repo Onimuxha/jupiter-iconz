@@ -30,8 +30,8 @@
     "paths": {
       "@/*": ["./client/*"],
       "@shared/*": ["./shared/*"],
-      "jupiter-icons": ["./packages/jupiter-icons/src/index.ts"],
-      "jupiter-icons/*": ["./packages/jupiter-icons/src/*"]
+      "jupiter-iconz": ["./packages/jupiter-iconz/src/index.ts"],
+      "jupiter-iconz/*": ["./packages/jupiter-iconz/src/*"]
     }
   },
   "include": [

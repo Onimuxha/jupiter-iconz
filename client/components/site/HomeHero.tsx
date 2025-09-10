@@ -3,9 +3,10 @@ import { Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { copyText } from "@/lib/copy";
+import { CodeBlock } from "@/components/ui/code-block";
 import { icons } from "../../../packages/jupiter-icons/src/index.ts";
 
-const heroList = ["React", "TypeScript", "VSCode", "Photoshop", "GitHub", "Figma", "Slack", "Chrome", "NodeJS"] as const;
+const heroList = ["React", "TypeScript", "VSCode", "MeteorJs", "D3Js", "Figma", "Slack", "Chrome", "NodeJS"] as const;
 
 export function HomeHero() {
   return (
@@ -17,26 +18,18 @@ export function HomeHero() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-balance text-4xl font-extrabold tracking-tight md:text-6xl"
+              className="text-balance text-4xl font-semibold md:text-7xl"
             >
               Developer-friendly colorful SVG icon library
             </motion.h1>
             <p className="mt-4 max-w-prose text-muted-foreground">
               A modern, accessible icon set with original brand colors, full TypeScript support, and delightful animations. Built for React, Vite, and Tailwind with class-based dark mode.
             </p>
-            <div id="install" className="mt-6 flex flex-wrap items-center gap-3">
-              <Button
-                variant="glass"
-                onClick={async () => {
-                  const ok = await copyText("npm i jupiter-icons");
-                  ok ? toast.success("Install command copied") : toast.error("Copy failed");
-                }}
-                className="gap-2"
-              >
-                <Download className="h-4 w-4" /> Copy install command
-              </Button>
-              <code className="rounded-md border border-input bg-muted px-3 py-2 text-sm">npm i jupiter-icons</code>
-            </div>
+            <CodeBlock
+              language="bash"
+              filename="terminal"
+              code={`npm install jupiter-iconz`}
+            />
           </div>
           <motion.div
             initial={{ opacity: 0, scale: 0.98 }}

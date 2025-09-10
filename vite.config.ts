@@ -26,7 +26,7 @@ export default defineConfig(({ mode }) => ({
     alias: {
       "@": path.resolve(__dirname, "./client"),
       "@shared": path.resolve(__dirname, "./shared"),
-      "jupiter-icons": path.resolve(__dirname, "./packages/jupiter-icons/src/index.ts"),
+      "jupiter-iconz": path.resolve(__dirname, "./packages/jupiter-iconz/src/index.ts"),
     },
   },
   base: '/',

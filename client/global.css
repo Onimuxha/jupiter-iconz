@@ -105,6 +105,12 @@
   }
 }
 
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
 @font-face {
   font-family: 'Outfit';
   src: url('/fonts/Outfit-VariableFont_wght.ttf') format('truetype-variations');

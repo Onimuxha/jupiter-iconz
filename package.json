@@ -1,5 +1,5 @@
 {
-  "name": "jupiter-icons",
+  "name": "jupiter-iconz",
   "private": false,
   "type": "module",
   "pkg": {
@@ -25,6 +25,7 @@
     "express": "^5.1.0",
     "motion": "^12.23.12",
     "react-syntax-highlighter": "^15.6.6",
+    "rough-notation": "^0.5.1",
     "zod": "^3.25.76"
   },
   "overrides": {

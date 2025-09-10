@@ -1,11 +1,18 @@
 import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Search, Grid, List } from "lucide-react";
+import { cn } from "@/lib/utils.ts";
+import { Search, Grid, List, ChevronDown, PenTool, LayoutGrid, Code2, Globe, Globe2, Blocks, ListTodo } from "lucide-react";
 import { Input } from "@/components/ui/input";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsContent } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Categories, allIconsData, icons } from "../../../packages/jupiter-icons/src/index.ts";
 import { IconPortal } from "./IconPortal";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export function IconExplorer() {
   const [query, setQuery] = useState("");
@@ -24,6 +31,13 @@ export function IconExplorer() {
   );
 
   const categories = ["All", "Programming", "Websites", "Apps", "DesignTools"] as const;
+  const iconsMap: Record<string, React.ReactNode> = {
+    All: <LayoutGrid className="w-4 h-4 mr-2" />,
+    Programming: <Code2 className="w-4 h-4 mr-2" />,
+    Websites: <Globe2 className="w-4 h-4 mr-2" />,
+    Apps: <Blocks className="w-4 h-4 mr-2" />,
+    DesignTools: <PenTool className="w-4 h-4 mr-2" />,
+  }
 
   const filtered = useMemo(() => {
     return allData.filter((i) => {
@@ -41,34 +55,31 @@ export function IconExplorer() {
         {/* Search and View Toggle */}
         <div className="flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between">
           <div className="relative flex-1 max-w-md">
-            <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
+            <Search className="absolute left-5 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
             <Input
               aria-label="Search icons"
               placeholder="Search icons..."
-              className="pl-10 bg-white/50 dark:bg-gray-900/50 border-gray-200 dark:border-gray-700"
+              className="pl-12 bg-white/50 dark:bg-gray-900/50 border-gray-200 dark:border-gray-700"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
             />
           </div>
-          
-          <div className="flex items-center gap-3">
-            {/* View Mode Toggle */}
-            <div className="flex rounded-lg border border-gray-200 dark:border-gray-700 p-1 bg-gray-50 dark:bg-gray-800">
+
+          <div className="flex items-center">
+            <div className="flex rounded-lg border border-gray-200 dark:border-gray-700 p-1 gap-2 bg-gray-50 dark:bg-gray-800">
               <Button
                 variant={viewMode === "grid" ? "default" : "ghost"}
-                size="sm"
                 onClick={() => setViewMode("grid")}
-                className="h-8 px-3"
+                className="h-8 px-4"
               >
-                <Grid className="h-4 w-4" />
+                <LayoutGrid size={23} className="text-white" />
               </Button>
               <Button
                 variant={viewMode === "list" ? "default" : "ghost"}
-                size="sm"
                 onClick={() => setViewMode("list")}
-                className="h-8 px-3"
+                className="h-8 px-4"
               >
-                <List className="h-4 w-4" />
+                <ListTodo size={23} className="text-white" />
               </Button>
             </div>
           </div>
@@ -97,46 +108,67 @@ export function IconExplorer() {
             </div>
           </div>
 
-          {/* Category Tabs */}
-          <Tabs value={tab} onValueChange={(v) => setTab(v)} className="w-full lg:w-auto">
-            <TabsList className="grid w-full grid-cols-5 lg:w-auto lg:flex bg-gray-100 dark:bg-gray-800">
-              {categories.map((c) => (
-                <TabsTrigger 
-                  key={c} 
-                  value={c} 
-                  className="text-xs sm:text-sm px-2 sm:px-4 py-2 data-[state=active]:bg-white dark:data-[state=active]:bg-gray-700"
+          {/* Category Dropdown (ShadCN) */}
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button
+                variant="outline"
+                className={cn(
+                  "min-w-[140px] justify-between rounded-full bg-gradient-to-r from-gray-100 via-white to-gray-100 dark:from-gray-800 dark:to-gray-900 px-4 py-2 text-sm",
+                  "focus-visible:ring-0 focus-visible:ring-offset-0 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-current"
+                )}
+              >
+                {tab === "DesignTools" ? "Design" : tab}
+                <ChevronDown className="w-4 h-4 ml-2 text-muted-foreground" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent
+              align="start"
+              className="w-48 border-none backdrop-blur-md bg-gradient-to-r from-gray-100 via-white to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-xl shadow-xl p-1"
+            >
+              {categories.map((category) => (
+                <DropdownMenuItem
+                  key={category}
+                  onSelect={() => setTab(category)}
+                  className={cn(
+                    "rounded-full px-3 py-2 text-sm transition-colors hover:bg-gray-200 dark:hover:bg-gray-700 focus-visible:outline-none flex items-center",
+                    tab === category ? "font-medium text-purple-600" : "text-foreground"
+                  )}
                 >
-                  {c === "DesignTools" ? "Design" : c}
-                </TabsTrigger>
+                  {iconsMap[category]}
+                  {category === "DesignTools" ? "Design" : category}
+                </DropdownMenuItem>
               ))}
-            </TabsList>
-          </Tabs>
+            </DropdownMenuContent>
+
+          </DropdownMenu>
         </div>
       </div>
 
       {/* Results Count */}
-      <div className="mb-4">
-        <p className="text-sm text-gray-600 dark:text-gray-400">
-          {filtered.length} icon{filtered.length !== 1 ? 's' : ''} 
+      <div className="mb-4 max-w-full">
+        <p className="text-sm text-gray-600 dark:text-gray-400 truncate max-w-xs">
+          {filtered.length} icon{filtered.length !== 1 ? "s" : ""}
           {query && ` matching "${query}"`}
           {tab !== "All" && ` in ${tab}`}
         </p>
       </div>
 
+
       {/* Icon Grid/List */}
-      <Tabs value={tab} onValueChange={(v) => setTab(v)}>
-        {categories.map((c) => (
-          <TabsContent key={c} value={c} className="mt-0">
-            <IconGrid 
-              category={c} 
-              size={size} 
-              query={query} 
-              data={filtered} 
-              viewMode={viewMode}
-            />
-          </TabsContent>
-        ))}
-      </Tabs>
+        <Tabs value={tab} onValueChange={(v) => setTab(v)}>
+          {categories.map((c) => (
+            <TabsContent key={c} value={c} className="mt-0">
+              <IconGrid
+                category={c}
+                size={size}
+                query={query}
+                data={filtered}
+                viewMode={viewMode}
+              />
+            </TabsContent>
+          ))}
+        </Tabs>
     </section>
   );
 }
@@ -158,24 +190,28 @@ function IconGrid({
 
   if (!visible.length) {
     return (
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         className="flex flex-col items-center justify-center rounded-lg border-2 border-dashed border-gray-300 dark:border-gray-600 p-8 sm:p-12 text-center"
       >
-        <Search className="h-12 w-12 text-gray-400 mb-4" />
+        <img
+          src="client/assets/nodata.svg"
+          alt="No icons found"
+          className="h-24 w-24 mb-4 opacity-70"
+        />
         <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-2">
           No icons found
         </h3>
-        <p className="text-gray-600 dark:text-gray-400 max-w-md">
-          {query ? `No icons match "${query}"` : "No icons in this category"}. 
-          Try adjusting your search or selecting a different category.
+        <p className="text-gray-600 dark:text-gray-400 truncate max-w-xs">
+          {query ? `No icons match "${query}"` : "No icons in this category"}.
         </p>
       </motion.div>
+
     );
   }
 
-  const gridClasses = viewMode === "grid" 
+  const gridClasses = viewMode === "grid"
     ? "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8 gap-3 sm:gap-4"
     : "flex flex-col gap-2";
 
@@ -201,10 +237,10 @@ function IconGrid({
               exit={{ opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.2 }}
             >
-              <IconItem 
-                name={i.name} 
-                Comp={Comp} 
-                size={size} 
+              <IconItem
+                name={i.name}
+                Comp={Comp}
+                size={size}
                 viewMode={viewMode}
                 category={i.category}
                 keywords={i.keywords}

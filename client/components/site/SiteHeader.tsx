@@ -1,6 +1,6 @@
-import { ThemeToggle } from "./ThemeToggle";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
+import { AnimatedThemeToggler } from "../ui/animated-theme-toggler";
 
 export function SiteHeader() {
   const { pathname } = useLocation();
@@ -12,25 +12,25 @@ export function SiteHeader() {
   return (
     <header className="fixed top-0 z-50 w-full pointer-events-none">
       <div className="mx-auto max-w-7xl px-6">
-        <motion.div 
+        <motion.div
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="pointer-events-auto mt-4 flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-6 py-3 shadow-[0_16px_64px_rgba(0,0,0,0.1)] dark:shadow-[0_16px_90px_rgba(225,225,225,0.2)] backdrop-blur-2xl dark:bg-black/20 dark:border-white/5"
         >
           {/* Logo Section */}
-          <motion.a 
-            href="/" 
-            className="flex items-center gap-3 group" 
+          <motion.a
+            href="/"
+            className="flex items-center gap-3 group"
             aria-label="Jupiter Icons"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 30 }}
           >
             <div className="relative">
-              <img 
-                src="/text-black.png" 
-                alt="Jupiter Icons" 
-                className="relative h-12 w-1h-12 dark:invert" 
+              <img
+                src="/text-black.png"
+                alt="Jupiter Icons"
+                className="relative h-12 w-1h-12 dark:invert"
               />
             </div>
           </motion.a>
@@ -55,10 +55,10 @@ export function SiteHeader() {
                       <motion.span
                         layoutId="nav-active"
                         className="absolute inset-0 rounded-lg bg-white/80 dark:bg-white/10 shadow-lg"
-                        transition={{ 
-                          type: "spring", 
-                          stiffness: 500, 
-                          damping: 35 
+                        transition={{
+                          type: "spring",
+                          stiffness: 500,
+                          damping: 35
                         }}
                       />
                     )}
@@ -74,18 +74,9 @@ export function SiteHeader() {
                 );
               })}
             </nav>
-
             {/* Divider */}
             <div className="h-6 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent dark:via-gray-600" />
-
-            {/* Theme Toggle */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.3, duration: 0.4 }}
-            >
-              <ThemeToggle />
-            </motion.div>
+            <AnimatedThemeToggler />
           </div>
         </motion.div>
       </div>
