@@ -42,7 +42,7 @@ export function IconDetailDialog(props: IconDetailProps) {
       const blob = new Blob([svgMin], { type: "image/svg+xml;charset=utf-8" });
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
-      a.href = url;
+      a.href = url;``
       a.download = `${name}.svg`;
       document.body.appendChild(a);
       a.click();
@@ -74,7 +74,7 @@ export function IconDetailDialog(props: IconDetailProps) {
                     <span className="mx-auto rounded-full border px-2 py-0.5">{weights.join(", ")}</span>
                   </div>
                 </DialogTitle>
-                <DialogDescription className="text-xs sm:text-sm">{keywords.join(" • ")}</DialogDescription>
+                <DialogDescription className="text-xs sm:text-sm pb-4">{keywords.join(" • ")}</DialogDescription>
               </DialogHeader>
 
               <div className="grid gap-4 sm:gap-6 md:grid-cols-2">
@@ -107,7 +107,7 @@ export function IconDetailDialog(props: IconDetailProps) {
                   </div>
                   <div className="relative rounded-lg">
                     <pre className={cn("max-h-[45vh] sm:max-h-60 overflow-auto no-scrollbar rounded-md border border-white/20 bg-white/10 p-3 pr-16 text-[12px] sm:text-sm backdrop-blur-md dark:bg-white/5 font-mono whitespace-pre-wrap break-words select-text")} aria-label={mode === "jsx" ? "JSX snippet" : "SVG snippet"}>
-{toCopy}
+                      {toCopy}
                     </pre>
                     <Button
                       variant="glass"
