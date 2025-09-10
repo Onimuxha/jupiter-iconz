@@ -19,8 +19,12 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@tabler/icons-react": "^3.34.1",
+    "@types/react-syntax-highlighter": "^15.5.13",
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
+    "motion": "^12.23.12",
+    "react-syntax-highlighter": "^15.6.6",
     "zod": "^3.25.76"
   },
   "overrides": {

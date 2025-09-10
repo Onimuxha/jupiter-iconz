@@ -2,7 +2,7 @@
 import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
-import { IconCheck, IconCopy } from "@tabler/icons-react";
+import { Check, Copy } from "lucide-react";
 
 type CodeBlockProps = {
   language: string;
@@ -54,18 +54,19 @@ export const CodeBlock = ({
     : highlightLines;
 
   return (
-    <div className="relative w-full rounded-lg bg-slate-900 p-4 font-mono text-sm">
-      <div className="flex flex-col gap-2">
+    <div className="relative w-full max-w-full rounded-lg bg-slate-900 overflow-hidden">
+      {/* Header with tabs or filename */}
+      <div className="flex flex-col">
         {tabsExist && (
-          <div className="flex  overflow-x-auto">
+          <div className="flex overflow-x-auto scrollbar-hide border-b border-slate-700 bg-slate-800">
             {tabs.map((tab, index) => (
               <button
                 key={index}
                 onClick={() => setActiveTab(index)}
-                className={`px-3 !py-2 text-xs transition-colors font-sans ${
+                className={`flex-shrink-0 px-4 py-2 text-sm font-medium transition-colors border-b-2 font-sans ${
                   activeTab === index
-                    ? "text-white"
-                    : "text-zinc-400 hover:text-zinc-200"
+                    ? "text-white border-blue-500 bg-slate-900"
+                    : "text-slate-400 hover:text-slate-200 border-transparent hover:bg-slate-700"
                 }`}
               >
                 {tab.name}
@@ -73,42 +74,99 @@ export const CodeBlock = ({
             ))}
           </div>
         )}
+        
         {!tabsExist && filename && (
-          <div className="flex justify-between items-center py-2">
-            <div className="text-xs text-zinc-400">{filename}</div>
+          <div className="flex justify-between items-center px-4 py-3 bg-slate-800 border-b border-slate-700">
+            <div className="text-sm text-slate-400 font-sans truncate">{filename}</div>
             <button
               onClick={copyToClipboard}
-              className="flex items-center gap-1 text-xs text-zinc-400 hover:text-zinc-200 transition-colors font-sans"
+              className="flex items-center gap-2 text-sm text-slate-400 hover:text-slate-200 transition-colors font-sans flex-shrink-0 ml-2"
+              title={copied ? "Copied!" : "Copy to clipboard"}
             >
-              {copied ? <IconCheck size={14} /> : <IconCopy size={14} />}
+              {copied ? (
+                <>
+                  <Check size={16} className="text-green-500" />
+                  <span className="hidden sm:inline">Copied!</span>
+                </>
+              ) : (
+                <>
+                  <Copy size={16} />
+                  <span className="hidden sm:inline">Copy</span>
+                </>
+              )}
+            </button>
+          </div>
+        )}
+
+        {/* Copy button for tabs */}
+        {tabsExist && (
+          <div className="flex justify-end px-4 py-2 bg-slate-800 border-b border-slate-700">
+            <button
+              onClick={copyToClipboard}
+              className="flex items-center gap-2 text-sm text-slate-400 hover:text-slate-200 transition-colors font-sans"
+              title={copied ? "Copied!" : "Copy to clipboard"}
+            >
+              {copied ? (
+                <>
+                  <Check size={16} className="text-green-500" />
+                  <span className="hidden sm:inline">Copied!</span>
+                </>
+              ) : (
+                <>
+                  <Copy size={16} />
+                  <span className="hidden sm:inline">Copy</span>
+                </>
+              )}
             </button>
           </div>
         )}
       </div>
-      <SyntaxHighlighter
-        language={activeLanguage}
-        style={atomDark}
-        customStyle={{
-          margin: 0,
-          padding: 0,
-          background: "transparent",
-          fontSize: "0.875rem", // text-sm equivalent
-        }}
-        wrapLines={true}
-        showLineNumbers={true}
-        lineProps={(lineNumber) => ({
-          style: {
-            backgroundColor: activeHighlightLines.includes(lineNumber)
-              ? "rgba(255,255,255,0.1)"
-              : "transparent",
-            display: "block",
+
+      {/* Code content */}
+      <div className="relative overflow-auto max-h-96 scrollbar-thin scrollbar-track-slate-800 scrollbar-thumb-slate-600 hover:scrollbar-thumb-slate-500">
+        <SyntaxHighlighter
+          language={activeLanguage}
+          style={atomDark}
+          customStyle={{
+            margin: 0,
+            padding: "1rem",
+            background: "transparent",
+            fontSize: "0.875rem",
+            fontFamily: "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
+            overflow: "visible",
             width: "100%",
-          },
-        })}
-        PreTag="div"
-      >
-        {String(activeCode)}
-      </SyntaxHighlighter>
+            minWidth: "max-content", // Ensures content doesn't get squeezed
+          }}
+          wrapLines={false} // Allow horizontal scrolling for long lines
+          showLineNumbers={true}
+          lineNumberStyle={{
+            minWidth: "2.5rem",
+            paddingRight: "1rem",
+            color: "#64748b",
+            fontSize: "0.75rem",
+            textAlign: "right",
+            userSelect: "none",
+          }}
+          lineProps={(lineNumber) => ({
+            style: {
+              backgroundColor: activeHighlightLines.includes(lineNumber)
+                ? "rgba(59, 130, 246, 0.15)" // blue-500 with opacity
+                : "transparent",
+              display: "block",
+              width: "100%",
+              paddingLeft: "0.5rem",
+              paddingRight: "1rem",
+              borderLeft: activeHighlightLines.includes(lineNumber)
+                ? "3px solid #3b82f6"
+                : "3px solid transparent",
+            },
+          })}
+          PreTag="div"
+          CodeTag="code"
+        >
+          {String(activeCode)}
+        </SyntaxHighlighter>
+      </div>
     </div>
   );
 };

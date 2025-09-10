@@ -1,12 +1,12 @@
 import { useMemo, useState } from "react";
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
-import { Copy, Download } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { Download, Copy, Check } from "lucide-react";
 import { toast } from "sonner";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { copyText } from "@/lib/copy";
+import { CodeBlock } from "@/components/ui/code-block";
 
 export interface IconDetailProps {
   open: boolean;
@@ -22,27 +22,18 @@ export interface IconDetailProps {
 export function IconDetailDialog(props: IconDetailProps) {
   const { open, onOpenChange, name, Component, svgContent, category, keywords, weights } = props;
   const [mode, setMode] = useState<"jsx" | "svg">("jsx");
-  const [size, setSize] = useState(64);
+  const [size, setSize] = useState(48);
+  const [copied, setCopied] = useState(false);
 
-  const importLine = `import { ${name} } from "jupiter-icons"`;
-  const usage = `<${name} size={24} />`;
-  const jsxSnippet = `${importLine}\n\n${usage}`;
-
+  const jsxCode = `import { ${name} } from "jupiter-icons";\n\n<${name} size={24} />`;
   const svgMin = useMemo(() => svgContent.trim(), [svgContent]);
-
-  const toCopy = mode === "jsx" ? jsxSnippet : svgMin;
-
-  const copy = async () => {
-    const ok = await copyText(toCopy);
-    ok ? toast.success("Copied to clipboard") : toast.error("Copy failed");
-  };
 
   const downloadSvg = () => {
     try {
       const blob = new Blob([svgMin], { type: "image/svg+xml;charset=utf-8" });
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
-      a.href = url;``
+      a.href = url;
       a.download = `${name}.svg`;
       document.body.appendChild(a);
       a.click();
@@ -54,81 +45,99 @@ export function IconDetailDialog(props: IconDetailProps) {
     }
   };
 
+  const handleCopy = async () => {
+    const code = mode === "jsx" ? jsxCode : svgMin;
+    try {
+      await copyText(code);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+      toast.success("Copied to clipboard");
+    } catch (e) {
+      toast.error("Copy failed");
+    }
+  };
+
+  if (!open) return null;
+
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-2xl border border-white/20 bg-white/10 backdrop-blur-md dark:bg-zinc-900/60">
-        <AnimatePresence mode="wait">
-          {open && (
-            <motion.div
-              key={name}
-              initial={{ opacity: 0, y: 8, scale: 0.98 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: -6, scale: 0.98 }}
-              transition={{ duration: 0.2 }}
-            >
-              <DialogHeader>
-                <DialogTitle className="flex flex-col items-start justify-between gap-2 sm:flex-row sm:items-center sm:gap-6">
-                  <span className="text-lg sm:text-xl font-semibold tracking-tight">{name}</span>
-                  <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-xs sm:text-[13px] text-muted-foreground">
-                    <span className="ml-[-2px] rounded-full border px-2 py-0.5">{category}</span>
-                    <span className="mx-auto rounded-full border px-2 py-0.5">{weights.join(", ")}</span>
-                  </div>
-                </DialogTitle>
-                <DialogDescription className="text-xs sm:text-sm pb-4">{keywords.join(" • ")}</DialogDescription>
-              </DialogHeader>
-
-              <div className="grid gap-4 sm:gap-6 md:grid-cols-2">
-                <div className="flex flex-col items-center gap-3 rounded-lg border border-white/20 bg-white/10 p-4 sm:p-6 backdrop-blur-md dark:bg-white/5">
-                  <div className="flex w-full flex-wrap items-center gap-3 sm:gap-4">
-                    <label htmlFor="preview-size" className="text-xs sm:text-sm text-muted-foreground">
-                      Size
-                    </label>
-                    <input
-                      id="preview-size"
-                      type="range"
-                      min={16}
-                      max={160}
-                      value={size}
-                      onChange={(e) => setSize(parseInt(e.target.value))}
-                    />
-                    <span className="text-xs sm:text-sm tabular-nums text-muted-foreground">{size}px</span>
-                  </div>
-                  <div className="flex h-28 w-28 items-center justify-center rounded-md bg-white/40 shadow-inner backdrop-blur-md dark:bg-white/10">
-                    <Component size={size} aria-label={`${name} preview`} />
-                  </div>
+      <DialogContent className="max-w-4xl w-[95vw] max-h-[90vh] overflow-hidden">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.2 }}
+        >
+          {/* Header */}
+          <DialogHeader className="pb-4 border-b">
+            <DialogTitle className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
+                  <Component size={20} />
                 </div>
-
-                <div>
-                  <div className="mb-2 flex items-center gap-2">
-                    <ToggleGroup type="single" value={mode} onValueChange={(v) => v && setMode(v as any)}>
-                      <ToggleGroupItem value="jsx" aria-label="Show JSX">JSX</ToggleGroupItem>
-                      <ToggleGroupItem value="svg" aria-label="Show SVG">SVG</ToggleGroupItem>
-                    </ToggleGroup>
-                  </div>
-                  <div className="relative rounded-lg">
-                    <pre className={cn("max-h-[45vh] sm:max-h-60 overflow-auto no-scrollbar rounded-md border border-white/20 bg-white/10 p-3 pr-16 text-[12px] sm:text-sm backdrop-blur-md dark:bg-white/5 font-mono whitespace-pre-wrap break-words select-text")} aria-label={mode === "jsx" ? "JSX snippet" : "SVG snippet"}>
-                      {toCopy}
-                    </pre>
-                    <Button
-                      variant="glass"
-                      size="icon"
-                      onClick={copy}
-                      aria-label="Copy code"
-                      className="absolute right-2 top-2 sm:right-2 sm:top-2"
-                    >
-                      <Copy className="h-4 w-4" />
-                    </Button>
-                  </div>
-                  <div className="mt-2 flex justify-end">
-                    <Button variant="glass" size="sm" onClick={downloadSvg} aria-label="Download SVG" className="gap-2">
-                      <Download className="h-4 w-4" /> Download SVG
-                    </Button>
-                  </div>
-                </div>
+                <span className="text-xl font-semibold">{name}</span>
               </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+              <div className="flex gap-2 text-sm">
+                <span className="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded">
+                  {category}
+                </span>
+              </div>
+            </DialogTitle>
+          </DialogHeader>
+
+          {/* Content */}
+          <div className="grid lg:grid-cols-5 gap-6 py-6">
+            {/* Preview */}
+            <div className="lg:col-span-2 space-y-4">
+              <div>
+                <div className="flex justify-between items-center mb-2">
+                  <span className="text-sm font-medium">Size</span>
+                  <span className="text-sm text-gray-500">{size}px</span>
+                </div>
+                <input
+                  type="range"
+                  min={16}
+                  max={128}
+                  value={size}
+                  onChange={(e) => setSize(parseInt(e.target.value))}
+                  className="w-full"
+                />
+              </div>
+
+              <div className="flex items-center justify-center h-40 bg-gray-50 dark:bg-gray-900 rounded-lg border">
+                <Component size={size} />
+              </div>
+
+              <div className="flex gap-2">
+                <Button onClick={handleCopy} variant="outline" size="sm" className="flex-1">
+                  {copied ? <Check className="w-4 h-4 mr-2" /> : <Copy className="w-4 h-4 mr-2" />}
+                  Copy
+                </Button>
+                <Button onClick={downloadSvg} variant="outline" size="sm" className="flex-1">
+                  <Download className="w-4 h-4 mr-2" />
+                  Download
+                </Button>
+              </div>
+            </div>
+
+            {/* Code */}
+            <div className="lg:col-span-3 min-w-0">
+              <div className="flex justify-between items-center mb-4">
+                <span className="text-sm font-medium">Code</span>
+                <ToggleGroup type="single" value={mode} onValueChange={(v) => v && setMode(v as any)}>
+                  <ToggleGroupItem value="jsx" size="sm">JSX</ToggleGroupItem>
+                  <ToggleGroupItem value="svg" size="sm">SVG</ToggleGroupItem>
+                </ToggleGroup>
+              </div>
+
+              <CodeBlock
+                language={mode === "jsx" ? "jsx" : "xml"}
+                filename={`${name}.${mode}`}
+                code={mode === "jsx" ? jsxCode : svgMin}
+                highlightLines={mode === "jsx" ? [1, 3] : undefined}
+              />
+            </div>
+          </div>
+        </motion.div>
       </DialogContent>
     </Dialog>
   );
