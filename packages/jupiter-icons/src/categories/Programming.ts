@@ -4,7 +4,7 @@ export const iconsData: IconData[] = [
   {
     name: "React",
     category: "Programming",
-    keywords: ["react", "frontend", "Frameworks", "ui"],
+    keywords: ["react", "frontend", "Frameworks", "ui", "library", "javascript"],
     weights: ["regular"],
     svgContent: `
 <svg x="0px" y="0px" viewBox="0 0 122.88 109.43" style="enable-background:new 0 0 122.88 109.43">
@@ -23,9 +23,30 @@ export const iconsData: IconData[] = [
 `.trim(),
   },
   {
+    name: "NodeJS",
+    category: "Programming",
+    keywords: ["node", "nodejs", "backend", "javascript", "runtime", "server"],
+    weights: ["regular"],
+    svgContent: `
+  <svg x="0px" y="0px" viewBox="0 0 109 122.88" style="enable-background:new 0 0 109 122.88">
+    <style type="text/css">
+        .node-element {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: #689f63;
+        }
+    </style>
+    <g>
+        <path class="node-element"
+            d="M68.43,87.08c-19.7,0-23.83-9.04-23.83-16.63c0-0.72,0.58-1.3,1.3-1.3h5.82c0.64,0,1.18,0.47,1.28,1.1 c0.88,5.93,3.49,8.92,15.41,8.92c9.49,0,13.52-2.14,13.52-7.18c0-2.9-1.15-5.05-15.89-6.49c-12.33-1.22-19.95-3.93-19.95-13.8 c0-9.08,7.66-14.49,20.5-14.49c14.42,0,21.56,5,22.46,15.76c0.03,0.37-0.1,0.73-0.35,1c-0.25,0.26-0.6,0.42-0.96,0.42H81.9 c-0.61,0-1.14-0.43-1.26-1.01c-1.41-6.23-4.81-8.23-14.07-8.23c-10.36,0-11.56,3.61-11.56,6.31c0,3.28,1.42,4.24,15.4,6.09 c13.84,1.84,20.41,4.43,20.41,14.16c0,9.81-8.18,15.43-22.45,15.43L68.43,87.08L68.43,87.08z M54.52,122.88 c-1.65,0-3.28-0.43-4.72-1.26l-15.03-8.9c-2.25-1.26-1.15-1.7-0.41-1.96c2.99-1.05,3.6-1.28,6.8-3.1c0.34-0.19,0.78-0.12,1.12,0.08 l11.55,6.85c0.42,0.23,1.01,0.23,1.4,0l45.03-25.99c0.42-0.24,0.69-0.72,0.69-1.22V35.43c0-0.52-0.27-0.98-0.7-1.24L55.23,8.22 c-0.42-0.25-0.97-0.25-1.39,0l-45,25.97c-0.44,0.25-0.71,0.73-0.71,1.23v51.96c0,0.5,0.27,0.97,0.7,1.21l12.33,7.12 c6.69,3.35,10.79-0.6,10.79-4.56V39.86c0-0.73,0.57-1.3,1.31-1.3l5.7,0c0.71,0,1.3,0.56,1.3,1.3v51.31 c0,8.93-4.87,14.05-13.33,14.05c-2.6,0-4.66,0-10.38-2.82L4.72,95.59C1.8,93.9,0,90.75,0,87.38V35.42c0-3.38,1.8-6.54,4.72-8.21 l45.07-26c2.85-1.61,6.64-1.61,9.47,0l45.02,26.01c2.91,1.68,4.72,4.82,4.72,8.21v51.96c0,3.37-1.81,6.51-4.72,8.21l-45.02,26 c-1.44,0.83-3.08,1.26-4.74,1.26L54.52,122.88L54.52,122.88z M54.52,122.88L54.52,122.88L54.52,122.88L54.52,122.88z" />
+    </g>
+</svg>
+  `.trim(),
+  },
+  {
     name: "TypeScript",
     category: "Programming",
-    keywords: ["typescript", "ts", "language"],
+    keywords: ["typescript", "ts", "javascript", "frontend", "backend", "language"],
     weights: ["regular"],
     svgContent: `
   <svg x="0px" y="0px" viewBox="0 0 122.88 122.88" style="enable-background:new 0 0 122.88 122.88">
@@ -53,7 +74,7 @@ export const iconsData: IconData[] = [
   {
     name: "D3Js",
     category: "Programming",
-    keywords: ["D3Js", "js"],
+    keywords: ["D3Js", "d3", "data", "visualization", "javascript", "library"],
     weights: ["regular"],
     svgContent: `
   <svg shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality"
@@ -129,7 +150,7 @@ export const iconsData: IconData[] = [
   {
     name: "ThreeJs",
     category: "Programming",
-    keywords: ["ThreeJs", "js"],
+    keywords: ["ThreeJs", "3D", "js", "javascript", "webgl", "library"],
     weights: ["regular"],
     svgContent: `
     <svg width="100%" height="100%" viewBox="0 0 512 512" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -160,7 +181,7 @@ export const iconsData: IconData[] = [
   {
     name: "ReduxJs",
     category: "Programming",
-    keywords: ["ReduxJs", "js"],
+    keywords: ["ReduxJs", "redux", "js", "javascript", "library", "state", "management"],
     weights: ["regular"],
     svgContent: `
   <svg viewBox="0 0 333333 316450" shape-rendering="geometricPrecision">
@@ -179,7 +200,7 @@ export const iconsData: IconData[] = [
   {
     name: "Jquery",
     category: "Programming",
-    keywords: ["BackboneJs", "js"],
+    keywords: ["BackboneJs", "Backbone", "js", "javascript", "library", "framework"],
     weights: ["regular"],
     svgContent: `
 <svg version="1.1" x="0px" y="0px" viewBox="0 0 122.88 121.74" style="enable-background:new 0 0 122.88 121.74">

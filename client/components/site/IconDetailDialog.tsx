@@ -25,7 +25,7 @@ export function IconDetailDialog(props: IconDetailProps) {
   const [size, setSize] = useState(48);
   const [copied, setCopied] = useState(false);
 
-  const jsxCode = `import { ${name} } from "jupiter-iconz";\n\n<${name} size={24} />`;
+  const jsxCode = `<${name} size={24} />`; // Remove the import statement
   const svgMin = useMemo(() => svgContent.trim(), [svgContent]);
 
   const downloadSvg = () => {
@@ -51,7 +51,7 @@ export function IconDetailDialog(props: IconDetailProps) {
       await copyText(code);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
-      toast.success("Copied to clipboard");
+      toast.success("Component usage copied to clipboard");
     } catch (e) {
       toast.error("Copy failed");
     }
@@ -71,8 +71,8 @@ export function IconDetailDialog(props: IconDetailProps) {
           <DialogHeader className="pb-4 border-b">
             <DialogTitle className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
-                  <Component size={20} />
+                <div className="w-12 h-12 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
+                  <Component size={30} />
                 </div>
                 <span className="text-xl font-semibold">{name}</span>
               </div>
@@ -132,8 +132,11 @@ export function IconDetailDialog(props: IconDetailProps) {
               <CodeBlock
                 language={mode === "jsx" ? "jsx" : "xml"}
                 filename={`${name}.${mode}`}
-                code={mode === "jsx" ? jsxCode : svgMin}
-                highlightLines={mode === "jsx" ? [1, 3] : undefined}
+                code={mode === "jsx" ? 
+                  `import { ${name} } from "jupiter-iconz";\n\n${jsxCode}` : 
+                  svgMin
+                }
+                highlightLines={mode === "jsx" ? [3] : undefined}
               />
             </div>
           </div>

@@ -4,7 +4,7 @@ export const iconsData: IconData[] = [
   {
     name: "Slack",
     category: "Apps",
-    keywords: ["slack", "chat", "team"],
+    keywords: ["slack", "chat", "team", "communication", "workspace"],
     weights: ["regular"],
     svgContent: `
 <svg version="1.1"

@@ -4,7 +4,7 @@ export const iconsData: IconData[] = [
   {
     name: "Photoshop",
     category: "DesignTools",
-    keywords: ["adobe", "ps", "photoshop"],
+    keywords: ["adobe", "ps", "photoshop", "design"],
     weights: ["regular"],
     svgContent: `
 <svg version="1.1" id="photoshop-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"

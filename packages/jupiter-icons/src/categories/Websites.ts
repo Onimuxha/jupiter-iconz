@@ -30,7 +30,7 @@ export const iconsData: IconData[] = [
   {
     name: "Chrome",
     category: "Websites",
-    keywords: ["chrome", "browser", "google"],
+    keywords: ["chrome", "browser", "google", "web", "internet", "search"],
     weights: ["regular"],
     svgContent: `
 <svg version="1.1" id="chrome" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"

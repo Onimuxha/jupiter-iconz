@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils.ts";
 import { Search, ChevronDown, PenTool, LayoutGrid, Code2, Globe2, Blocks, ListTodo, Bot, DraftingCompass, VectorSquare } from "lucide-react";
@@ -13,12 +13,26 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { useSearchParams } from "react-router-dom";
 
 export function IconExplorer() {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [query, setQuery] = useState("");
   const [size, setSize] = useState(48);
-  const [tab, setTab] = useState("All");
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
+  
+  // Initialize tab from URL or localStorage, fallback to "All"
+  const [tab, setTab] = useState(() => {
+    const urlTab = searchParams.get("category");
+    const savedTab = localStorage.getItem("selectedCategory");
+    return urlTab || savedTab || "All";
+  });
+
+  // Persist tab changes to URL and localStorage
+  useEffect(() => {
+    localStorage.setItem("selectedCategory", tab);
+    setSearchParams({ category: tab }, { replace: true });
+  }, [tab, setSearchParams]);
 
   const allData = useMemo(
     () => [
