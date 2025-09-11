@@ -1,11 +1,11 @@
 import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils.ts";
-import { Search, Grid, List, ChevronDown, PenTool, LayoutGrid, Code2, Globe, Globe2, Blocks, ListTodo } from "lucide-react";
+import { Search, ChevronDown, PenTool, LayoutGrid, Code2, Globe2, Blocks, ListTodo, Bot, DraftingCompass, VectorSquare } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
-import { Categories, allIconsData, icons } from "../../../packages/jupiter-icons/src/index.ts";
+import { Categories, icons } from "../../../packages/jupiter-icons/src/index.ts";
 import { IconPortal } from "./IconPortal";
 import {
   DropdownMenu,
@@ -26,17 +26,23 @@ export function IconExplorer() {
       ...Categories.Websites,
       ...Categories.Apps,
       ...Categories.DesignTools,
+      ...Categories.AI,
+      ...Categories.Tools,
+      ...Categories.Frameworks,
     ],
     [],
   );
 
-  const categories = ["All", "Programming", "Websites", "Apps", "DesignTools"] as const;
+  const categories = ["All", "Programming", "Websites", "Apps", "DesignTools", "AI", "Tools", "Frameworks"] as const;
   const iconsMap: Record<string, React.ReactNode> = {
     All: <LayoutGrid className="w-4 h-4 mr-2" />,
     Programming: <Code2 className="w-4 h-4 mr-2" />,
     Websites: <Globe2 className="w-4 h-4 mr-2" />,
     Apps: <Blocks className="w-4 h-4 mr-2" />,
     DesignTools: <PenTool className="w-4 h-4 mr-2" />,
+    AI: <Bot className="w-4 h-4 mr-2" />,
+    Tools: <DraftingCompass className="w-4 h-4 mr-2" />,
+    Frameworks: <VectorSquare className="w-4 h-4 mr-2" />,
   }
 
   const filtered = useMemo(() => {

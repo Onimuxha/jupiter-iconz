@@ -1,8 +1,4 @@
 import { motion } from "framer-motion";
-import { Download } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { toast } from "sonner";
-import { copyText } from "@/lib/copy";
 import { CodeBlock } from "@/components/ui/code-block";
 import { icons } from "../../../packages/jupiter-icons/src/index.ts";
 
