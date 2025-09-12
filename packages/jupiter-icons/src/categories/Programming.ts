@@ -28,12 +28,10 @@ export const iconsData: IconData[] = [
     keywords: ["node", "nodejs", "backend", "javascript", "runtime", "server"],
     weights: ["regular"],
     svgContent: `
-  <svg x="0px" y="0px" viewBox="0 0 109 122.88" style="enable-background:new 0 0 109 122.88">
-    <style type="text/css">
+<svg viewBox="0 0 115 122.88">
+    <style>
         .node-element {
-            fill-rule: evenodd;
-            clip-rule: evenodd;
-            fill: #689f63;
+        fill: #689f63;
         }
     </style>
     <g>
@@ -49,8 +47,8 @@ export const iconsData: IconData[] = [
     keywords: ["typescript", "ts", "javascript", "frontend", "backend", "language"],
     weights: ["regular"],
     svgContent: `
-  <svg x="0px" y="0px" viewBox="0 0 122.88 122.88" style="enable-background:new 0 0 122.88 122.88">
-    <style type="text/css">
+<svg x="0px" y="0px" viewBox="0 0 122.88 122.88" style="enable-background:new 0 0 122.88 122.88">
+    <style>
         .bg {
             fill-rule: evenodd;
             clip-rule: evenodd;
@@ -63,10 +61,34 @@ export const iconsData: IconData[] = [
             fill: #ffffff;
         }
     </style>
-    <g>
+    <defs>
+        <clipPath id="ts-rounded">
+            <rect x="0" y="0" width="122.88" height="122.88" rx="15" ry="15" />
+        </clipPath>
+    </defs>
+    <g clip-path="url(#ts-rounded)">
         <path class="bg" d="M0,61.44V0h122.88v122.88H0V61.44L0,61.44z M0,61.44L0,61.44L0,61.44L0,61.44z" />
-        <path class="text"
-            d="M26.94,61.65v5.01h15.97v45.47h11.34V66.66h15.97v-4.92c0-2.76,0-5.01-0.12-5.07c0-0.09-9.74-0.12-21.57-0.12 l-21.5,0.09v5.04L26.94,61.65L26.94,61.65L26.94,61.65z M98.73,56.52c3.13,0.74,5.53,2.15,7.68,4.39c1.14,1.23,2.83,3.38,2.95,3.93 c0,0.18-5.31,3.78-8.54,5.78c-0.12,0.09-0.61-0.43-1.11-1.23c-1.6-2.27-3.23-3.26-5.78-3.44c-3.69-0.25-6.14,1.69-6.14,4.91 c0,0.98,0.18,1.54,0.55,2.33c0.83,1.69,2.37,2.7,7.13,4.79c8.79,3.78,12.6,6.27,14.9,9.83c2.61,3.99,3.19,10.26,1.44,14.96 c-1.97,5.13-6.76,8.6-13.61,9.74c-2.15,0.37-7.07,0.31-9.37-0.09c-4.91-0.92-9.62-3.38-12.5-6.54c-1.14-1.23-3.32-4.52-3.19-4.73 l1.17-0.74l4.61-2.67l3.47-2.03l0.8,1.08c1.01,1.6,3.29,3.75,4.61,4.49c3.99,2.06,9.34,1.78,11.98-0.61 c1.14-1.04,1.63-2.15,1.63-3.69c0-1.41-0.22-2.06-0.92-3.13c-0.98-1.35-2.95-2.46-8.48-4.91c-6.36-2.7-9.06-4.42-11.58-7.07 c-1.44-1.6-2.76-4.09-3.38-6.14c-0.46-1.78-0.61-6.14-0.18-7.9c1.32-6.14,5.96-10.44,12.6-11.67c2.15-0.43,7.22-0.25,9.34,0.31 L98.73,56.52L98.73,56.52L98.73,56.52z" />
+        <path class="text" d="M26.94,61.65v5.01h15.97v45.47h11.34V66.66h15.97v-4.92c0-2.76,0-5.01-0.12-5.07c0-0.09-9.74-0.12-21.57-0.12 l-21.5,0.09v5.04L26.94,61.65L26.94,61.65L26.94,61.65z M98.73,56.52c3.13,0.74,5.53,2.15,7.68,4.39c1.14,1.23,2.83,3.38,2.95,3.93 c0,0.18-5.31,3.78-8.54,5.78c-0.12,0.09-0.61-0.43-1.11-1.23c-1.6-2.27-3.23-3.26-5.78-3.44c-3.69-0.25-6.14,1.69-6.14,4.91 c0,0.98,0.18,1.54,0.55,2.33c0.83,1.69,2.37,2.7,7.13,4.79c8.79,3.78,12.6,6.27,14.9,9.83c2.61,3.99,3.19,10.26,1.44,14.96 c-1.97,5.13-6.76,8.6-13.61,9.74c-2.15,0.37-7.07,0.31-9.37-0.09c-4.91-0.92-9.62-3.38-12.5-6.54c-1.14-1.23-3.32-4.52-3.19-4.73 l1.17-0.74l4.61-2.67l3.47-2.03l0.8,1.08c1.01,1.6,3.29,3.75,4.61,4.49c3.99,2.06,9.34,1.78,11.98-0.61 c1.14-1.04,1.63-2.15,1.63-3.69c0-1.41-0.22-2.06-0.92-3.13c-0.98-1.35-2.95-2.46-8.48-4.91c-6.36-2.7-9.06-4.42-11.58-7.07 c-1.44-1.6-2.76-4.09-3.38-6.14c-0.46-1.78-0.61-6.14-0.18-7.9c1.32-6.14,5.96-10.44,12.6-11.67c2.15-0.43,7.22-0.25,9.34,0.31 L98.73,56.52L98.73,56.52L98.73,56.52z" />
+    </g>
+</svg>
+  `.trim(),
+  },
+  {
+    name: "JavaScript",
+    category: "Programming",
+    keywords: ["javascript", "js", "language", "frontend", "backend", "web"],
+    weights: ["regular"],
+    svgContent: `
+<svg viewBox="0 0 122.88 122.88">
+    <defs>
+        <clipPath id="rounded">
+            <rect width="122.88" height="122.88" rx="12" />
+        </clipPath>
+    </defs>
+    <g clip-path="url(#rounded)">
+        <path fill="#F7DF1E" d="M0 0h122.88v122.88H0z" />
+        <path
+            d="M32.31 102.69l9.4-5.69c1.81 3.22 3.46 5.94 7.42 5.94 3.79 0 6.19-1.48 6.19-7.26V56.41h11.55v39.43c0 11.96-7.01 17.4-17.24 17.4-9.24 0-14.6-4.78-17.32-10.55zm40.83-1.24l9.4-5.44c2.48 4.04 5.69 7.01 11.38 7.01 4.78 0 7.84-2.39 7.84-5.69 0-3.96-3.13-5.36-8.41-7.67l-2.89-1.24c-8.33-3.55-13.86-8-13.86-17.4 0-8.66 6.6-15.26 16.91-15.26 7.34 0 12.62 2.56 16.41 9.24l-8.99 5.77c-1.98-3.55-4.12-4.95-7.42-4.95-3.38 0-5.53 2.14-5.53 4.95 0 3.46 2.14 4.87 7.09 7.01l2.89 1.24c9.82 4.21 15.34 8.5 15.34 18.15 0 10.39-8.17 16.08-19.14 16.08-10.31 0-17.24-5.12-20.62-11.8" />
     </g>
 </svg>
   `.trim(),
@@ -148,16 +170,14 @@ export const iconsData: IconData[] = [
 `.trim(),
   },
   {
-    name: "ThreeJs",
+    name: "ThreeJsDark",
     category: "Programming",
     keywords: ["ThreeJs", "3D", "js", "javascript", "webgl", "library"],
     weights: ["regular"],
     svgContent: `
-    <svg width="100%" height="100%" viewBox="0 0 512 512" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
-    xml:space="preserve" xmlns:serif="http://www.serif.com/"
-    style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:10;">
+<svg viewBox="0 0 512 512">
     <g transform="matrix(2.25096,0,0,2.25096,256.253,256.48)">
-        <g id="Three.js_Icon.svg" transform="matrix(1,0,0,1,-113.385,-113.385)">
+        <g id="ThreeJsDark" transform="matrix(1,0,0,1,-113.385,-113.385)">
             <g transform="matrix(1,0,0,1,8.964,4.2527)">
                 <path d="M63.02,200.61L19.807,25.67L193.037,75.544L63.02,200.61Z"
                     style="fill:none;stroke:black;stroke-width:4px;" />
@@ -173,7 +193,34 @@ export const iconsData: IconData[] = [
                     style="fill:none;stroke:black;stroke-width:4px;" />
             </g>
         </g>
-        <g id="Three.js_Icon.svg1" serif:id="Three.js_Icon.svg"></g>
+    </g>
+</svg>
+`.trim(),
+  },
+  {
+    name: "ThreeJsLight",
+    category: "Programming",
+    keywords: ["ThreeJs", "3D", "js", "javascript", "webgl", "library"],
+    weights: ["regular"],
+    svgContent: `
+<svg viewBox="0 0 512 512">
+    <g transform="matrix(2.25096,0,0,2.25096,256.253,256.48)">
+        <g id="Three.js_Icon.svg" transform="matrix(1,0,0,1,-113.385,-113.385)">
+            <g transform="matrix(1,0,0,1,8.964,4.2527)">
+                <path d="M63.02,200.61L19.807,25.67L193.037,75.544L63.02,200.61Z"
+                    style="fill:none;stroke:white;stroke-width:4px;" />
+                <path d="M106.39,50.612L127.981,138.108L41.414,113.163L106.39,50.612Z"
+                    style="fill:none;stroke:white;stroke-width:4px;" />
+                <path d="M84.91,125.03L74.186,81.565L117.194,93.911L84.91,125.03Z"
+                    style="fill:none;stroke:white;stroke-width:4px;" />
+                <path d="M63.458,38.153L74.182,81.618L31.174,69.272L63.458,38.153Z"
+                    style="fill:none;stroke:white;stroke-width:4px;" />
+                <path d="M149.47,62.93L160.194,106.395L117.186,94.049L149.47,62.93Z"
+                    style="fill:none;stroke:white;stroke-width:4px;" />
+                <path d="M84.915,125.06L95.639,168.525L52.631,156.179L84.915,125.06Z"
+                    style="fill:none;stroke:white;stroke-width:4px;" />
+            </g>
+        </g>
     </g>
 </svg>
 `.trim(),

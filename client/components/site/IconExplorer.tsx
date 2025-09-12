@@ -7,6 +7,11 @@ import { Tabs, TabsContent } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Categories, icons } from "../../../packages/jupiter-icons/src/index.ts";
 import { IconPortal } from "./IconPortal";
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import Slider from '@mui/material/Slider';
+
+
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -20,7 +25,7 @@ export function IconExplorer() {
   const [query, setQuery] = useState("");
   const [size, setSize] = useState(48);
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
-  
+
   // Initialize tab from URL or localStorage, fallback to "All"
   const [tab, setTab] = useState(() => {
     const urlTab = searchParams.get("category");
@@ -108,21 +113,37 @@ export function IconExplorer() {
         {/* Size Control and Categories */}
         <div className="flex flex-col lg:flex-row gap-4 lg:items-center lg:justify-between">
           {/* Size Control */}
-          <div className="flex items-center gap-3 min-w-0">
+          <div className="flex items-center gap-4 min-w-0 justify-center">
             <span className="text-sm font-medium text-gray-700 dark:text-gray-300 whitespace-nowrap">
               Size
             </span>
             <div className="flex items-center gap-2 flex-1 min-w-0">
-              <input
-                id="size"
-                type="range"
-                min={16}
-                max={96}
-                value={size}
-                onChange={(e) => setSize(parseInt(e.target.value))}
-                className="flex-1 min-w-0 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
-              />
-              <span className="text-sm font-mono text-gray-500 dark:text-gray-400 whitespace-nowrap min-w-[40px]">
+              <Box sx={{
+                width: 300,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}>
+                <Slider
+                  defaultValue={50}
+                  aria-label="Default"
+                  id="size"
+                  min={16}
+                  max={100}
+                  value={size}
+                  onChange={(_, value) => setSize(typeof value === "number" ? value : value[0])}
+                  valueLabelDisplay="auto"
+                  sx={{
+                    '& .MuiSlider-thumb': {
+                      marginTop: 0,
+                    },
+                    '& .MuiSlider-track': {
+                      marginTop: 0,
+                    }
+                  }}
+                />
+              </Box>
+              <span className="text-sm text-gray-500 dark:text-gray-400 ml-2">
                 {size}px
               </span>
             </div>
@@ -165,7 +186,6 @@ export function IconExplorer() {
         </div>
       </div>
 
-      {/* Results Count */}
       <div className="mb-4 max-w-full">
         <p className="text-sm text-gray-600 dark:text-gray-400 truncate max-w-xs">
           {filtered.length} icon{filtered.length !== 1 ? "s" : ""}
@@ -174,21 +194,19 @@ export function IconExplorer() {
         </p>
       </div>
 
-
-      {/* Icon Grid/List */}
-        <Tabs value={tab} onValueChange={(v) => setTab(v)}>
-          {categories.map((c) => (
-            <TabsContent key={c} value={c} className="mt-0">
-              <IconGrid
-                category={c}
-                size={size}
-                query={query}
-                data={filtered}
-                viewMode={viewMode}
-              />
-            </TabsContent>
-          ))}
-        </Tabs>
+      <Tabs value={tab} onValueChange={(v) => setTab(v)}>
+        {categories.map((c) => (
+          <TabsContent key={c} value={c} className="mt-0">
+            <IconGrid
+              category={c}
+              size={size}
+              query={query}
+              data={filtered}
+              viewMode={viewMode}
+            />
+          </TabsContent>
+        ))}
+      </Tabs>
     </section>
   );
 }
@@ -321,18 +339,25 @@ function IconItem({
   return (
     <>
       <motion.button
-        whileHover={{ y: -2, scale: 1.02 }}
-        whileTap={{ scale: 0.95 }}
-        className="flex w-full flex-col items-center gap-3 p-3 sm:p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white/50 dark:bg-gray-800/50 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-all duration-200 shadow-sm hover:shadow-md"
+        whileHover={{ y: -4, scale: 1.03 }}
+        whileTap={{ scale: 0.97 }}
         onClick={handleOpen}
+        className="group w-full flex flex-col items-center gap-3 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white/60 dark:bg-gray-800/60 hover:bg-white dark:hover:bg-gray-800 transition-all duration-300 shadow-sm hover:shadow-md"
       >
-        <div className="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-gray-100 dark:bg-gray-700 rounded-lg">
+        
+        <div className="flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-gray-100 dark:bg-gray-700 rounded-lg transition-colors duration-300">
           <Comp size={Math.min(size, 48)} aria-label={name} />
         </div>
-        <span className="text-xs sm:text-sm font-medium text-gray-900 dark:text-gray-100 text-center leading-tight">
-          {name}
-        </span>
+        <div className="flex flex-col items-center gap-1 leading-tight text-center">
+          <span className="text-sm sm:text-base font-medium text-gray-900 dark:text-gray-100">
+            {name}
+          </span>
+          <span className="px-2 text-xs py-1 bg-gray-200 dark:bg-gray-700 rounded">
+            {category}
+          </span>
+        </div>
       </motion.button>
+
       <IconPortal name={name} open={open} onOpenChange={setOpen} />
     </>
   );

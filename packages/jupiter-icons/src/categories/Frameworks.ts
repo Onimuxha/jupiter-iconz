@@ -1,28 +1,95 @@
 import type { IconData } from "../types";
 
 export const iconsData: IconData[] = [
- {
-    // Convert this:
-    // <svg shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality"
-    //     fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 234.84">
-
-    // To this:
-    // <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 512 234.84" style="enable-background:new 0 0 512 234.84">
+  {
     name: "AlpineJs",
     category: "Frameworks",
-    keywords: ["AlpineJs" , "frontend", "Frameworks", "ui", "javascript"],
+    keywords: ["AlpineJs", "frontend", "Frameworks", "ui", "javascript"],
     weights: ["regular"],
     svgContent: `
-   <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 512 234.84" style="enable-background:new 0 0 512 234.84">
-    <path fill="#77C1D2" d="M398.22 0L512 113.28 398.22 226.56 284.44 113.28z" />
-    <path fill="#2D3441" d="M113.78 0l235.87 234.84H122.1L0 113.28z" />
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512">
+      <g transform="translate(0, 138)">
+        <path fill="#77C1D2" d="M398.22 0L512 113.28 398.22 226.56 284.44 113.28z" />
+        <path fill="#2D3441" d="M113.78 0l235.87 234.84H122.1L0 113.28z" />
+      </g>
+    </svg>
+    `.trim(),
+  },
+  {
+    name: "VueJs",
+    category: "Frameworks",
+    keywords: ["VueJs", "frontend", "Frameworks", "ui", "javascript", "typescript"],
+    weights: ["regular"],
+    svgContent: `
+<svg viewBox="0 -15 122.88 150"
+    style="enable-background:new 0 0 122.88 106.42">
+    <style>.vue-green{fill:#4DBA87;} .vue-gray{fill:#425466;}</style>
+    <g>
+        <polygon class="vue-green"
+            points="75.63,0 61.44,24.58 47.25,0 0,0 61.44,106.42 122.88,0 75.63,0" />
+        <polygon class="vue-gray"
+            points="75.63,0 61.44,24.58 47.25,0 24.58,0 61.44,63.85 98.3,0 75.63,0" />
+    </g>
 </svg>
-  `.trim(),
+    `.trim(),
+  },
+  {
+    name: "Angular",
+    category: "Frameworks",
+    keywords: ["Angular", "frontend", "Frameworks", "ui", "javascript", "typescript"],
+    weights: ["regular"],
+    svgContent: `
+<svg viewBox="0 0 512 512">
+    <g>
+        <mask id="angular-mask" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="14" y="0"
+            width="484" height="512">
+            <path d="M14 0h484v512H14V0z" fill="#fff" />
+        </mask>
+        <g mask="url(#angular-mask)">
+            <mask id="prefix__b" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="14" y="0"
+                width="484" height="512">
+                <path d="M14 0h484v512H14V0z" fill="#fff" />
+            </mask>
+            <g mask="url(#prefix__b)">
+                <path
+                    d="M496 86l-18 272L312 0l184 86zM380 438l-124 72-126-72 24-62h202l24 62zM256 136l64 160H190l66-160zM32 358L14 86 198 0 32 358z"
+                    fill="url(#angular-gradient)" />
+                <path
+                    d="M496 86l-18 272L312 0l184 86zM380 438l-124 72-126-72 24-62h202l24 62zM256 136l64 160H190l66-160zM32 358L14 86 198 0 32 358z"
+                    fill="url(#prefix__paint1_linear_9_19)" />
+            </g>
+        </g>
+    </g>
+    <defs>
+        <linearGradient id="angular-gradient" x1="120.4" y1="463.8" x2="504" y2="281.4"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#E40035" />
+            <stop offset=".2" stop-color="#F60A48" />
+            <stop offset=".4" stop-color="#F20755" />
+            <stop offset=".5" stop-color="#DC087D" />
+            <stop offset=".7" stop-color="#9717E7" />
+            <stop offset="1" stop-color="#6C00F5" />
+        </linearGradient>
+        <linearGradient id="prefix__paint1_linear_9_19" x1="103" y1="61.4" x2="354" y2="348"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#FF31D9" />
+            <stop offset="1" stop-color="#FF5BE1" stop-opacity="0" />
+        </linearGradient>
+    </defs>
+</svg>
+    `.trim(),
   },
   {
     name: "NestJs",
     category: "Frameworks",
-    keywords: ["NestJs", "backend", "Frameworks", "nodejs", "javascript", "typescript"],
+    keywords: [
+      "NestJs",
+      "backend",
+      "Frameworks",
+      "nodejs",
+      "javascript",
+      "typescript",
+    ],
     weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 455.95 454.16">
@@ -42,7 +109,14 @@ export const iconsData: IconData[] = [
   {
     name: "MeteorJs",
     category: "Frameworks",
-    keywords: ["MeteorJs", "fullstack", "Frameworks", "nodejs", "javascript", "typescript"],
+    keywords: [
+      "MeteorJs",
+      "fullstack",
+      "Frameworks",
+      "nodejs",
+      "javascript",
+      "typescript",
+    ],
     weights: ["regular"],
     svgContent: `
   <svg viewBox="0 0 495.7 484.43">
@@ -105,7 +179,14 @@ export const iconsData: IconData[] = [
   {
     name: "ElectronJs",
     category: "Frameworks",
-    keywords: ["ElectronJs", "desktop", "Frameworks", "nodejs", "javascript", "typescript"],
+    keywords: [
+      "ElectronJs",
+      "desktop",
+      "Frameworks",
+      "nodejs",
+      "javascript",
+      "typescript",
+    ],
     weights: ["regular"],
     svgContent: `
    <svg id="Electron" viewBox="0 0 122.88 122.88">
@@ -131,10 +212,17 @@ export const iconsData: IconData[] = [
 </svg>
 `.trim(),
   },
-    {
+  {
     name: "NextJs",
     category: "Frameworks",
-    keywords: ["NestJs", "backend", "Frameworks", "nodejs", "javascript", "typescript"],
+    keywords: [
+      "NestJs",
+      "backend",
+      "Frameworks",
+      "nodejs",
+      "javascript",
+      "typescript",
+    ],
     weights: ["regular"],
     svgContent: `
    <svg viewBox="0 0 512 512" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
@@ -178,7 +266,14 @@ export const iconsData: IconData[] = [
   {
     name: "GatsbyJs",
     category: "Frameworks",
-    keywords: ["GatsbyJs", "static", "Frameworks", "react", "javascript", "typescript"],
+    keywords: [
+      "GatsbyJs",
+      "static",
+      "Frameworks",
+      "react",
+      "javascript",
+      "typescript",
+    ],
     weights: ["regular"],
     svgContent: `
   <svg viewBox="0 0 506 506">
@@ -203,7 +298,14 @@ export const iconsData: IconData[] = [
   {
     name: "NuxtJs",
     category: "Frameworks",
-    keywords: ["NuxtJs", "frontend", "Frameworks", "vue", "javascript", "typescript"],
+    keywords: [
+      "NuxtJs",
+      "frontend",
+      "Frameworks",
+      "vue",
+      "javascript",
+      "typescript",
+    ],
     weights: ["regular"],
     svgContent: `
 <svg id="nuxtjs" viewBox="0 0 122.88 92.73">
@@ -232,12 +334,40 @@ export const iconsData: IconData[] = [
 `.trim(),
   },
   {
-    name: "ExpressJs",
+    name: "ExpressJsDark",
     category: "Frameworks",
-    keywords: ["ExpressJs", "backend", "Frameworks", "nodejs", "javascript", "typescript"],
+    keywords: [
+      "ExpressJs",
+      "backend",
+      "Frameworks",
+      "nodejs",
+      "javascript",
+      "typescript",
+    ],
     weights: ["regular"],
     svgContent: `
-<svg viewBox="0 0 1333.33 773.55" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"
+<svg viewBox="0 -290 1333.33 2000" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"
+    image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd">
+    <path
+        d="M1333.33 753.49c-48.5 12.33-78.5.54-105.41-39.87L1036.5 448.79l-27.67-36.67L785.29 714.5c-25.54 36.38-52.33 52.2-100 39.33l286.25-384.25-266.5-347.09c45.83-8.91 77.5-4.38 105.62 36.67l198.54 268.13 200-266.67c25.62-36.38 53.17-50.2 99.17-36.8l-103.33 137-140 182.29c-16.67 20.83-14.38 35.09.96 55.2l267.33 355.18zM.34 363.16l23.41-115.17c63.75-227.92 325-322.63 505.17-181.8 105.29 82.83 131.46 200 126.25 331.25H61.67C52.76 633.69 222.8 776.27 439.58 703.53c76.04-25.54 120.83-85.09 143.25-159.58 11.38-37.33 30.2-43.17 65.29-32.5-17.91 93.17-58.33 171-143.75 219.71-127.62 72.91-309.8 49.33-405.62-52C41.66 620.36 18.08 545.87 7.5 466.2c-1.67-13.17-5-25.71-7.5-38.33.22-21.56.34-43.11.34-64.67v-.04zm62.41-15.83h536.33c-3.5-170.83-109.87-292.17-255.25-293.2-159.58-1.25-274.17 117.2-281.09 293.2h.01z"
+        fill-rule="nonzero" />
+</svg>
+`.trim(),
+  },
+  {
+    name: "ExpressJsLight",
+    category: "Frameworks",
+    keywords: [
+      "ExpressJs",
+      "backend",
+      "Frameworks",
+      "nodejs",
+      "javascript",
+      "typescript",
+    ],
+    weights: ["regular"],
+    svgContent: `
+<svg fill="#fff" viewBox="0 -290 1333.33 2000" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"
     image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd">
     <path
         d="M1333.33 753.49c-48.5 12.33-78.5.54-105.41-39.87L1036.5 448.79l-27.67-36.67L785.29 714.5c-25.54 36.38-52.33 52.2-100 39.33l286.25-384.25-266.5-347.09c45.83-8.91 77.5-4.38 105.62 36.67l198.54 268.13 200-266.67c25.62-36.38 53.17-50.2 99.17-36.8l-103.33 137-140 182.29c-16.67 20.83-14.38 35.09.96 55.2l267.33 355.18zM.34 363.16l23.41-115.17c63.75-227.92 325-322.63 505.17-181.8 105.29 82.83 131.46 200 126.25 331.25H61.67C52.76 633.69 222.8 776.27 439.58 703.53c76.04-25.54 120.83-85.09 143.25-159.58 11.38-37.33 30.2-43.17 65.29-32.5-17.91 93.17-58.33 171-143.75 219.71-127.62 72.91-309.8 49.33-405.62-52C41.66 620.36 18.08 545.87 7.5 466.2c-1.67-13.17-5-25.71-7.5-38.33.22-21.56.34-43.11.34-64.67v-.04zm62.41-15.83h536.33c-3.5-170.83-109.87-292.17-255.25-293.2-159.58-1.25-274.17 117.2-281.09 293.2h.01z"
@@ -248,10 +378,16 @@ export const iconsData: IconData[] = [
   {
     name: "BackboneJs",
     category: "Frameworks",
-    keywords: ["BackboneJs", "frontend", "Frameworks", "javascript", "typescript"],
+    keywords: [
+      "BackboneJs",
+      "frontend",
+      "Frameworks",
+      "javascript",
+      "typescript",
+    ],
     weights: ["regular"],
     svgContent: `
-  <svg viewBox="0 0 97.03 120.58">
+  <svg viewBox="-7 0 110 150">
     <style>
         .backbone-dark {
             fill: #002a41;

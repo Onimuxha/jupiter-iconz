@@ -7,6 +7,10 @@ import { toast } from "sonner";
 import { motion } from "framer-motion";
 import { copyText } from "@/lib/copy";
 import { CodeBlock } from "@/components/ui/code-block";
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import Slider from '@mui/material/Slider';
+import { cn } from "@/lib/utils";
 
 export interface IconDetailProps {
   open: boolean;
@@ -61,7 +65,8 @@ export function IconDetailDialog(props: IconDetailProps) {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-4xl w-[95vw] max-h-[90vh] overflow-hidden">
+      <DialogContent
+        className="rounded-2xl max-w-4xl w-[95vw] px-5 py-10 max-h-[90vh] overflow-hidden bg-white/40 dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800 shadow-xl">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -74,10 +79,15 @@ export function IconDetailDialog(props: IconDetailProps) {
                 <div className="w-12 h-12 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
                   <Component size={30} />
                 </div>
-                <span className="text-xl font-semibold">{name}</span>
+                <div className="flex text-left flex-col">
+                  <span className="text-xl font-light">{name}</span>
+                  <p className="text-sm text-gray-500 dark:text-gray-500">
+                    {keywords.slice(0, 3).join(", ")}
+                  </p>
+                </div>
               </div>
-              <div className="flex gap-2 text-sm">
-                <span className="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded">
+              <div className="flex gap-2 text-sm font-medium">
+                <span className="px-2 py-1 bg-gray-100/60 dark:bg-gray-800 rounded">
                   {category}
                 </span>
               </div>
@@ -93,26 +103,55 @@ export function IconDetailDialog(props: IconDetailProps) {
                   <span className="text-sm font-medium">Size</span>
                   <span className="text-sm text-gray-500">{size}px</span>
                 </div>
-                <input
-                  type="range"
-                  min={16}
-                  max={128}
-                  value={size}
-                  onChange={(e) => setSize(parseInt(e.target.value))}
-                  className="w-full"
-                />
+                <Box sx={{
+                  width: 300,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}>
+                  <Slider
+                    defaultValue={50}
+                    aria-label="Default"
+                    id="size"
+                    min={16}
+                    max={100}
+                    value={size}
+                    onChange={(_, value) => setSize(typeof value === "number" ? value : value[0])}
+                    valueLabelDisplay="auto"
+                    sx={{
+                      '& .MuiSlider-thumb': {
+                        marginTop: 0,
+                      },
+                      '& .MuiSlider-track': {
+                        marginTop: 0,
+                      }
+                    }}
+                  />
+                </Box>
               </div>
 
-              <div className="flex items-center justify-center h-40 bg-gray-50 dark:bg-gray-900 rounded-lg border">
-                <Component size={size} />
+              <div className="flex items-center justify-center h-40 bg-gray-50 dark:bg-gray-900 rounded-lg border relative overflow-hidden">
+                <div
+                  className={cn(
+                    "absolute inset-0",
+                    "[background-size:20px_20px]",
+                    "[background-image:radial-gradient(#d4d4d4_1px,transparent_1px)]",
+                    "dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]"
+                  )}
+                />
+                <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-gray-50/80 dark:bg-gray-900/80 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
+                <div className="backdrop-blur-lg bg-gray-500/30 dark:bg-white/10 rounded-xl px-6 py-4 shadow-inner border border-white/20 dark:border-white/10 relative z-10">
+                  <Component size={size} />
+                </div>
               </div>
+
 
               <div className="flex gap-2">
-                <Button onClick={handleCopy} variant="outline" size="sm" className="flex-1">
+                <Button onClick={handleCopy} variant="default" size="sm" className="flex-1 rounded-full hover">
                   {copied ? <Check className="w-4 h-4 mr-2" /> : <Copy className="w-4 h-4 mr-2" />}
                   Copy
                 </Button>
-                <Button onClick={downloadSvg} variant="outline" size="sm" className="flex-1">
+                <Button onClick={downloadSvg} variant="ghost" size="sm" className="flex-1 border border-zinc-300 dark:border-zinc-700 rounded-full">
                   <Download className="w-4 h-4 mr-2" />
                   Download
                 </Button>
@@ -132,8 +171,8 @@ export function IconDetailDialog(props: IconDetailProps) {
               <CodeBlock
                 language={mode === "jsx" ? "jsx" : "xml"}
                 filename={`${name}.${mode}`}
-                code={mode === "jsx" ? 
-                  `import { ${name} } from "jupiter-iconz";\n\n${jsxCode}` : 
+                code={mode === "jsx" ?
+                  `import { ${name} } from "jupiter-iconz";\n\n${jsxCode}` :
                   svgMin
                 }
                 highlightLines={mode === "jsx" ? [3] : undefined}

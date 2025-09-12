@@ -58,4 +58,26 @@ export const iconsData: IconData[] = [
 </svg>
     `.trim(),
   },
+  {
+    name: "VercelDark",
+    category: "Tools",
+    keywords: ["vercel", "dark", "triangle"],
+    weights: ["regular"],
+    svgContent: `
+<svg viewBox="0 0 512 512">
+    <path d="M255.998 48.152L496 463.848H16L255.998 48.152z" fill-rule="nonzero" />
+</svg>
+    `.trim(),
+  },
+  {
+    name: "VercelLight",
+    category: "Tools",
+    keywords: ["vercel", "dark", "triangle"],
+    weights: ["regular"],
+    svgContent: `
+<svg fill="#fff" viewBox="0 0 512 512">
+    <path d="M255.998 48.152L496 463.848H16L255.998 48.152z" fill-rule="nonzero" />
+</svg>
+    `.trim(),
+  },
 ];
