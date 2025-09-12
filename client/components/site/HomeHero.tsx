@@ -18,7 +18,7 @@ export function HomeHero() {
             >
               Developer-friendly colorful SVG icon library
             </motion.h1>
-            <p className="mt-4 max-w-prose text-muted-foreground">
+            <p className="mt-4 max-w-prose text-muted-foreground mb-8">
               A modern, accessible icon set with original brand colors, full TypeScript support, and delightful animations. Built for React, Vite, and Tailwind with class-based dark mode.
             </p>
             <CodeBlock

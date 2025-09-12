@@ -349,10 +349,10 @@ function IconItem({
           <Comp size={Math.min(size, 48)} aria-label={name} />
         </div>
         <div className="flex flex-col items-center gap-1 leading-tight text-center">
-          <span className="text-sm sm:text-base font-medium text-gray-900 dark:text-gray-100">
+          <span className="text-sm sm:text-base font-light text-gray-900 dark:text-gray-100">
             {name}
           </span>
-          <span className="px-2 text-xs py-1 bg-gray-200 dark:bg-gray-700 rounded">
+          <span className="px-2 text-xs font-light py-1 bg-gray-200 dark:bg-gray-700 rounded">
             {category}
           </span>
         </div>
