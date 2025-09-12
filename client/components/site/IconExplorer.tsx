@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils.ts";
-import { Search, ChevronDown, PenTool, LayoutGrid, Code2, Globe2, Blocks, ListTodo, Bot, DraftingCompass, VectorSquare } from "lucide-react";
+import { Search, ChevronDown, PenTool, LayoutGrid, Code2, Globe2, Blocks, ListTodo, Bot, DraftingCompass, VectorSquare, Component } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
@@ -48,11 +48,12 @@ export function IconExplorer() {
       ...Categories.AI,
       ...Categories.Tools,
       ...Categories.Frameworks,
+      ...Categories.Other,
     ],
     [],
   );
 
-  const categories = ["All", "Programming", "Websites", "Apps", "DesignTools", "AI", "Tools", "Frameworks"] as const;
+  const categories = ["All", "Programming", "Websites", "Apps", "DesignTools", "AI", "Tools", "Frameworks", "Other"] as const;
   const iconsMap: Record<string, React.ReactNode> = {
     All: <LayoutGrid className="w-4 h-4 mr-2" />,
     Programming: <Code2 className="w-4 h-4 mr-2" />,
@@ -62,6 +63,7 @@ export function IconExplorer() {
     AI: <Bot className="w-4 h-4 mr-2" />,
     Tools: <DraftingCompass className="w-4 h-4 mr-2" />,
     Frameworks: <VectorSquare className="w-4 h-4 mr-2" />,
+    Other: <Component className="w-4 h-4 mr-2" />,
   }
 
   const filtered = useMemo(() => {

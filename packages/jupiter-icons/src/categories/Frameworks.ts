@@ -329,7 +329,7 @@ export const iconsData: IconData[] = [
     ],
     weights: ["regular"],
     svgContent: `
-<svg viewBox="0 0 455.95 454.16">
+<svg viewBox="0 0 455.95 454.16" width="100" height="100">
     <defs>
         <style>
             .nest-red {
@@ -356,7 +356,7 @@ export const iconsData: IconData[] = [
     ],
     weights: ["regular"],
     svgContent: `
-  <svg viewBox="0 0 495.7 484.43">
+  <svg viewBox="0 0 495.7 484.43" width="100" height="100">
     <defs>
         <style>
             .meteor-orange {
@@ -466,7 +466,7 @@ export const iconsData: IconData[] = [
     ],
     weights: ["regular"],
     svgContent: `
-<svg id="nuxtjs" viewBox="0 0 122.88 92.73">
+<svg id="nuxtjs" viewBox="0 0 122.88 92.73" width="100" height="100">
     <defs>
         <style>
             .nuxt-green {

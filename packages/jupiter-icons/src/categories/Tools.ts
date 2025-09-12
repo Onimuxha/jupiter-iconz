@@ -112,7 +112,7 @@ export const iconsData: IconData[] = [
     keywords: ["JestJs", "testing", "Tools", "javascript", "typescript"],
     weights: ["regular"],
     svgContent: `
-  <svg viewBox="0 0 398.25 439.89">
+  <svg viewBox="0 0 398.25 439.89" width="100" height="100">
     <style>
         .jest-fill {
             fill: #c21325;

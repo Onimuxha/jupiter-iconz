@@ -9,12 +9,13 @@ import { iconsData as Frameworks } from "./categories/Frameworks";
 import { iconsData as Tools } from "./categories/Tools";
 import { iconsData as Apps } from "./categories/Apps";
 import { iconsData as DesignTools } from "./categories/DesignTools";
+import { iconsData as Other } from "./categories/Other";
 
 export type { IconData };
 export { createIcon };
 
 const all: Record<string, ReturnType<typeof createIcon>> = {};
-[...Programming, ...Websites, ...Apps, ...DesignTools, ...AI, ...Frameworks, ...Tools].forEach((icon) => {
+[...Programming, ...Websites, ...Apps, ...DesignTools, ...AI, ...Frameworks, ...Tools, ...Other].forEach((icon) => {
   all[icon.name] = createIcon(icon.name, icon.svgContent);
 });
 // -----------------------------------------------------------------------------------------------------------
@@ -59,6 +60,7 @@ export const Categories = {
   AI,
   Frameworks,
   Tools,
+  Other,
 };
 
 // Combine all icon data
@@ -70,6 +72,7 @@ const allCategories = [
   ...AI,
   ...Frameworks,
   ...Tools,
+  ...Other,
 ];
 
 export const allIconsData: IconData[] = allCategories;

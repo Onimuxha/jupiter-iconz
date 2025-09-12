@@ -46,7 +46,7 @@ export const iconsData: IconData[] = [
     keywords: ["html5", "html", "language", "frontend", "web"],
     weights: ["regular"],
     svgContent: `
-<svg viewBox="0 0 108.35 122.88">
+<svg viewBox="0 0 108.35 122.88" width="100" height="100">
     <style>.html-tomato-red{fill-rule:evenodd;clip-rule:evenodd;fill:#E44D26;}
         .html-orange-red{fill-rule:evenodd;clip-rule:evenodd;fill:#F16529;}
         .html-light-gray{fill-rule:evenodd;clip-rule:evenodd;fill:#EBEBEB;}
@@ -70,8 +70,7 @@ export const iconsData: IconData[] = [
     keywords: ["css3", "css", "language", "frontend", "web", "style"],
     weights: ["regular"],
     svgContent: `
-<svg viewBox="0 0 296297 333333"
-    xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg viewBox="0 0 296297 333333" width="100" height="100">
     <defs>
         <linearGradient id="id4" gradientUnits="userSpaceOnUse" x1="54128.7" y1="79355.5"
             x2="240318" y2="79355.5">
