@@ -111,7 +111,7 @@ export function IconExplorer() {
               <Slider
                 defaultValue={50}
                 min={16}
-                max={100}
+                max={55}
                 value={size}
                 onChange={(_, v) => setSize(typeof v === "number" ? v : v[0])}
                 valueLabelDisplay="auto"

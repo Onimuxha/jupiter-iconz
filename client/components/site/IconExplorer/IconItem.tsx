@@ -39,7 +39,7 @@ export function IconItem({ name, Comp, size, viewMode, category, keywords }) {
         className="group w-full flex flex-col items-center gap-3 p-4 rounded-xl border bg-white/60 dark:bg-gray-800/60"
       >
         <div className="w-14 h-14 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded-lg">
-          <Comp size={Math.min(size, 48)} aria-label={name} />
+          <Comp size={Math.min(size, 55)} aria-label={name} />
         </div>
         <div className="text-center">
           <span className="text-sm font-light">{name}</span>

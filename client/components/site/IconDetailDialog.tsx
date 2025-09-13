@@ -176,20 +176,17 @@ export function IconDetailDialog(props: IconDetailProps) {
                   type="single"
                   value={mode}
                   onValueChange={(v) => v && setMode(v as any)}
-                  className="flex gap-2 bg-transparent"
-                >
+                  className="flex gap-2 bg-transparent">
                   <ToggleGroupItem
                     value="jsx"
                     size="sm"
-                    className="rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 data-[state=on]:bg-zinc-100 dark:data-[state=on]:bg-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
-                  >
+                    className="rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 data-[state=on]:bg-zinc-100 dark:data-[state=on]:bg-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">
                     JSX
                   </ToggleGroupItem>
                   <ToggleGroupItem
                     value="svg"
                     size="sm"
-                    className="rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 data-[state=on]:bg-zinc-100 dark:data-[state=on]:bg-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
-                  >
+                    className="rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 data-[state=on]:bg-zinc-100 dark:data-[state=on]:bg-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">
                     SVG
                   </ToggleGroupItem>
                 </ToggleGroup>
