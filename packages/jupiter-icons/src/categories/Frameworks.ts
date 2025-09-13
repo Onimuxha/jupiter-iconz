@@ -276,42 +276,31 @@ export const iconsData: IconData[] = [
     ],
     weights: ["regular"],
     svgContent: `
-<svg viewBox="0 0 512 512">
-    <g>
-        <mask id="angular-mask" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="14" y="0"
-            width="484" height="512">
-            <path d="M14 0h484v512H14V0z" fill="#fff" />
-        </mask>
-        <g mask="url(#angular-mask)">
-            <mask id="prefix__b" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="14" y="0"
-                width="484" height="512">
-                <path d="M14 0h484v512H14V0z" fill="#fff" />
-            </mask>
-            <g mask="url(#prefix__b)">
-                <path
-                    d="M496 86l-18 272L312 0l184 86zM380 438l-124 72-126-72 24-62h202l24 62zM256 136l64 160H190l66-160zM32 358L14 86 198 0 32 358z"
-                    fill="url(#angular-gradient)" />
-                <path
-                    d="M496 86l-18 272L312 0l184 86zM380 438l-124 72-126-72 24-62h202l24 62zM256 136l64 160H190l66-160zM32 358L14 86 198 0 32 358z"
-                    fill="url(#prefix__paint1_linear_9_19)" />
-            </g>
-        </g>
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 223 236">
+    <g clip-path="url(#a)">
+        <path fill="url(#b)"
+            d="m222.077 39.192-8.019 125.923L137.387 0zm-53.105 162.825-57.933 33.056-57.934-33.056 11.783-28.556h92.301zM111.039 62.675l30.357 73.803H80.681zM7.937 165.115 0 39.192 84.69 0z" />
+        <path fill="url(#c)"
+            d="m222.077 39.192-8.019 125.923L137.387 0zm-53.105 162.825-57.933 33.056-57.934-33.056 11.783-28.556h92.301zM111.039 62.675l30.357 73.803H80.681zM7.937 165.115 0 39.192 84.69 0z" />
     </g>
     <defs>
-        <linearGradient id="angular-gradient" x1="120.4" y1="463.8" x2="504" y2="281.4"
+        <linearGradient id="b" x1="49.009" x2="225.829" y1="213.75" y2="129.722"
             gradientUnits="userSpaceOnUse">
             <stop stop-color="#E40035" />
-            <stop offset=".2" stop-color="#F60A48" />
-            <stop offset=".4" stop-color="#F20755" />
-            <stop offset=".5" stop-color="#DC087D" />
-            <stop offset=".7" stop-color="#9717E7" />
+            <stop offset=".24" stop-color="#F60A48" />
+            <stop offset=".352" stop-color="#F20755" />
+            <stop offset=".494" stop-color="#DC087D" />
+            <stop offset=".745" stop-color="#9717E7" />
             <stop offset="1" stop-color="#6C00F5" />
         </linearGradient>
-        <linearGradient id="prefix__paint1_linear_9_19" x1="103" y1="61.4" x2="354" y2="348"
+        <linearGradient id="c" x1="41.025" x2="156.741" y1="28.344" y2="160.344"
             gradientUnits="userSpaceOnUse">
             <stop stop-color="#FF31D9" />
             <stop offset="1" stop-color="#FF5BE1" stop-opacity="0" />
         </linearGradient>
+        <clipPath id="a">
+            <path fill="#fff" d="M0 0h223v236H0z" />
+        </clipPath>
     </defs>
 </svg>
     `.trim(),
