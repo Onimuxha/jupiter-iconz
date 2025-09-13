@@ -1,7 +1,7 @@
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { HomeHero } from "@/components/site/HomeHero";
-import { IconExplorer } from "@/components/site/IconExplorer";
+import { IconExplorer } from "@/components/site/IconExplorer/IconExplorer";
 
 export default function Index() {
   return (
