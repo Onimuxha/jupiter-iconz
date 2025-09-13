@@ -1,5 +1,3 @@
-// components/site/IconExplorer/IconGrid.tsx
-
 import { AnimatePresence, motion } from "framer-motion";
 import { IconItem } from "./IconItem";
 import { IconEmptyState } from "./IconEmptyState";

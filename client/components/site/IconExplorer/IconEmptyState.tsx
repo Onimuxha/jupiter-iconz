@@ -1,5 +1,3 @@
-// components/site/IconExplorer/IconEmptyState.tsx
-
 export function IconEmptyState({ query }: { query: string }) {
   return (
     <div className="flex flex-col items-center justify-center rounded-lg border-2 border-dashed p-8 sm:p-12 text-center">

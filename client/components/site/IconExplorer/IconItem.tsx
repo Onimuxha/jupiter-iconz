@@ -1,5 +1,3 @@
-// components/site/IconExplorer/IconItem.tsx
-
 import { motion } from "framer-motion";
 import { IconPortal } from "../IconPortal";
 import { useState } from "react";

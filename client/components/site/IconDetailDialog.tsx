@@ -147,29 +147,57 @@ export function IconDetailDialog(props: IconDetailProps) {
 
 
               <div className="flex gap-2">
-                <Button onClick={handleCopy} variant="default" size="sm" className="flex-1 rounded-full hover">
+                <Button
+                  onClick={handleCopy}
+                  variant="ghost"
+                  size="sm"
+                  className="flex-1 rounded-full border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+                >
                   {copied ? <Check className="w-4 h-4 mr-2" /> : <Copy className="w-4 h-4 mr-2" />}
                   Copy
                 </Button>
-                <Button onClick={downloadSvg} variant="ghost" size="sm" className="flex-1 border border-zinc-300 dark:border-zinc-700 rounded-full">
+                <Button
+                  onClick={downloadSvg}
+                  variant="ghost"
+                  size="sm"
+                  className="flex-1 rounded-full border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">
                   <Download className="w-4 h-4 mr-2" />
                   Download
                 </Button>
               </div>
+
             </div>
 
             {/* Code */}
             <div className="lg:col-span-3 min-w-0">
               <div className="flex justify-between items-center mb-4">
                 <span className="text-sm font-medium">Code</span>
-                <ToggleGroup type="single" value={mode} onValueChange={(v) => v && setMode(v as any)}>
-                  <ToggleGroupItem value="jsx" size="sm">JSX</ToggleGroupItem>
-                  <ToggleGroupItem value="svg" size="sm">SVG</ToggleGroupItem>
+                <ToggleGroup
+                  type="single"
+                  value={mode}
+                  onValueChange={(v) => v && setMode(v as any)}
+                  className="flex gap-2 bg-transparent"
+                >
+                  <ToggleGroupItem
+                    value="jsx"
+                    size="sm"
+                    className="rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 data-[state=on]:bg-zinc-100 dark:data-[state=on]:bg-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+                  >
+                    JSX
+                  </ToggleGroupItem>
+                  <ToggleGroupItem
+                    value="svg"
+                    size="sm"
+                    className="rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 data-[state=on]:bg-zinc-100 dark:data-[state=on]:bg-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+                  >
+                    SVG
+                  </ToggleGroupItem>
                 </ToggleGroup>
+
               </div>
 
               <CodeBlock
-                language={mode === "jsx" ? "jsx" : "xml"}
+                language={mode === "jsx" ? "tsx" : "xml"}
                 filename={`${name}.${mode}`}
                 code={mode === "jsx" ?
                   `import { ${name} } from "jupiter-iconz";\n\n${jsxCode}` :

@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent } from "@/components/ui/tabs";
 import Box from "@mui/material/Box";
+import { cn } from "@/lib/utils";
 import Slider from "@mui/material/Slider";
 import {
   DropdownMenu,
@@ -72,23 +73,34 @@ export function IconExplorer() {
           </div>
 
           <div className="flex items-center">
-            <div className="flex rounded-lg border p-1 gap-2 bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700">
+            <div className="flex rounded-lg border p-1 gap-2 bg-gray-100 dark:bg-gray-900 border-gray-300 dark:border-gray-700">
               <Button
-                variant={viewMode === "grid" ? "default" : "ghost"}
+                variant="ghost"
                 onClick={() => setViewMode("grid")}
-                className="h-8 px-4"
+                className={cn(
+                  "h-8 px-4 flex items-center justify-center rounded-md transition-colors",
+                  viewMode === "grid"
+                    ? "bg-gray-300 dark:bg-gray-700 text-black dark:text-white"
+                    : "hover:bg-gray-200 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-300"
+                )}
               >
-                <LayoutGrid size={23} className="text-white" />
+                <LayoutGrid size={20} />
               </Button>
               <Button
-                variant={viewMode === "list" ? "default" : "ghost"}
+                variant="ghost"
                 onClick={() => setViewMode("list")}
-                className="h-8 px-4"
+                className={cn(
+                  "h-8 px-4 flex items-center justify-center rounded-md transition-colors",
+                  viewMode === "list"
+                    ? "bg-gray-300 dark:bg-gray-700 text-black dark:text-white"
+                    : "hover:bg-gray-200 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-300"
+                )}
               >
-                <ListTodo size={23} className="text-white" />
+                <ListTodo size={20} />
               </Button>
             </div>
           </div>
+
         </div>
 
         {/* Size + Category */}
@@ -110,14 +122,14 @@ export function IconExplorer() {
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="outline" className="min-w-[140px] justify-between rounded-full px-4 py-2 text-sm">
+              <Button variant="glass" className="min-w-[140px] justify-between rounded-full px-4 py-2 text-sm">
                 {tab === "DesignTools" ? "Design" : tab}
                 <ChevronDown className="w-4 h-4 ml-2" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-48 p-1 rounded-xl">
               {categories.map((category) => (
-                <DropdownMenuItem key={category} onSelect={() => setTab(category)} className="flex items-center">
+                <DropdownMenuItem key={category} onSelect={() => setTab(category)} className="flex items-center hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">
                   {iconsMap[category]}
                   {category === "DesignTools" ? "Design" : category}
                 </DropdownMenuItem>
