@@ -37,7 +37,6 @@ export function IconExplorer() {
   const allData = useMemo(
     () => [
       ...Categories.Programming,
-      ...Categories.Websites,
       ...Categories.Apps,
       ...Categories.DesignTools,
       ...Categories.AI,

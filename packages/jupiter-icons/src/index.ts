@@ -3,7 +3,6 @@ import React from "react";
 import type { IconData } from "./types";
 
 import { iconsData as Programming } from "./categories/Programming";
-import { iconsData as Websites } from "./categories/Websites";
 import { iconsData as AI } from "./categories/AI";
 import { iconsData as Frameworks } from "./categories/Frameworks";
 import { iconsData as Tools } from "./categories/Tools";
@@ -15,7 +14,7 @@ export type { IconData };
 export { createIcon };
 
 const all: Record<string, ReturnType<typeof createIcon>> = {};
-[...Programming, ...Websites, ...Apps, ...DesignTools, ...AI, ...Frameworks, ...Tools, ...Other].forEach((icon) => {
+[...Programming, ...Apps, ...DesignTools, ...AI, ...Frameworks, ...Tools, ...Other].forEach((icon) => {
   all[icon.name] = createIcon(icon.name, icon.svgContent);
 });
 // -----------------------------------------------------------------------------------------------------------
@@ -29,7 +28,6 @@ export const Chrome = all["Chrome"];
 export const VSCode = all["VSCode"];
 export const Slack = all["Slack"];
 export const AlpineJs = all["AlpineJs"];
-export const D3Js = all["D3Js"];
 export const ThreeJs = all["ThreeJs"];
 
 //Apps iconz
@@ -39,7 +37,6 @@ export const JestJs = all["JestJs"];
 export const ElectronJs = all["ElectronJs"];
 export const NextJs = all["NextJs"];
 
-// Websites iconz
 export const GatsbyJs = all["GatsbyJs"];
 export const NuxtJs = all["NuxtJs"];
 export const ExpressJs = all["ExpressJs"];
@@ -54,7 +51,6 @@ export const Photoshop = all["Photoshop"];
 // -----------------------------------------------------------------------------------------------------------
 export const Categories = {
   Programming,
-  Websites,
   Apps,
   DesignTools,
   AI,
@@ -66,7 +62,6 @@ export const Categories = {
 // Combine all icon data
 const allCategories = [
   ...Programming,
-  ...Websites,
   ...Apps,
   ...DesignTools,
   ...AI,

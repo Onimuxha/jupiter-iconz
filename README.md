@@ -71,10 +71,13 @@ Icons are defined by category files under:
 
 ```
 packages/jupiter-iconz/src/categories/
-  Programming.ts
-  Websites.ts
+  AI.ts
   Apps.ts
   DesignTools.ts
+  Frameworks.ts
+  Other.ts
+  Programming.ts
+  Tools.ts
 ```
 
 Each file exports `const iconsData: IconData[]`, where an `IconData` is:

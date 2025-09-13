@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { CodeBlock } from "@/components/ui/code-block";
 import { icons } from "../../../packages/jupiter-icons/src/index.ts";
 
-const heroList = ["React", "TypeScript", "VSCode", "MeteorJs", "D3Js", "Figma", "Slack", "Chrome", "NodeJS"] as const;
+const heroList = ["React", "TypeScript", "VSCode", "MeteorJs", "BuyMeACoffee", "Figma", "Slack", "Chrome", "NodeJS"] as const;
 
 export function HomeHero() {
   return (
