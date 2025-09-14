@@ -20,7 +20,7 @@ export function HomeHero() {
               className="text-balance text-4xl font-medium md:text-7xl"
             >
               Every icon you need.
-              <FlipWords words={words} className="font-semibold text-blue-900" />
+              <FlipWords words={words}/>
             </motion.h1>
             <p className="mt-4 max-w-prose text-muted-foreground mb-8">
               A modern, accessible icon set with original brand colors, full TypeScript support, and delightful animations. Built for React, Vite, and Tailwind with class-based dark mode.

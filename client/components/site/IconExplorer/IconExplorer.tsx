@@ -20,7 +20,7 @@ import { categories, iconsMap } from "./iconUtils";
 export function IconExplorer() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [query, setQuery] = useState("");
-  const [size, setSize] = useState(48);
+  const [size, setSize] = useState(40);
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
 
   const [tab, setTab] = useState(() => {

@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { useMemo, useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -7,10 +8,11 @@ import { toast } from "sonner";
 import { motion } from "framer-motion";
 import { copyText } from "@/lib/copy";
 import { CodeBlock } from "@/components/ui/code-block";
-import * as React from 'react';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import { cn } from "@/lib/utils";
+import { DialogDescription } from "@/components/ui/dialog";
+
 
 export interface IconDetailProps {
   open: boolean;
@@ -85,11 +87,11 @@ export function IconDetailDialog(props: IconDetailProps) {
                   </p>
                 </div>
               </div>
-              <div className="flex gap-2 text-sm font-medium">
+              <DialogDescription className="flex gap-2 text-sm font-medium">
                 <span className="px-2 py-1 bg-gray-100/60 dark:bg-gray-800 rounded">
                   {category}
                 </span>
-              </div>
+              </DialogDescription>
             </DialogTitle>
           </DialogHeader>
 

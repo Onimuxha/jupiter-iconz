@@ -85,7 +85,7 @@ export default function App() {
                     code={`<GitHubDark size={32} className="dark:invert" /> `}
                   />
                 </Card>
-                <p className="capitalize">recommanded to use <Highlighter action="underline" color="#FF9800">Dark vision</Highlighter> for dark mode and light mode for better visibility</p> 
+                <p className="capitalize">recommanded to use <Highlighter action="underline" color="#FF9800">Dark vision</Highlighter> for dark mode and light mode for better visibility</p>
 
                 <Card title="Sizing and accessibility">
                   <CodeBlock
@@ -137,16 +137,37 @@ export default function App() {
         >
           <a
             href="/"
-            className="text-gray-500 hover:text-black dark:hover:text-white transition-colors"
+            className="
+    inline-flex items-center gap-2
+    px-4 py-2 md:text-base
+    text-gray-800 dark:text-gray-100
+    bg-gray-100 dark:bg-gray-800
+    hover:bg-gray-200 dark:hover:bg-gray-700
+    border border-gray-300 dark:border-gray-700
+    rounded-md
+    transition-all duration-200
+    shadow-sm
+  "
           >
-            ← Back to Home
+            <span className="text-base">←</span>
+            Back to Home
           </a>
-          <Button
-            variant="outline"
-            className="border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-900"
-          >
-            Open Playground
-          </Button>
+
+          <a href="/playground">
+            <Button
+              className="
+      border border-gray-300 dark:border-gray-700
+      bg-white dark:bg-gray-800
+      hover:bg-gray-100 dark:hover:bg-gray-700
+      text-gray-800 dark:text-gray-100 rounded-md
+      shadow-sm
+    "
+            >
+              Open Playground
+            </Button>
+          </a>
+
+
         </motion.div>
       </main>
 

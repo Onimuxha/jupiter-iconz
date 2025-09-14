@@ -49,16 +49,13 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <RouterProvider
-        router={router}
-        fallbackElement={<div>Loading...</div>}
-      />
+      <RouterProvider router={router} />
     </TooltipProvider>
     <div className="pointer-events-none fixed inset-0 z-50 select-none">
       <ShootingStars />
       <StarsBackground />
     </div>
-    
+
   </QueryClientProvider>
 );
 
