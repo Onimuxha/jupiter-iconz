@@ -5,7 +5,6 @@ export const iconsData: IconData[] = [
     name: "VSCode",
     category: "Tools",
     keywords: ["vscode", "editor", "code"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <path fill="#2489CA"
@@ -23,7 +22,6 @@ export const iconsData: IconData[] = [
     name: "i18Next",
     category: "Tools",
     keywords: ["i18next", "internationalization", "localization", "translate"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <path fill="#009688"
@@ -45,7 +43,6 @@ export const iconsData: IconData[] = [
     name: "VercelDark",
     category: "Tools",
     keywords: ["vercel", "dark", "triangle"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512">
     <path d="M255.998 48.152L496 463.848H16L255.998 48.152z" fill-rule="nonzero" />
@@ -56,7 +53,6 @@ export const iconsData: IconData[] = [
     name: "VercelLight",
     category: "Tools",
     keywords: ["vercel", "dark", "triangle"],
-    weights: ["regular"],
     svgContent: `
 <svg fill="#fff" viewBox="0 0 512 512">
     <path d="M255.998 48.152L496 463.848H16L255.998 48.152z" fill-rule="nonzero" />
@@ -67,7 +63,6 @@ export const iconsData: IconData[] = [
     name: "GitHubDark",
     category: "Tools",
     keywords: ["github", "code", "repo"],
-    weights: ["regular"],
     svgContent: `
 <svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -80,7 +75,6 @@ export const iconsData: IconData[] = [
     name: "GitHubLight",
     category: "Tools",
     keywords: ["github", "code", "repo"],
-    weights: ["regular"],
     svgContent: `
 <svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -93,7 +87,6 @@ export const iconsData: IconData[] = [
     name: "JestJs",
     category: "Tools",
     keywords: ["JestJs", "testing", "Tools", "javascript", "typescript"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <path fill="#c21325"
@@ -114,7 +107,6 @@ export const iconsData: IconData[] = [
       "javascript",
       "typescript",
     ],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <path fill="#2DD0ED"
@@ -142,7 +134,6 @@ export const iconsData: IconData[] = [
       "networking",
       "security",
     ],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512">
     <g clip-path="url(#alibaba-cloud)" fill="#FF6A00">
@@ -164,7 +155,6 @@ export const iconsData: IconData[] = [
       "hosting",
       "storage",
     ],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <path fill="#FFA000"
@@ -180,7 +170,6 @@ export const iconsData: IconData[] = [
     name: "n8n",
     category: "Tools",
     keywords: ["n8n", "automation", "workflow", "Tools"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512" fill-rule="evenodd">
     <path
@@ -193,7 +182,6 @@ export const iconsData: IconData[] = [
     name: "Netlify",
     category: "Tools",
     keywords: ["netlify", "hosting", "Tools", "infrastructure", "server"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512">
     <g transform="translate(9.167 9.167) scale(11.5703)">
@@ -213,7 +201,6 @@ export const iconsData: IconData[] = [
     name: "Replit",
     category: "Tools",
     keywords: ["replit", "code", "Tools", "development"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512">
     <path
@@ -226,7 +213,6 @@ export const iconsData: IconData[] = [
     name: "RailwayDark",
     category: "Tools",
     keywords: ["railway", "infrastructure", "Tools", "server", "hosting", "storage"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512">
     <path
@@ -240,7 +226,6 @@ export const iconsData: IconData[] = [
     name: "RailwayLight",
     category: "Tools",
     keywords: ["railway", "infrastructure", "Tools", "server", "hosting", "storage"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512" fill="#fff">
     <path
@@ -254,7 +239,6 @@ export const iconsData: IconData[] = [
     name: "GoogleCloud",
     category: "Tools",
     keywords: ["google", "cloud", "google cloud", "web", "internet", "search"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <g>
@@ -274,7 +258,6 @@ export const iconsData: IconData[] = [
     name: "Atlassian",
     category: "Tools",
     keywords: ["atlassian", "collaboration", "Tools", "development", "software"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
     <path
@@ -287,7 +270,6 @@ export const iconsData: IconData[] = [
     name: "AtlassianLoom",
     category: "Tools",
     keywords: ["atlassian", "loom", "collaboration", "Tools", "development", "software"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
     <path

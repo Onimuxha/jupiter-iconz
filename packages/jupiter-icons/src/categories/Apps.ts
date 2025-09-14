@@ -5,7 +5,6 @@ export const iconsData: IconData[] = [
     name: "Telegram",
     category: "Apps",
     keywords: ["telegram", "chat", "message", "social", "communication"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
     <defs>
@@ -25,7 +24,6 @@ export const iconsData: IconData[] = [
     name: "LinkedIn",
     category: "Apps",
     keywords: ["linkedin", "social", "media", "network", "connect"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 100 100">
@@ -42,7 +40,6 @@ export const iconsData: IconData[] = [
     name: "Slack",
     category: "Apps",
     keywords: ["slack", "chat", "team", "communication", "workspace"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
     <path fill="#36C5F0" fill-rule="evenodd"
@@ -64,7 +61,6 @@ export const iconsData: IconData[] = [
     name: "FacebookSquare",
     category: "Apps",
     keywords: ["facebook", "social", "media", "network", "connect"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 509.64">
     <rect fill="#0866FF" width="512" height="509.64" rx="115.612" ry="115.612" />
@@ -77,7 +73,6 @@ export const iconsData: IconData[] = [
     name: "FacebookRound",
     category: "Apps",
     keywords: ["facebook", "social", "media", "network", "connect"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 509 509">
     <g fill-rule="nonzero">
@@ -93,7 +88,6 @@ export const iconsData: IconData[] = [
     name: "MessengerBlue",
     category: "Apps",
     keywords: ["facebook", "social", "media", "network", "connect"],
-    weights: ["regular"],
     svgContent: `
 <svg
    viewBox="0 0 1000 1000"
@@ -120,7 +114,6 @@ export const iconsData: IconData[] = [
     name: "MessengerColor",
     category: "Apps",
     keywords: ["facebook", "social", "media", "network", "connect"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 800 800">
     <radialGradient id="messenger-fill" cx="101.9" cy="809" r="1.1"
@@ -141,7 +134,6 @@ export const iconsData: IconData[] = [
     name: "ThreadDark",
     category: "Apps",
     keywords: ["threads", "social", "media", "network", "connect"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192">
     <path fill="#000"
@@ -153,7 +145,6 @@ export const iconsData: IconData[] = [
     name: "ThreadLight",
     category: "Apps",
     keywords: ["threads", "social", "media", "network", "connect"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192">
     <path fill="#fff"
@@ -165,7 +156,6 @@ export const iconsData: IconData[] = [
     name: "XDark",
     category: "Apps",
     keywords: ["x", "x app", "twitter", "meta", "social", "media", "network", "connect"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227">
     <path fill="#000"
@@ -177,7 +167,6 @@ export const iconsData: IconData[] = [
     name: "XLight",
     category: "Apps",
     keywords: ["x", "x app", "twitter", "meta", "social", "media", "network", "connect"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227">
     <path fill="#fff"
@@ -189,7 +178,6 @@ export const iconsData: IconData[] = [
     name: "Bing",
     category: "Apps",
     keywords: ["bing", "search", "microsoft", "web", "internet", "browser"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 388" width="256" height="388">
     <defs>
@@ -221,7 +209,6 @@ export const iconsData: IconData[] = [
     name: "Brainly",
     category: "Apps",
     keywords: ["brainly", "education", "learning", "school", "study"],
-    weights: ["regular"],
     svgContent: `
 <svg fill-rule="evenodd" viewBox="0 0 512 512">
     <defs>
@@ -248,7 +235,6 @@ export const iconsData: IconData[] = [
       "help",
       "contribute",
     ],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="-50 0 600 512" width="100" height="100">
     <g>
@@ -284,7 +270,6 @@ export const iconsData: IconData[] = [
     name: "Proton",
     category: "Apps",
     keywords: ["proton", "mail", "vpn", "secure", "privacy", "email"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512">
     <path
@@ -308,7 +293,6 @@ export const iconsData: IconData[] = [
     name: "YouTube",
     category: "Apps",
     keywords: ["youtube", "video", "streaming", "media", "entertainment"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 28.57  20" style="pointer-events: none; display: block; width: 100%; height: 100%;">
   <svg viewBox="0 0 28.57 20">
@@ -326,7 +310,6 @@ export const iconsData: IconData[] = [
     name: "YouTubeLogoDark",
     category: "Apps",
     keywords: ["youtube", "video", "streaming", "media", "entertainment"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 114.56" width="1000" height="150">
     <g>
@@ -343,7 +326,6 @@ export const iconsData: IconData[] = [
     name: "YouTubeLogoLight",
     category: "Apps",
     keywords: ["youtube", "video", "streaming", "media", "entertainment"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 114.56" width="1000" height="150">
     <g>
@@ -360,7 +342,6 @@ export const iconsData: IconData[] = [
     name: "YouTubeShorts",
     category: "Apps",
     keywords: ["youtube", "video", "streaming", "media", "entertainment"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 98.94 122.88" width="100" height="100">
 	<path
@@ -374,7 +355,6 @@ export const iconsData: IconData[] = [
     name: "YouTubeMusic",
     category: "Apps",
     keywords: ["youtube", "music", "streaming", "media", "entertainment"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512" width="100" height="100">
     <g fill-rule="nonzero">
@@ -390,7 +370,6 @@ export const iconsData: IconData[] = [
     name: "YouTubeStudio",
     category: "Apps",
     keywords: ["youtube", "music", "streaming", "media", "entertainment"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="-25 0 512 511.955" width="100" height="100">
     <g fill-rule="nonzero">
@@ -410,7 +389,6 @@ export const iconsData: IconData[] = [
     name: "Chrome",
     category: "Apps",
     keywords: ["chrome", "browser", "google", "web", "internet", "search"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <g clip-path="url(#chrome1)">
@@ -452,7 +430,6 @@ export const iconsData: IconData[] = [
     name: "Chromium",
     category: "Apps",
     keywords: ["chrome", "browser", "google", "web", "internet", "search"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <g clip-path="url(#chroium1)">
@@ -499,7 +476,6 @@ export const iconsData: IconData[] = [
     name: "Gmail",
     category: "Apps",
     keywords: ["gmail", "email", "google", "communication", "inbox"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
     <path d="M99.719 31.465 87.87 37.98 76.02 49.238v38.633h16.59a7.11 7.11 0 0 0 7.109-7.11Zm0 0"
@@ -522,7 +498,6 @@ export const iconsData: IconData[] = [
     name: "Microsoft",
     category: "Apps",
     keywords: ["microsoft", "windows", "office", "software", "technology"],
-    weights: ["regular"],
     svgContent: `
 <svg  viewBox="0 0 2499.6 2500"
     xmlns="http://www.w3.org/2000/svg">
@@ -541,7 +516,6 @@ export const iconsData: IconData[] = [
     name: "MicrosoftWordmark",
     category: "Apps",
     keywords: ["microsoft", "windows", "office", "software", "technology"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 604 129" width="100" height="100">
     <path
@@ -563,7 +537,6 @@ export const iconsData: IconData[] = [
     name: "VK",
     category: "Apps",
     keywords: ["vk", "vkontakte", "social", "media", "network"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
     <path
@@ -581,7 +554,6 @@ export const iconsData: IconData[] = [
     name: "VKDark",
     category: "Apps",
     keywords: ["vk", "vkontakte", "social", "media", "network"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
     <path
@@ -599,7 +571,6 @@ export const iconsData: IconData[] = [
     name: "VKLight",
     category: "Apps",
     keywords: ["vk", "vkontakte", "social", "media", "network"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
     <path

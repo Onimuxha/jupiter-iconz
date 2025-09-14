@@ -5,7 +5,6 @@ export const iconsData: IconData[] = [
     name: "AntGroup",
     category: "Other",
     keywords: ["ant", "financial", "alipay", "antgroup"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512">
     <path
@@ -50,7 +49,6 @@ export const iconsData: IconData[] = [
     name: "Meta",
     category: "Other",
     keywords: ["meta", "facebook", "social", "network", "metaverse"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 287.56 191" width="100" height="100">
     <defs>
@@ -82,7 +80,6 @@ export const iconsData: IconData[] = [
     name: "Google",
     category: "Other",
     keywords: ["google", "search", "web", "internet", "wordmark"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 262">
     <path fill="#4285F4"
@@ -100,7 +97,6 @@ export const iconsData: IconData[] = [
     name: "GoogleWordmark",
     category: "Other",
     keywords: ["google", "search", "web", "internet", "wordmark"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 272 92" width="272" height="92">
     <path fill="#EA4335"
@@ -121,7 +117,6 @@ export const iconsData: IconData[] = [
     name: "JupiterIconDark",
     category: "Other",
     keywords: ["google", "search", "web", "internet", "wordmark"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 1747 1747"
     xmlns="http://www.w3.org/2000/svg">
@@ -137,7 +132,6 @@ export const iconsData: IconData[] = [
     name: "JupiterIconLight",
     category: "Other",
     keywords: ["google", "search", "web", "internet", "wordmark"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 1747 1747"
     xmlns="http://www.w3.org/2000/svg">

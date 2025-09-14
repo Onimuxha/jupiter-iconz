@@ -16,7 +16,6 @@ export function IconPortal({ name, open, onOpenChange }: { name: string; open: b
       svgContent={data.svgContent}
       category={data.category}
       keywords={data.keywords}
-      weights={data.weights}
     />
   );
 }

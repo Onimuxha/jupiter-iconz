@@ -3,7 +3,6 @@ export interface IconData {
   category: string;
   keywords: string[];
   svgContent: string;
-  weights: string[];
 }
 
 export interface IconComponentProps extends React.HTMLAttributes<HTMLSpanElement> {

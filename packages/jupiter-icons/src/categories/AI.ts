@@ -5,7 +5,6 @@ export const iconsData: IconData[] = [
     name: "ChatGPTFill",
     category: "AI",
     keywords: ["chatgpt", "ai", "openai"],
-    weights: ["regular"],
     svgContent: `
 <svg
     clip-rule="evenodd" viewBox="0 0 512 509.639">
@@ -20,7 +19,6 @@ export const iconsData: IconData[] = [
     name: "ChatGPTDark",
     category: "AI",
     keywords: ["chatgpt", "ai", "openai"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512" stroke-linejoin="round" stroke-miterlimit="2">
     <path
@@ -33,7 +31,6 @@ export const iconsData: IconData[] = [
     name: "ChatGPTLight",
     category: "AI",
     keywords: ["chatgpt", "ai", "openai"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512" stroke-linejoin="round" stroke-miterlimit="2">
     <path fill="#fff"
@@ -46,7 +43,6 @@ export const iconsData: IconData[] = [
     name: "Perplexity",
     category: "AI",
     keywords: ["ai", "perplexity", "chatgpt"],
-    weights: ["regular"],
     svgContent: `
 <svg shape-rendering="geometricPrecision"
     text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
@@ -62,7 +58,6 @@ export const iconsData: IconData[] = [
     name: "GoogleAIStudioDark",
     category: "AI",
     keywords: ["ai", "google", "aistudio"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512">
     <g clip-path="url(#googleAiStudioDark)" fill-rule="evenodd" clip-rule="evenodd" fill="#000">
@@ -78,7 +73,6 @@ export const iconsData: IconData[] = [
     name: "GoogleAIStudioLight",
     category: "AI",
     keywords: ["ai", "google", "aistudio"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512">
     <g clip-path="url(#googleAiStudioLight)" fill-rule="evenodd" clip-rule="evenodd" fill="#fff">
@@ -94,7 +88,6 @@ export const iconsData: IconData[] = [
     name: "ClaudeAI",
     category: "AI",
     keywords: ["ai", "claude", "anthropic"],
-    weights: ["regular"],
     svgContent: `
 <svg shape-rendering="geometricPrecision"
     text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
@@ -110,7 +103,6 @@ export const iconsData: IconData[] = [
     name: "VercelV0Dark",
     category: "AI",
     keywords: ["ai", "vercel", "V0"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
     clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
@@ -123,7 +115,6 @@ export const iconsData: IconData[] = [
     name: "VercelV0Light",
     category: "AI",
     keywords: ["ai", "vercel", "V0"],
-    weights: ["regular"],
     svgContent: `
 <svg fill="#fff" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
     clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
@@ -136,7 +127,6 @@ export const iconsData: IconData[] = [
     name: "DeepSeek",
     category: "AI",
     keywords: ["ai", "deepseek"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 509.64">
     <path fill="#fff"
@@ -150,7 +140,6 @@ export const iconsData: IconData[] = [
     name: "GoogleGemmaAI",
     category: "AI",
     keywords: ["ai", "google", "gemma"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512" fill-rule="evenodd" stroke-miterlimit="2">
     <path
@@ -172,7 +161,6 @@ export const iconsData: IconData[] = [
     name: "CursorAIFill",
     category: "AI",
     keywords: ["ai", "cursor"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
     <rect width="512" height="512" rx="104" fill="black" />
@@ -206,7 +194,6 @@ export const iconsData: IconData[] = [
     name: "CursorAI",
     category: "AI",
     keywords: ["ai", "cursor"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512"  xmlns="http://www.w3.org/2000/svg">
     <path d="M255.989 499L472.784 377.5L255.989 256L39.1953 377.5L255.989 499Z"
@@ -239,7 +226,6 @@ export const iconsData: IconData[] = [
     name: "ElevenLabsAIDark",
     category: "AI",
     keywords: ["ai", "elevenlabs"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512" stroke-linejoin="round" stroke-miterlimit="2">
     <path d="M106.667 0h106.666v512H106.667V0zm192 0h106.667v512H298.667V0z" />
@@ -250,7 +236,6 @@ export const iconsData: IconData[] = [
     name: "ElevenLabsAILight",
     category: "AI",
     keywords: ["ai", "elevenlabs"],
-    weights: ["regular"],
     svgContent: `
 <svg fill="#fff" viewBox="0 0 512 512" stroke-linejoin="round" stroke-miterlimit="2">
     <path d="M106.667 0h106.666v512H106.667V0zm192 0h106.667v512H298.667V0z" />
@@ -261,7 +246,6 @@ export const iconsData: IconData[] = [
     name: "FluxAIDark",
     category: "AI",
     keywords: ["ai", "flux"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512">
     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -277,7 +261,6 @@ export const iconsData: IconData[] = [
     name: "FluxAILight",
     category: "AI",
     keywords: ["ai", "flux"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512" >
     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -293,7 +276,6 @@ export const iconsData: IconData[] = [
     name: "KlingAI",
     category: "AI",
     keywords: ["ai", "kling"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
     <g clip-path="url(#klingLogo_clip0)">
@@ -355,7 +337,6 @@ export const iconsData: IconData[] = [
     name: "KlingWordmarkDark",
     category: "AI",
     keywords: ["ai", "kling", "wordmark"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 3541 952" xmlns="http://www.w3.org/2000/svg" width="3541" height="952">
     <g>
@@ -370,7 +351,6 @@ export const iconsData: IconData[] = [
     name: "KlingWordmarkLight",
     category: "AI",
     keywords: ["ai", "kling", "wordmark"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 3541 952" xmlns="http://www.w3.org/2000/svg" width="3541" height="952">
     <g>
@@ -385,7 +365,6 @@ export const iconsData: IconData[] = [
     name: "WritesonicAI",
     category: "AI",
     keywords: ["ai", "writesonic", "sonic"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512">
     <path
@@ -417,7 +396,6 @@ export const iconsData: IconData[] = [
     name: "ManusAIDark",
     category: "AI",
     keywords: ["ai", "manus"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512" fill-rule="evenodd">
     <g transform="scale(32)">
@@ -436,7 +414,6 @@ export const iconsData: IconData[] = [
     name: "ManusAILight",
     category: "AI",
     keywords: ["ai", "manus"],
-    weights: ["regular"],
     svgContent: `
 <svg fill="#fff" viewBox="0 0 512 512" fill-rule="evenodd">
     <g transform="scale(32)">
@@ -455,7 +432,6 @@ export const iconsData: IconData[] = [
     name: "MetaAI",
     category: "AI",
     keywords: ["ai", "meta"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512">
     <path
@@ -481,7 +457,6 @@ export const iconsData: IconData[] = [
     name: "QwenAI",
     category: "AI",
     keywords: ["ai", "qwen"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512">
     <path
@@ -501,7 +476,6 @@ export const iconsData: IconData[] = [
     name: "ClineAIDark",
     category: "AI",
     keywords: ["ai", "cline"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512"
     clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
@@ -518,7 +492,6 @@ export const iconsData: IconData[] = [
     name: "ClineAILight",
     category: "AI",
     keywords: ["ai", "cline"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512"
     clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
@@ -535,7 +508,6 @@ export const iconsData: IconData[] = [
     name: "DeepAIDark",
     category: "AI",
     keywords: ["ai", "deepai"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512">
     <g clip-path="url(#deep-ai)">
@@ -550,7 +522,6 @@ export const iconsData: IconData[] = [
     name: "DeepAILight",
     category: "AI",
     keywords: ["ai", "deepai"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512">
     <g clip-path="url(#deep-ai)">
@@ -565,7 +536,6 @@ export const iconsData: IconData[] = [
     name: "GrokFill",
     category: "AI",
     keywords: ["ai", "grok", "x"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 509.641">
     <path
@@ -579,7 +549,6 @@ export const iconsData: IconData[] = [
     name: "GrokAIDark",
     category: "AI",
     keywords: ["ai", "grok", "x"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 492">
     <path
@@ -592,7 +561,6 @@ export const iconsData: IconData[] = [
     name: "GrokAILight",
     category: "AI",
     keywords: ["ai", "grok", "x"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 492">
     <path
@@ -605,7 +573,6 @@ export const iconsData: IconData[] = [
     name: "SunoAIDark",
     category: "AI",
     keywords: ["ai", "suno", "audio", "music"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512">
     <g>
@@ -620,7 +587,6 @@ export const iconsData: IconData[] = [
     name: "SunoAILight",
     category: "AI",
     keywords: ["ai", "suno", "audio", "music"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512">
     <g>
@@ -635,7 +601,6 @@ export const iconsData: IconData[] = [
     name: "OllamaDark",
     category: "AI",
     keywords: ["ai", "ollama", "llama", "model"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512">
     <path
@@ -648,7 +613,6 @@ export const iconsData: IconData[] = [
     name: "OllamaLight",
     category: "AI",
     keywords: ["ai", "ollama", "llama", "model"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512">
     <path
@@ -661,7 +625,6 @@ export const iconsData: IconData[] = [
     name: "KreaAIDark",
     category: "AI",
     keywords: ["ai", "krea", "image", "generation"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512">
     <g transform="scale(32)">
@@ -679,7 +642,6 @@ export const iconsData: IconData[] = [
     name: "KreaAILight",
     category: "AI",
     keywords: ["ai", "krea", "image", "generation"],
-    weights: ["regular"],
     svgContent: `
 <svg fill="#fff" viewBox="0 0 512 512">
     <g transform="scale(32)">
@@ -697,7 +659,6 @@ export const iconsData: IconData[] = [
     name: "LovableAI",
     category: "AI",
     keywords: ["ai", "lovable", "chat", "assistant", "bot"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512">
     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -721,7 +682,6 @@ export const iconsData: IconData[] = [
     name: "PikaAIDark",
     category: "AI",
     keywords: ["ai", "pika", "image", "generation"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512">
     <g transform="scale(32)">
@@ -737,7 +697,6 @@ export const iconsData: IconData[] = [
     name: "PikaAILight",
     category: "AI",
     keywords: ["ai", "pika", "image", "generation"],
-    weights: ["regular"],
     svgContent: `
 <svg fill="#fff" viewBox="0 0 512 512">
     <g transform="scale(32)">
@@ -753,7 +712,6 @@ export const iconsData: IconData[] = [
     name: "WindsurfAIDark",
     category: "AI",
     keywords: ["ai", "windsurf", "chat", "assistant", "bot"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512">
     <g clip-path="url(#windsurf1)">
@@ -770,7 +728,6 @@ export const iconsData: IconData[] = [
     name: "WindsurfAILight",
     category: "AI",
     keywords: ["ai", "windsurf", "chat", "assistant", "bot"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512">
     <g clip-path="url(#windsurf1)">
@@ -787,7 +744,6 @@ export const iconsData: IconData[] = [
     name: "AtlassianRovo",
     category: "AI",
     keywords: ["ai", "atlassian", "rovo", "chat", "assistant", "bot"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
     <path

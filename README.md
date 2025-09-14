@@ -88,7 +88,6 @@ interface IconData {
   category: string;
   keywords: string[];
   svgContent: string;     // raw <svg>…</svg> with original brand colors/gradients
-  weights: string[];      // e.g. ["regular"]
 }
 ```
 

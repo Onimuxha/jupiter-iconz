@@ -20,11 +20,10 @@ export interface IconDetailProps {
   svgContent: string;
   category: string;
   keywords: string[];
-  weights: string[];
 }
 
 export function IconDetailDialog(props: IconDetailProps) {
-  const { open, onOpenChange, name, Component, svgContent, category, keywords, weights } = props;
+  const { open, onOpenChange, name, Component, svgContent, category, keywords } = props;
   const [mode, setMode] = useState<"jsx" | "svg">("jsx");
   const [size, setSize] = useState(48);
   const [copied, setCopied] = useState(false);

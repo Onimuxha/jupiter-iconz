@@ -12,7 +12,6 @@ export const iconsData: IconData[] = [
       "backend",
       "language",
     ],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 100 100" >
     <g clip-path="url(#ts)">
@@ -33,7 +32,6 @@ export const iconsData: IconData[] = [
     name: "HTML5",
     category: "Programming",
     keywords: ["html5", "html", "language", "frontend", "web"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <path fill="#E44D26" d="M14.021 90.035 6 0h88.187l-8.022 89.986L50.02 100" />
@@ -49,7 +47,6 @@ export const iconsData: IconData[] = [
     name: "CSS3",
     category: "Programming",
     keywords: ["css3", "css", "language", "frontend", "web", "style"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <path fill="#264DE4" d="m94.175 0-8.033 89.99L50.034 100l-36.01-9.996L6 0z" />
@@ -62,10 +59,35 @@ export const iconsData: IconData[] = [
   `.trim(),
   },
   {
+    name: "SASS",
+    category: "Programming",
+    keywords: ["sass", "scss", "style", "css", "preprocessor", "frontend", "web"],
+    svgContent: `
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <path fill="#CD6799"
+        d="M86.108 56.112c-3.489.018-6.52.858-9.06 2.1-.931-1.845-1.863-3.489-2.027-4.694-.183-1.407-.402-2.265-.183-3.945s1.206-4.074 1.187-4.256-.219-1.041-2.228-1.06c-2.01-.018-3.744.384-3.945.914s-.585 1.735-.84 2.977c-.348 1.826-4.019 8.347-6.12 11.763-.675-1.334-1.26-2.503-1.388-3.434-.182-1.406-.401-2.265-.182-3.945s1.205-4.074 1.187-4.256-.22-1.041-2.228-1.06c-2.01-.018-3.745.384-3.946.914-.2.53-.42 1.771-.84 2.977S50.198 63.199 48.92 66.01a84 84 0 0 1-1.626 3.38s-.018.054-.073.146c-.347.675-.548 1.04-.548 1.04v.02c-.274.492-.566.949-.712.949-.11 0-.311-1.315.036-3.105.73-3.781 2.466-9.663 2.448-9.864 0-.11.328-1.132-1.133-1.662-1.425-.53-1.936.347-2.064.347s-.219.31-.219.31 1.59-6.611-3.032-6.611c-2.886 0-6.868 3.16-8.84 6.01a2157 2157 0 0 0-6.722 3.67c-1.078.603-2.192 1.206-3.233 1.772-.073-.073-.146-.164-.22-.237-5.589-5.973-15.927-10.192-15.488-18.21.164-2.923 1.169-10.595 19.854-19.91 15.38-7.58 27.617-5.48 29.736-.822 3.032 6.648-6.557 18.996-22.448 20.786-6.064.676-9.242-1.662-10.046-2.539-.84-.913-.968-.968-1.279-.785-.511.274-.182 1.096 0 1.57.475 1.242 2.43 3.434 5.736 4.512 2.922.95 10.028 1.48 18.63-1.845 9.626-3.726 17.152-14.082 14.941-22.758-2.21-8.804-16.822-11.709-30.649-6.795-8.22 2.922-17.133 7.525-23.544 13.516C.808 36.02-.397 42.212.096 44.806 1.868 54.01 14.562 60.001 19.64 64.44c-.256.146-.493.274-.694.383-2.539 1.26-12.22 6.32-14.63 11.672-2.74 6.064.438 10.411 2.538 10.996 6.521 1.808 13.224-1.443 16.823-6.813 3.598-5.37 3.16-12.348 1.497-15.544a.4.4 0 0 0-.073-.11c.658-.383 1.334-.785 1.991-1.169a97 97 0 0 1 3.672-2.064c-.621 1.699-1.078 3.726-1.297 6.649-.274 3.434 1.132 7.89 2.977 9.644.822.767 1.79.785 2.411.785 2.156 0 3.124-1.79 4.201-3.909 1.315-2.593 2.503-5.607 2.503-5.607s-1.48 8.146 2.538 8.146c1.462 0 2.941-1.9 3.599-2.867v.018s.036-.055.11-.183c.145-.237.237-.383.237-.383v-.037c.584-1.023 1.9-3.342 3.854-7.196 2.52-4.969 4.95-11.179 4.95-11.179s.219 1.516.968 4.037c.438 1.48 1.351 3.105 2.082 4.676-.584.822-.95 1.278-.95 1.278l.018.019c-.474.62-.986 1.296-1.552 1.954-1.991 2.375-4.365 5.096-4.694 5.882-.384.931-.293 1.607.438 2.155.53.402 1.48.456 2.448.402 1.79-.128 3.05-.566 3.671-.84.968-.348 2.1-.877 3.16-1.663 1.954-1.443 3.142-3.507 3.032-6.228-.055-1.498-.548-2.996-1.15-4.402.182-.256.346-.512.529-.767 3.087-4.512 5.48-9.462 5.48-9.462s.219 1.516.968 4.037c.365 1.279 1.114 2.667 1.771 4.018-2.904 2.357-4.694 5.096-5.333 6.886-1.15 3.325-.256 4.822 1.443 5.17.767.164 1.863-.201 2.667-.549a12.2 12.2 0 0 0 3.379-1.735c1.954-1.443 3.835-3.452 3.726-6.173-.055-1.242-.384-2.466-.84-3.653 2.465-1.023 5.644-1.59 9.698-1.115 8.695 1.023 10.412 6.448 10.083 8.731s-2.155 3.525-2.758 3.909-.804.511-.749.785c.073.402.365.384.877.31.712-.127 4.566-1.844 4.73-6.045.275-5.37-4.84-11.233-13.881-11.178m-67.07 22.612c-2.887 3.142-6.905 4.33-8.64 3.325-1.863-1.078-1.133-5.718 2.41-9.042 2.156-2.027 4.933-3.909 6.777-5.06.42-.255 1.041-.62 1.79-1.077.128-.073.201-.11.201-.11l.439-.274c1.296 4.75.054 8.932-2.978 12.238M40.041 64.44c-1.004 2.447-3.105 8.712-4.383 8.365-1.096-.292-1.772-5.041-.22-9.735.786-2.356 2.448-5.17 3.416-6.265 1.571-1.754 3.306-2.338 3.726-1.626.53.932-1.918 7.726-2.539 9.26m17.334 8.292c-.42.22-.822.365-1.004.256-.128-.073.182-.365.182-.365s2.174-2.338 3.032-3.398c.494-.62 1.078-1.352 1.7-2.173v.237c0 2.795-2.704 4.676-3.91 5.443m13.37-3.05c-.31-.22-.255-.95.786-3.233.402-.895 1.352-2.393 2.977-3.836.183.585.31 1.15.293 1.68-.019 3.526-2.54 4.84-4.055 5.389" />
+</svg>
+    `.trim(),
+  },
+  {
+    name: "Vitest",
+    category: "Programming",
+    keywords: ["sass", "scss", "style", "css", "preprocessor", "frontend", "web"],
+    svgContent: `
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <path fill="#FCC72B"
+        d="M75.045 31.66 51.138 66.224a2.058 2.058 0 0 1-3.389-.006 2.04 2.04 0 0 1-.352-1.25l.957-19.084-15.447-3.276a2.05 2.05 0 0 1-1.478-1.242 2.04 2.04 0 0 1 .218-1.915L55.554 4.886a2.06 2.06 0 0 1 2.35-.78c.423.143.788.419 1.039.786s.375.807.352 1.251l-.956 19.084 15.446 3.276a2.036 2.036 0 0 1 1.26 3.156" />
+    <path fill="#729B1B"
+        d="M50.01 95.225a4.83 4.83 0 0 1-3.423-1.418L23.997 71.22a4.84 4.84 0 0 1 3.426-8.254 4.84 4.84 0 0 1 3.42 1.408L50.01 83.54l41.755-41.753a4.84 4.84 0 0 1 6.844 6.845L53.432 93.807a4.82 4.82 0 0 1-3.422 1.418" />
+    <path fill="#729B1B" fill-opacity=".5"
+        d="M49.99 95.225a4.83 4.83 0 0 0 3.423-1.418l22.59-22.587a4.837 4.837 0 0 0-.01-6.836 4.84 4.84 0 0 0-6.836-.01L49.99 83.54 8.235 41.786a4.84 4.84 0 0 0-6.845 6.845l45.178 45.176a4.82 4.82 0 0 0 3.422 1.418" />
+</svg>
+    `.trim(),
+  },
+  {
     name: "JavaScript",
     category: "Programming",
     keywords: ["javascript", "js", "language", "frontend", "backend", "web"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
     <g clip-path="url(#js)">
@@ -86,7 +108,6 @@ export const iconsData: IconData[] = [
     name: "ApacheKafkaDark",
     category: "Programming",
     keywords: ["apache kafka", "kafka", "streaming", "data", "backend"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512">
     <path
@@ -99,7 +120,6 @@ export const iconsData: IconData[] = [
     name: "ApacheKafkaLight",
     category: "Programming",
     keywords: ["apache kafka", "kafka", "streaming", "data", "backend"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512">
     <path
@@ -120,7 +140,6 @@ export const iconsData: IconData[] = [
       "ai",
       "machine learning",
     ],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <path fill="url(#a)"
@@ -146,7 +165,6 @@ export const iconsData: IconData[] = [
     name: "PHP",
     category: "Programming",
     keywords: ["php", "language", "backend", "web", "server"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 125 62.27" width="125" height="62.27">
     <style>.php-bg{fill-rule:evenodd;clip-rule:evenodd;fill:#6884BA;}
@@ -170,7 +188,6 @@ export const iconsData: IconData[] = [
       "blockchain",
       "ethereum",
     ],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <path fill="#000" d="M66.208 0 50.13 28.574H18L34.064 0z" opacity=".45" />
@@ -192,7 +209,6 @@ export const iconsData: IconData[] = [
       "blockchain",
       "ethereum",
     ],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <path fill="#fff" d="M66.208 0 50.13 28.574H18L34.064 0z" opacity=".45" />
@@ -208,7 +224,6 @@ export const iconsData: IconData[] = [
     name: "Haskell",
     category: "Programming",
     keywords: ["haskell", "language", "functional programming", "backend"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <path fill="#453A62" d="m0 85.543 23.53-35.271L0 15h17.647l23.53 35.272-23.53 35.271z" />
@@ -223,7 +238,6 @@ export const iconsData: IconData[] = [
     name: "Dlang",
     category: "Programming",
     keywords: ["dlang", "d programming language", "language", "backend"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <path fill="#B03931"
@@ -237,7 +251,6 @@ export const iconsData: IconData[] = [
     name: "Crystal",
     category: "Programming",
     keywords: ["crystal", "language", "backend", "web", "server"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 102 102" width="100" height="100">
     <path fill="#fff" fill-opacity=".965" stroke="#FFFFFE" stroke-linecap="rounded"
@@ -251,7 +264,6 @@ export const iconsData: IconData[] = [
     name: "Clojure",
     category: "Programming",
     keywords: ["clojure", "language", "functional programming", "lisp"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <path fill="#fff"
@@ -271,7 +283,6 @@ export const iconsData: IconData[] = [
     name: "Erlang",
     category: "Programming",
     keywords: ["erlang", "language", "functional programming", "backend"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <path fill="#A90432"
@@ -285,7 +296,6 @@ export const iconsData: IconData[] = [
     name: "VisualBasic",
     category: "Programming",
     keywords: ["erlang", "language", "functional programming", "backend"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 102 102">
     <path fill="#004E8C"
@@ -300,7 +310,6 @@ export const iconsData: IconData[] = [
     name: "Swift",
     category: "Programming",
     keywords: ["swift", "language", "ios", "macos", "mobile"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <path fill="url(#swift-gradient)"
@@ -328,7 +337,6 @@ export const iconsData: IconData[] = [
     name: "RustDark",
     category: "Programming",
     keywords: ["rust", "language", "systems programming", "backend"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg"  fill="none" viewBox="0 0 100 100.03" width="100" height="100.03">
     <path fill="#000"
@@ -340,7 +348,6 @@ export const iconsData: IconData[] = [
     name: "RustLight",
     category: "Programming",
     keywords: ["rust", "language", "systems programming", "backend"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg"  fill="none" viewBox="0 0 100 100.03" width="100" height="100">
     <path fill="#fff"
@@ -352,7 +359,6 @@ export const iconsData: IconData[] = [
     name: "R",
     category: "Programming",
     keywords: ["r", "language", "data science", "statistics"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg"
     viewBox="0.91 3 721.09 556.06" width="100%" height="100%">
@@ -381,7 +387,6 @@ export const iconsData: IconData[] = [
     name: "Nim",
     category: "Programming",
     keywords: ["nim", "language", "systems programming", "backend"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <path fill="#F3D400"
@@ -395,7 +400,6 @@ export const iconsData: IconData[] = [
     name: "Lua",
     category: "Programming",
     keywords: ["lua", "language", "scripting", "game development"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <path stroke="gray" stroke-dasharray="4.25 4.25"
@@ -415,7 +419,6 @@ export const iconsData: IconData[] = [
     name: "Kotlin",
     category: "Programming",
     keywords: ["kotlin", "language", "android", "backend"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100" width="100" height="100">
     <path fill="url(#kotlin)" d="M100 100H0V0h100L48.965 49.276z" />
@@ -434,7 +437,6 @@ export const iconsData: IconData[] = [
     name: "Java",
     category: "Programming",
     keywords: ["java", "language", "backend", "enterprise"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <path fill="#5382A1"
@@ -454,7 +456,6 @@ export const iconsData: IconData[] = [
     name: "Go",
     category: "Programming",
     keywords: ["go", "language", "backend", "systems programming"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <path fill="#00ACD7"
@@ -468,7 +469,6 @@ export const iconsData: IconData[] = [
     name: "Dart",
     category: "Programming",
     keywords: ["dart", "language", "flutter", "mobile"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <g clip-path="url(#a)">
@@ -497,7 +497,6 @@ export const iconsData: IconData[] = [
     name: "C",
     category: "Programming",
     keywords: ["c", "language", "systems programming", "backend"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="381 479 4562 5044">
     <g fill-rule="evenodd" clip-rule="evenodd">
@@ -517,7 +516,6 @@ export const iconsData: IconData[] = [
     name: "C++",
     category: "Programming",
     keywords: ["c++", "language", "systems programming", "backend"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <path fill="#5C8DBC"
@@ -539,7 +537,6 @@ export const iconsData: IconData[] = [
     name: "C#",
     category: "Programming",
     keywords: ["c#", "language", "backend", "enterprise", "dotnet"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <path fill="#A179DC"
@@ -559,7 +556,6 @@ export const iconsData: IconData[] = [
     name: "AtlassianBitbucket",
     category: "Programming",
     keywords: ["atlassian", "bitbucket", "git", "repository", "version control"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
     <path

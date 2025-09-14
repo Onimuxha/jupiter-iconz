@@ -5,7 +5,6 @@ export const iconsData: IconData[] = [
     name: "AdobePhotoshop",
     category: "DesignTools",
     keywords: ["adobe", "ps", "photoshop", "design"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <path fill="#001E36"
@@ -19,7 +18,6 @@ export const iconsData: IconData[] = [
     name: "AdobeFresco",
     category: "DesignTools",
     keywords: ["adobe", "design", "sampler", "fresco", "draw", "paint"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 511.45 498.66">
     <defs>
@@ -37,7 +35,6 @@ export const iconsData: IconData[] = [
     name: "AdobeLightroom",
     category: "DesignTools",
     keywords: ["adobe", "design", "lightroom", "lr", "photo", "edit"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <path fill="#001E36"
@@ -51,7 +48,6 @@ export const iconsData: IconData[] = [
     name: "AdobeAfterEffects",
     category: "DesignTools",
     keywords: ["adobe", "design", "after effects", "ae", "video", "motion"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.47 499.66">
     <defs>
@@ -69,7 +65,6 @@ export const iconsData: IconData[] = [
     name: "AdobeAnimate",
     category: "DesignTools",
     keywords: ["adobe", "design", "animate", "animation", "flash", "2d"],
-    weights: ["regular"],
     svgContent: `
 <svg  viewBox="0 0 463.65 452.06">
     <defs>
@@ -95,7 +90,6 @@ export const iconsData: IconData[] = [
       "wave",
       "music",
     ],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 468.76 457.04">
     <defs>
@@ -113,7 +107,6 @@ export const iconsData: IconData[] = [
     name: "CharacterAnimator",
     category: "DesignTools",
     keywords: ["adobe", "design", "animator", "character", "animation"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 511.45 498.66">
     <defs>
@@ -131,7 +124,6 @@ export const iconsData: IconData[] = [
     name: "AdobePremierePro",
     category: "DesignTools",
     keywords: ["adobe", "design", "premiere", "pro", "video", "edit", "film"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.84 500.01">
     <defs>
@@ -150,7 +142,6 @@ export const iconsData: IconData[] = [
     name: "AdobeRush",
     category: "DesignTools",
     keywords: ["adobe", "design", "rush", "video", "edit", "film"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 122.88 119.81">
     <style>.rush-bg{fill:#00005B;} .rush-text{fill:#9999FF;}</style>
@@ -169,7 +160,6 @@ export const iconsData: IconData[] = [
     name: "AdobeAero",
     category: "DesignTools",
     keywords: ["adobe", "aero", "design", "3d", "ar", "augmented reality"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 484.78 472.66">
     <defs>
@@ -187,7 +177,6 @@ export const iconsData: IconData[] = [
     name: "AdobeDimension",
     category: "DesignTools",
     keywords: ["adobe", "demension", "design", "3d", "3d design"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 511.45 498.66">
     <defs>
@@ -213,7 +202,6 @@ export const iconsData: IconData[] = [
       "material",
       "substance",
     ],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512.47 499.66">
     <defs>
@@ -239,7 +227,6 @@ export const iconsData: IconData[] = [
       "texture",
       "material",
     ],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.45 498.66">
     <defs>
@@ -266,7 +253,6 @@ export const iconsData: IconData[] = [
       "scene",
       "composition",
     ],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 511.94 493.66">
     <defs>
@@ -285,7 +271,6 @@ export const iconsData: IconData[] = [
     name: "AdobeDreamweaver",
     category: "DesignTools",
     keywords: ["adobe", "dreamweaver", "design", "web", "development", "code"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 511.45 498.66">
     <defs>
@@ -304,7 +289,6 @@ export const iconsData: IconData[] = [
     name: "AdobeXd",
     category: "DesignTools",
     keywords: ["adobe", "xd", "design", "ui", "ux", "prototype"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.45 499.64">
     <defs>
@@ -322,7 +306,6 @@ export const iconsData: IconData[] = [
     name: "AdobeInDesign",
     category: "DesignTools",
     keywords: ["adobe", "dreamweaver", "design", "indesign", "layout", "print"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512">
     <path
@@ -339,7 +322,6 @@ export const iconsData: IconData[] = [
     name: "AdobeStock",
     category: "DesignTools",
     keywords: ["adobe", "design", "stock"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 464.49 452.88">
     <defs>
@@ -358,7 +340,6 @@ export const iconsData: IconData[] = [
     name: "AdobeIllustrator",
     category: "DesignTools",
     keywords: ["adobe", "design", "illustrator", "vector", "graphics", "art"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 511.45 498.66">
     <defs>
@@ -376,7 +357,6 @@ export const iconsData: IconData[] = [
     name: "Adobe",
     category: "DesignTools",
     keywords: ["adobe", "design", "creative", "tools"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512">
     <path
@@ -396,7 +376,6 @@ export const iconsData: IconData[] = [
       "generative",
       "artificial intelligence",
     ],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512">
     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -409,7 +388,6 @@ export const iconsData: IconData[] = [
     name: "Figma",
     category: "DesignTools",
     keywords: ["figma", "design", "graphic", "tools", "creator", "ux", "ui"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 200 300" width="100" height="100">
     <path fill="#0ACF83"
@@ -426,7 +404,6 @@ export const iconsData: IconData[] = [
     name: "Canva",
     category: "DesignTools",
     keywords: ["canva", "design", "graphic", "tools", "creator"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 508 508">
     <g transform="matrix(.26718 0 0 .26718 0 0)">
@@ -469,7 +446,6 @@ export const iconsData: IconData[] = [
     name: "Sketch",
     category: "DesignTools",
     keywords: ["sketch", "design", "vector", "tools", "app"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <path fill="#EA6C00" fill-rule="evenodd"

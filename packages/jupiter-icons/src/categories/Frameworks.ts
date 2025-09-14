@@ -12,7 +12,6 @@ export const iconsData: IconData[] = [
       "library",
       "javascript",
     ],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 122.88 109.43" width="100" height="100">
     <style>.react-fill{fill-rule:evenodd;clip-rule:evenodd;fill:#00D8FF;}</style>
@@ -27,7 +26,6 @@ export const iconsData: IconData[] = [
     name: "NodeJS",
     category: "Frameworks",
     keywords: ["node", "nodejs", "backend", "javascript", "runtime", "server"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 109 122.88" width="100" height="100">
     <style>.node-fill{fill-rule:evenodd;clip-rule:evenodd;fill:#689F63;}</style>
@@ -42,7 +40,6 @@ export const iconsData: IconData[] = [
     name: "AlpineJs",
     category: "Frameworks",
     keywords: ["AlpineJs", "frontend", "Frameworks", "ui", "javascript"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 234.84" width="100" height="100">
     <path fill="#77C1D2" d="M398.22 0L512 113.28 398.22 226.56 284.44 113.28z" />
@@ -54,7 +51,6 @@ export const iconsData: IconData[] = [
     name: "ThreeJsDark",
     category: "Frameworks",
     keywords: ["ThreeJs", "3D", "js", "javascript", "webgl", "library"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 110" width="100" height="100">
     <path stroke="#000" stroke-linejoin="round" stroke-miterlimit="10"
@@ -71,7 +67,6 @@ export const iconsData: IconData[] = [
     name: "ThreeJsLight",
     category: "Frameworks",
     keywords: ["ThreeJs", "3D", "js", "javascript", "webgl", "library"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 110" width="100" height="100">
     <path stroke="#fff" stroke-linejoin="round" stroke-miterlimit="10"
@@ -96,7 +91,6 @@ export const iconsData: IconData[] = [
       "state",
       "management",
     ],
-    weights: ["regular"],
     svgContent: `
   <svg viewBox="0 0 339999 326500">
     <style>
@@ -120,7 +114,6 @@ export const iconsData: IconData[] = [
         "frontend",
         "ui",
     ],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <path fill="#1266A9"
@@ -144,7 +137,6 @@ export const iconsData: IconData[] = [
       "javascript",
       "typescript",
     ],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 -15 122.88 150"
     style="enable-background:new 0 0 122.88 106.42">
@@ -169,7 +161,6 @@ export const iconsData: IconData[] = [
       "javascript",
       "typescript",
     ],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 223 236">
     <g clip-path="url(#angular1)">
@@ -211,7 +202,6 @@ export const iconsData: IconData[] = [
       "javascript",
       "typescript",
     ],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 455.95 454.16" width="100" height="100">
     <defs>
@@ -238,7 +228,6 @@ export const iconsData: IconData[] = [
       "javascript",
       "typescript",
     ],
-    weights: ["regular"],
     svgContent: `
   <svg viewBox="0 0 495.7 484.43" width="100" height="100">
     <defs>
@@ -265,7 +254,6 @@ export const iconsData: IconData[] = [
       "javascript",
       "typescript",
     ],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <path fill="#000"
@@ -299,7 +287,6 @@ export const iconsData: IconData[] = [
       "javascript",
       "typescript",
     ],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <path fill="#744C9E"
@@ -318,7 +305,6 @@ export const iconsData: IconData[] = [
       "javascript",
       "typescript",
     ],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <path fill="#00DC82"
@@ -337,7 +323,6 @@ export const iconsData: IconData[] = [
       "javascript",
       "typescript",
     ],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 1333.33 773.55" width="100" height="100">
     <path
@@ -357,7 +342,6 @@ export const iconsData: IconData[] = [
       "javascript",
       "typescript",
     ],
-    weights: ["regular"],
     svgContent: `
 <svg fill="#fff" viewBox="0 0 1333.33 773.55" width="100" height="100">
     <path
@@ -370,7 +354,6 @@ export const iconsData: IconData[] = [
     name: "CodeIgniter",
     category: "Frameworks",
     keywords: ["CodeIgniter", "backend", "Frameworks", "php", "symfony"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 102.33 122.88" width="100" height="100">
     <style>.codeigniter-fill{fill-rule:evenodd;clip-rule:evenodd;fill:#EE4323;}</style>
@@ -385,7 +368,6 @@ export const iconsData: IconData[] = [
     name: "AstroJs",
     category: "Frameworks",
     keywords: ["AstroJs", "static", "Frameworks", "javascript", "typescript"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512" width="100" height="100">
     <g fill="#17191E">
@@ -405,7 +387,6 @@ export const iconsData: IconData[] = [
       "javascript",
       "typescript",
     ],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <path fill="#002A41"
@@ -421,7 +402,6 @@ export const iconsData: IconData[] = [
     name: "Django",
     category: "Frameworks",
     keywords: ["Django", "backend", "Frameworks", "python", "flask", "fastapi"],
-    weights: ["regular"],
     svgContent: `
  <svg viewBox="0 0 261418 333333" width="100" height="100">
     <path
@@ -434,7 +414,6 @@ export const iconsData: IconData[] = [
     name: "Godot",
     category: "Frameworks",
     keywords: ["Godot", "game", "Frameworks", "csharp", "cpp", "gdscript"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512">
     <path
@@ -458,7 +437,6 @@ export const iconsData: IconData[] = [
     name: "Materialize",
     category: "Frameworks",
     keywords: ["Materialize", "frontend", "Frameworks", "css", "javascript"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512">
     <g transform="matrix(3.94708 0 0 3.9766 1.03 1.544)">
@@ -481,7 +459,6 @@ export const iconsData: IconData[] = [
     name: "Laravel",
     category: "Frameworks",
     keywords: ["Laravel", "backend", "Frameworks", "php", "symfony"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
     <path fill="#FF2D20"
@@ -493,7 +470,6 @@ export const iconsData: IconData[] = [
     name: "PandaCSS",
     category: "Frameworks",
     keywords: ["pandacss", "css", "creator", "ui"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 507 512.33">
     <g fill-rule="nonzero">
@@ -509,7 +485,6 @@ export const iconsData: IconData[] = [
     name: "TailwindCSS",
     category: "Frameworks",
     keywords: ["tailwind", "css", "creator", "ui", "frontend", "framework"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 122.88 73.29" width="100" height="100">
     <defs>
@@ -524,7 +499,6 @@ export const iconsData: IconData[] = [
     name: "Bootstrap4",
     category: "Frameworks",
     keywords: ["bootstrap", "css", "creator", "ui", "frontend", "framework"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
     <path fill="#563D7C"
@@ -538,7 +512,6 @@ export const iconsData: IconData[] = [
     name: "Bootstrap5",
     category: "Frameworks",
     keywords: ["bootstrap", "css", "creator", "ui", "frontend", "framework"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
     <path fill="#7952B3"
@@ -551,7 +524,6 @@ export const iconsData: IconData[] = [
     name: "Supabase",
     category: "Frameworks",
     keywords: ["supabase", "backend", "Frameworks", "postgres", "database"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <path fill="url(#supabase1)"
@@ -579,7 +551,6 @@ export const iconsData: IconData[] = [
     name: "Flutter",
     category: "Frameworks",
     keywords: ["flutter", "mobile", "Frameworks", "dart", "cross-platform"],
-    weights: ["regular"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <path fill="#42A5F5" fill-opacity=".8"
@@ -607,7 +578,6 @@ export const iconsData: IconData[] = [
     name: "AzureDevOps",
     category: "Frameworks",
     keywords: ["azure", "devops", "Frameworks", "cloud", "microsoft"],
-    weights: ["regular"],
     svgContent: `
 <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
     <path
@@ -625,6 +595,94 @@ export const iconsData: IconData[] = [
             <stop offset="1" stop-color="#5ea0ef" />
         </linearGradient>
     </defs>
+</svg>
+    `.trim(),
+  },
+  {
+    name: "MaterialUI",
+    category: "Frameworks",
+    keywords: ["materialui", "css", "creator", "ui", "frontend", "framework"],
+    svgContent: `
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <path fill="#00B0FF" d="M0 53.3V10l37.5 21.65v14.434l-25-14.434v28.867z" />
+    <path fill="#0081CB"
+        d="M37.5 31.65 75 10v43.3L50 67.735l-12.5-7.217 25-14.433V31.65l-25 14.434z" />
+    <path fill="#00B0FF" d="M37.5 60.517V74.95l25 14.434V74.95z" />
+    <path fill="#0081CB"
+        d="m62.5 89.384 37.5-21.65V38.867l-12.5 7.217v14.433l-25 14.434zm25-57.733V17.217l12.5-7.216v14.433z" />
+</svg>
+    `.trim(),
+  },
+  {
+    name: "ReactBitsDark",
+    category: "Frameworks",
+    keywords: ["reactbits", "dark", "Frameworks", "react", "ui"],
+    svgContent: `
+<svg viewBox="0 0 235 235" xmlns="http://www.w3.org/2000/svg">
+    <path
+        d="M65.3115 14.3631C74.4428 9.70832 84.5983 12.5791 93.0947 17.3661L93.9121 17.8348L101.611 22.3377L92.6054 37.7361L84.9062 33.2332L84.2578 32.8611C77.6609 29.1525 74.4866 29.7085 73.4121 30.2567L73.4052 30.2596C72.4933 30.7239 70.64 32.3567 69.5478 37.8485C68.4804 43.2157 68.4886 50.8122 69.9277 60.3641C70.6709 65.2973 71.7766 70.616 73.2324 76.2371C79.0244 75.3794 85.0572 74.685 91.2802 74.1688C101.696 57.3351 112.834 43.0135 123.568 32.4412C131.231 24.8929 139.056 18.8891 146.61 15.4032C153.93 12.0247 162.446 10.4022 170.217 14.1688L170.587 14.3524L170.605 14.3612C176.268 17.2567 179.855 22.2725 181.968 27.7684C184.055 33.1968 184.909 39.5586 184.942 46.282L184.986 55.201L167.147 55.2879L167.104 46.369L167.09 45.3651C166.986 40.4283 166.301 36.7288 165.318 34.1697C164.298 31.5182 163.18 30.6019 162.492 30.2479C161.572 29.7847 159.156 29.259 154.084 31.5994C149.111 33.8943 142.969 38.3699 136.085 45.1502C128.714 52.4105 120.914 61.8967 113.237 73.117C114.801 73.095 116.373 73.0819 117.951 73.0818C148.196 73.0818 175.95 77.1557 196.452 83.9891C206.656 87.3901 215.558 91.6364 222.092 96.785C228.525 101.854 233.903 108.848 233.903 117.679C233.903 125.289 229.871 131.565 224.72 136.326C219.57 141.086 212.573 145.062 204.602 148.353L196.358 151.756L189.551 135.268L197.795 131.864C204.689 129.018 209.585 126.024 212.611 123.227C215.636 120.43 216.065 118.56 216.065 117.679C216.064 116.656 215.45 114.264 211.051 110.797C206.751 107.409 199.977 103.967 190.812 100.912C172.574 94.8332 146.812 90.9207 117.951 90.9207C112.444 90.9207 107.05 91.0639 101.799 91.3367C99.1726 95.8891 96.5974 100.629 94.0976 105.533C92.0217 109.606 90.0686 113.655 88.2402 117.659C89.7117 120.883 91.2624 124.135 92.8945 127.405L94.1093 129.813L94.1103 129.815L95.3447 132.214C108.158 156.856 122.82 177.141 136.087 190.209C142.969 196.988 149.111 201.461 154.082 203.753C159.16 206.095 161.575 205.562 162.492 205.097L162.653 205.009C163.498 204.508 164.921 203.112 165.973 199.141C167.09 194.92 167.46 188.856 166.715 181.024C165.231 165.433 159.527 144.824 149.78 122.453L146.218 114.276L162.572 107.15L166.135 115.328C176.368 138.814 182.758 161.304 184.474 179.335C185.328 188.315 185.074 196.693 183.217 203.707C181.364 210.705 177.583 217.426 170.596 220.989L170.591 220.991C162.723 224.997 154.051 223.382 146.612 219.952C139.058 216.468 131.232 210.466 123.569 202.918C108.539 188.114 92.7181 165.955 79.2021 139.831C74.5896 152.725 71.4718 164.693 69.9228 174.985C68.4851 184.539 68.4775 192.137 69.5459 197.506C70.5707 202.656 72.2642 204.414 73.2236 204.996L73.4052 205.098L73.414 205.102L73.5546 205.168C75.1129 205.84 79.7264 206.044 88.8173 199.598L96.0927 194.439L106.411 208.991L99.1347 214.15L98.1836 214.814C88.2768 221.616 76.0895 226.49 65.3115 220.994V220.995C57.4411 216.988 53.6486 209.022 52.0498 200.987C50.4261 192.828 50.6814 182.968 52.2822 172.331C54.6878 156.346 60.3129 137.447 68.7431 117.659C65.6972 110.509 63.0185 103.474 60.7246 96.6522C55.0588 97.9069 49.8214 99.3352 45.0908 100.912C35.9252 103.967 29.151 107.409 24.8515 110.797C20.4524 114.264 19.8381 116.656 19.8378 117.679C19.8378 119.22 21.459 123.327 30.8193 128.426L31.75 128.923L39.6533 133.057L31.3857 148.863L23.4824 144.73L22.456 144.183C11.8747 138.441 2 129.778 2 117.679C2.00026 108.848 7.3775 101.854 13.8105 96.785C20.3442 91.6363 29.246 87.3902 39.4502 83.9891C44.4446 82.3244 49.8698 80.8247 55.6562 79.5067C54.202 73.749 53.0728 68.231 52.288 63.0223C50.6857 52.387 50.4292 42.5277 52.0517 34.369C53.6494 26.3352 57.4411 18.3704 65.3115 14.3631ZM79.2783 84.4481C74.0003 84.4482 69.7216 88.7267 69.7216 94.0047C69.7218 99.2825 74.0004 103.561 79.2783 103.561C84.5562 103.561 88.8348 99.2826 88.8349 94.0047C88.8349 88.7267 84.5563 84.4481 79.2783 84.4481Z"
+        fill="#000" />
+</svg>
+    `.trim(),
+  },
+  {
+    name: "ReactBitsLight",
+    category: "Frameworks",
+    keywords: ["reactbits", "light", "Frameworks", "react", "ui"],
+    svgContent: `
+<svg viewBox="0 0 235 235" xmlns="http://www.w3.org/2000/svg">
+    <path
+        d="M65.3115 14.3631C74.4428 9.70832 84.5983 12.5791 93.0947 17.3661L93.9121 17.8348L101.611 22.3377L92.6054 37.7361L84.9062 33.2332L84.2578 32.8611C77.6609 29.1525 74.4866 29.7085 73.4121 30.2567L73.4052 30.2596C72.4933 30.7239 70.64 32.3567 69.5478 37.8485C68.4804 43.2157 68.4886 50.8122 69.9277 60.3641C70.6709 65.2973 71.7766 70.616 73.2324 76.2371C79.0244 75.3794 85.0572 74.685 91.2802 74.1688C101.696 57.3351 112.834 43.0135 123.568 32.4412C131.231 24.8929 139.056 18.8891 146.61 15.4032C153.93 12.0247 162.446 10.4022 170.217 14.1688L170.587 14.3524L170.605 14.3612C176.268 17.2567 179.855 22.2725 181.968 27.7684C184.055 33.1968 184.909 39.5586 184.942 46.282L184.986 55.201L167.147 55.2879L167.104 46.369L167.09 45.3651C166.986 40.4283 166.301 36.7288 165.318 34.1697C164.298 31.5182 163.18 30.6019 162.492 30.2479C161.572 29.7847 159.156 29.259 154.084 31.5994C149.111 33.8943 142.969 38.3699 136.085 45.1502C128.714 52.4105 120.914 61.8967 113.237 73.117C114.801 73.095 116.373 73.0819 117.951 73.0818C148.196 73.0818 175.95 77.1557 196.452 83.9891C206.656 87.3901 215.558 91.6364 222.092 96.785C228.525 101.854 233.903 108.848 233.903 117.679C233.903 125.289 229.871 131.565 224.72 136.326C219.57 141.086 212.573 145.062 204.602 148.353L196.358 151.756L189.551 135.268L197.795 131.864C204.689 129.018 209.585 126.024 212.611 123.227C215.636 120.43 216.065 118.56 216.065 117.679C216.064 116.656 215.45 114.264 211.051 110.797C206.751 107.409 199.977 103.967 190.812 100.912C172.574 94.8332 146.812 90.9207 117.951 90.9207C112.444 90.9207 107.05 91.0639 101.799 91.3367C99.1726 95.8891 96.5974 100.629 94.0976 105.533C92.0217 109.606 90.0686 113.655 88.2402 117.659C89.7117 120.883 91.2624 124.135 92.8945 127.405L94.1093 129.813L94.1103 129.815L95.3447 132.214C108.158 156.856 122.82 177.141 136.087 190.209C142.969 196.988 149.111 201.461 154.082 203.753C159.16 206.095 161.575 205.562 162.492 205.097L162.653 205.009C163.498 204.508 164.921 203.112 165.973 199.141C167.09 194.92 167.46 188.856 166.715 181.024C165.231 165.433 159.527 144.824 149.78 122.453L146.218 114.276L162.572 107.15L166.135 115.328C176.368 138.814 182.758 161.304 184.474 179.335C185.328 188.315 185.074 196.693 183.217 203.707C181.364 210.705 177.583 217.426 170.596 220.989L170.591 220.991C162.723 224.997 154.051 223.382 146.612 219.952C139.058 216.468 131.232 210.466 123.569 202.918C108.539 188.114 92.7181 165.955 79.2021 139.831C74.5896 152.725 71.4718 164.693 69.9228 174.985C68.4851 184.539 68.4775 192.137 69.5459 197.506C70.5707 202.656 72.2642 204.414 73.2236 204.996L73.4052 205.098L73.414 205.102L73.5546 205.168C75.1129 205.84 79.7264 206.044 88.8173 199.598L96.0927 194.439L106.411 208.991L99.1347 214.15L98.1836 214.814C88.2768 221.616 76.0895 226.49 65.3115 220.994V220.995C57.4411 216.988 53.6486 209.022 52.0498 200.987C50.4261 192.828 50.6814 182.968 52.2822 172.331C54.6878 156.346 60.3129 137.447 68.7431 117.659C65.6972 110.509 63.0185 103.474 60.7246 96.6522C55.0588 97.9069 49.8214 99.3352 45.0908 100.912C35.9252 103.967 29.151 107.409 24.8515 110.797C20.4524 114.264 19.8381 116.656 19.8378 117.679C19.8378 119.22 21.459 123.327 30.8193 128.426L31.75 128.923L39.6533 133.057L31.3857 148.863L23.4824 144.73L22.456 144.183C11.8747 138.441 2 129.778 2 117.679C2.00026 108.848 7.3775 101.854 13.8105 96.785C20.3442 91.6363 29.246 87.3902 39.4502 83.9891C44.4446 82.3244 49.8698 80.8247 55.6562 79.5067C54.202 73.749 53.0728 68.231 52.288 63.0223C50.6857 52.387 50.4292 42.5277 52.0517 34.369C53.6494 26.3352 57.4411 18.3704 65.3115 14.3631ZM79.2783 84.4481C74.0003 84.4482 69.7216 88.7267 69.7216 94.0047C69.7218 99.2825 74.0004 103.561 79.2783 103.561C84.5562 103.561 88.8348 99.2826 88.8349 94.0047C88.8349 88.7267 84.5563 84.4481 79.2783 84.4481Z"
+        fill="#fff" />
+</svg>
+    `.trim(),
+  },
+  {
+    name: "Storybook",
+    category: "Frameworks",
+    keywords: ["storybook", "ui", "Frameworks", "frontend", "components"],
+    svgContent: `
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <path fill="#FF4785"
+        d="m13.103 92.15-3.1-82.55a5.03 5.03 0 0 1 4.72-5.2l70.2-4.39a5.025 5.025 0 0 1 5.345 5.02v89.945a5.03 5.03 0 0 1-5.255 5.02l-67.11-3.015a5.03 5.03 0 0 1-4.8-4.83" />
+    <path fill="#fff" fill-rule="evenodd"
+        d="m79.404.355-9.66.6-.47 11.335a.75.75 0 0 0 1.2.63l4.4-3.34 3.72 2.93a.75.75 0 0 0 1.215-.615zm-7.52 37.95c-1.765 1.375-14.945 2.31-14.945.355.28-7.465-3.06-7.79-4.92-7.79-1.76 0-4.73.53-4.73 4.53 0 4.075 4.34 6.375 9.435 9.075 7.235 3.835 16 8.48 16 20.16 0 11.2-9.1 17.38-20.7 17.38-11.975 0-22.44-4.845-21.26-21.64.465-1.97 15.69-1.5 15.69 0-.19 6.93 1.39 8.97 5.38 8.97 3.065 0 4.455-1.69 4.455-4.53 0-4.305-4.52-6.845-9.725-9.765-7.045-3.955-15.335-8.61-15.335-19.295 0-10.66 7.33-17.77 20.42-17.77s20.235 7 20.235 20.32"
+        clip-rule="evenodd" />
+</svg>
+    `.trim(),
+  },
+  {
+    name: "SemanticUI",
+    category: "Frameworks",
+    keywords: ["semanticui", "ui", "Frameworks", "css", "frontend"],
+    svgContent: `
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100" height="100" rx="10" fill="#34BDB2" />
+    <path
+        d="M65.8041 34.0021C60.5241 30.9401 55.8381 28.5311 49.7061 28.6371C46.1991 28.6971 43.1861 30.6041 42.5541 34.0941C41.9641 37.3401 44.8501 39.1411 47.8531 40.2471C52.8321 42.0801 57.1671 44.0171 62.0591 46.0551C70.9531 49.7611 75.5141 55.7651 74.9751 63.4661C74.2891 73.2661 68.3911 80.2941 59.0181 82.6111C46.7711 85.6401 34.8781 81.0271 24.8281 74.5881C27.3651 70.7241 30.3081 68.0871 32.8281 64.2471C38.6341 66.7171 43.1951 70.0571 49.2681 70.5771C53.5511 70.9451 58.4031 70.7401 59.3651 65.7101C60.2321 61.1741 56.2851 58.7431 52.4351 57.3851C47.8501 55.7681 43.2751 53.7901 38.7801 51.9541C30.4701 48.5601 27.0891 41.9211 27.6581 34.1011C27.6581 29.5151 31.4621 20.2471 40.7911 17.3641C55.1241 12.9341 63.0211 17.4701 73.4141 24.1491C70.6541 27.8001 68.5311 30.3951 65.8041 34.0021Z"
+        fill="white" />
+</svg>
+    `.trim(),
+  },
+  {
+    name: "RadixUIDark",
+    category: "Frameworks",
+    keywords: ["radixui", "dark", "Frameworks", "react", "components"],
+    svgContent: `
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <path fill="#000"
+        d="M47.435 100C30.626 100 17 85.4 17 67.39s13.626-32.609 30.435-32.609zm0-100H17v30.434h30.435zM67 30.434c8.404 0 15.217-6.813 15.217-15.217S75.404 0 67 0 51.782 6.813 51.782 15.217 58.597 30.434 67 30.434" />
+</svg>
+    `.trim(),
+  },
+  {
+    name: "RadixUILight",
+    category: "Frameworks",
+    keywords: ["radixui", "dark", "Frameworks", "react", "components"],
+    svgContent: `
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <path fill="#fff"
+        d="M47.435 100C30.626 100 17 85.4 17 67.39s13.626-32.609 30.435-32.609zm0-100H17v30.434h30.435zM67 30.434c8.404 0 15.217-6.813 15.217-15.217S75.404 0 67 0 51.782 6.813 51.782 15.217 58.597 30.434 67 30.434" />
 </svg>
     `.trim(),
   },
