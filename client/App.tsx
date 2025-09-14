@@ -11,6 +11,9 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Playground from "./pages/Playground";
 import Docs from "./pages/Docs";
+import { StarsBackground } from "./components/ui/stars-background.tsx";
+import { ShootingStars } from "./components/ui/shooting-stars.tsx";
+
 
 const queryClient = new QueryClient();
 
@@ -46,11 +49,16 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <RouterProvider 
+      <RouterProvider
         router={router}
         fallbackElement={<div>Loading...</div>}
       />
     </TooltipProvider>
+    <div className="pointer-events-none fixed inset-0 z-50 select-none">
+      <ShootingStars />
+      <StarsBackground />
+    </div>
+    
   </QueryClientProvider>
 );
 

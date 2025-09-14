@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import { CodeBlock } from "@/components/ui/code-block";
 import { icons } from "../../../packages/jupiter-icons/src/index.ts";
+import { FlipWords } from "../ui/flip-words.tsx";
+
 
 const heroList = ["React", "GrokFill", "C", "NestJs", "CodeIgniter", "Figma", "Slack", "Chrome", "AtlassianBitbucket", "Telegram", "AdobeInDesign", "VK"] as const;
+const words = ["Beautiful.", "Categorized.", "Code.", "Modern."];
 
 export function HomeHero() {
   return (
@@ -14,9 +17,10 @@ export function HomeHero() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-balance text-4xl font-semibold md:text-7xl"
+              className="text-balance text-4xl font-medium md:text-7xl"
             >
-              Every icon you need. Beautiful. Categorized. SVG.
+              Every icon you need.
+              <FlipWords words={words} className="font-semibold text-blue-900" />
             </motion.h1>
             <p className="mt-4 max-w-prose text-muted-foreground mb-8">
               A modern, accessible icon set with original brand colors, full TypeScript support, and delightful animations. Built for React, Vite, and Tailwind with class-based dark mode.
