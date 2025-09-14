@@ -28,7 +28,7 @@ export function SiteHeader() {
           >
             <div className="relative">
               <img
-                src="/text-black.png"
+                src="/jupiterDark.png"
                 alt="Jupiter Icons"
                 className="relative h-12 w-1h-12 dark:invert"
               />

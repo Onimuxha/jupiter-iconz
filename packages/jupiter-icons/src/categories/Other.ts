@@ -117,4 +117,36 @@ export const iconsData: IconData[] = [
 </svg>
     `.trim(),
   },
+  {
+    name: "JupiterIconDark",
+    category: "Other",
+    keywords: ["google", "search", "web", "internet", "wordmark"],
+    weights: ["regular"],
+    svgContent: `
+<svg viewBox="0 0 1747 1747"
+    xmlns="http://www.w3.org/2000/svg">
+    <path d="M873.5 0L1629.97 436.75V1310.25L873.5 1747L117.027 1310.25V436.75L873.5 0Z"
+        fill="black" />
+    <path
+        d="M839.5 873V703H997.5V873C997.5 897 992.833 920 983.5 942C974.5 963.667 962 982.833 946 999.5C930.333 1015.83 911.833 1028.83 890.5 1038.5C869.167 1048.17 846.5 1053 822.5 1053H382.5V878H540.5V923H789.5C803.5 923 815.333 918.167 825 908.5C834.667 898.833 839.5 887 839.5 873ZM1037.29 703H1195.29V1053H1037.29V703Z"
+        fill="white" />
+</svg>
+    `.trim(),
+  },
+  {
+    name: "JupiterIconLight",
+    category: "Other",
+    keywords: ["google", "search", "web", "internet", "wordmark"],
+    weights: ["regular"],
+    svgContent: `
+<svg viewBox="0 0 1747 1747"
+    xmlns="http://www.w3.org/2000/svg">
+    <path d="M873.5 0L1629.97 436.75V1310.25L873.5 1747L117.027 1310.25V436.75L873.5 0Z"
+        fill="white" />
+    <path
+        d="M839.5 873V703H997.5V873C997.5 897 992.833 920 983.5 942C974.5 963.667 962 982.833 946 999.5C930.333 1015.83 911.833 1028.83 890.5 1038.5C869.167 1048.17 846.5 1053 822.5 1053H382.5V878H540.5V923H789.5C803.5 923 815.333 918.167 825 908.5C834.667 898.833 839.5 887 839.5 873ZM1037.29 703H1195.29V1053H1037.29V703Z"
+        fill="dark" />
+</svg>
+    `.trim(),
+  },
 ];
