@@ -41,9 +41,11 @@ export function IconItem({ name, Comp, size, viewMode, category, keywords }) {
         <div className="w-14 h-14 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded-lg">
           <Comp size={Math.min(size, 55)} aria-label={name} />
         </div>
-        <div className="text-center">
-          <span className="text-sm font-light">{name}</span>
-          <div className="text-xs bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">{category}</div>
+        <div className="text-center space-y-1">
+          <span className="text-sm font-light block">{name}</span>
+          <div className="text-xs inline-block bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">
+            {category}
+          </div>
         </div>
       </motion.button>
       <IconPortal name={name} open={open} onOpenChange={setOpen} />
