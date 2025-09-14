@@ -4,14 +4,7 @@ export const iconsData: IconData[] = [
   {
     name: "TypeScript",
     category: "Programming",
-    keywords: [
-      "typescript",
-      "ts",
-      "javascript",
-      "frontend",
-      "backend",
-      "language",
-    ],
+    keywords: ["ts", "javascript", "frontend", "backend", "language"],
     svgContent: `
 <svg viewBox="0 0 100 100" >
     <g clip-path="url(#ts)">
@@ -61,7 +54,7 @@ export const iconsData: IconData[] = [
   {
     name: "SASS",
     category: "Programming",
-    keywords: ["sass", "scss", "style", "css", "preprocessor", "frontend", "web"],
+    keywords: ["scss", "style", "css", "preprocessor", "frontend", "web"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
     <path fill="#CD6799"
@@ -72,7 +65,7 @@ export const iconsData: IconData[] = [
   {
     name: "Vitest",
     category: "Programming",
-    keywords: ["sass", "scss", "style", "css", "preprocessor", "frontend", "web"],
+    keywords: ["testing", "test", "unit test", "javascript", "typescript"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
     <path fill="#FCC72B"
@@ -131,15 +124,7 @@ export const iconsData: IconData[] = [
   {
     name: "Python",
     category: "Programming",
-    keywords: [
-      "python",
-      "language",
-      "backend",
-      "data",
-      "science",
-      "ai",
-      "machine learning",
-    ],
+    keywords: ["backend", "data", "science", "ai", "machine learning"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <path fill="url(#a)"
@@ -181,13 +166,7 @@ export const iconsData: IconData[] = [
   {
     name: "SolidityDark",
     category: "Programming",
-    keywords: [
-      "solidity",
-      "language",
-      "smart contracts",
-      "blockchain",
-      "ethereum",
-    ],
+    keywords: ["language", "smart contracts", "blockchain", "ethereum"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <path fill="#000" d="M66.208 0 50.13 28.574H18L34.064 0z" opacity=".45" />
@@ -202,13 +181,7 @@ export const iconsData: IconData[] = [
   {
     name: "SolidityLight",
     category: "Programming",
-    keywords: [
-      "solidity",
-      "language",
-      "smart contracts",
-      "blockchain",
-      "ethereum",
-    ],
+    keywords: ["language", "smart contracts", "blockchain", "ethereum"],
     svgContent: `
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
     <path fill="#fff" d="M66.208 0 50.13 28.574H18L34.064 0z" opacity=".45" />
@@ -555,7 +528,13 @@ export const iconsData: IconData[] = [
   {
     name: "AtlassianBitbucket",
     category: "Programming",
-    keywords: ["atlassian", "bitbucket", "git", "repository", "version control"],
+    keywords: [
+      "atlassian",
+      "bitbucket",
+      "git",
+      "repository",
+      "version control",
+    ],
     svgContent: `
 <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
     <path

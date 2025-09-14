@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { CodeBlock } from "@/components/ui/code-block";
 import { icons } from "../../../packages/jupiter-icons/src/index.ts";
 
-const heroList = ["React", "TypeScript", "VSCode", "MeteorJs", "BuyMeACoffee", "Figma", "Slack", "Chrome", "NodeJS"] as const;
+const heroList = ["React", "GrokFill", "C", "NestJs", "CodeIgniter", "Figma", "Slack", "Chrome", "AtlassianBitbucket", "Telegram", "AdobeInDesign", "VK"] as const;
 
 export function HomeHero() {
   return (
@@ -16,7 +16,7 @@ export function HomeHero() {
               transition={{ duration: 0.5 }}
               className="text-balance text-4xl font-semibold md:text-7xl"
             >
-              Developer-friendly colorful SVG icon library
+              Every icon you need. Beautiful. Categorized. SVG.
             </motion.h1>
             <p className="mt-4 max-w-prose text-muted-foreground mb-8">
               A modern, accessible icon set with original brand colors, full TypeScript support, and delightful animations. Built for React, Vite, and Tailwind with class-based dark mode.
