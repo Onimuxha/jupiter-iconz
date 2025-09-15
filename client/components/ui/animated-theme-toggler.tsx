@@ -69,9 +69,9 @@ export const AnimatedThemeToggler = ({ className }: Props) => {
             <AnimatePresence mode="wait" initial={false}>
                 <motion.span
                     key={isDarkMode ? "sun" : "moon"}
-                    initial={{ rotate: -90, opacity: 0 }}
-                    animate={{ rotate: 0, opacity: 1 }}
-                    exit={{ rotate: 90, opacity: 0 }}
+                    initial={{ rotate: -90 }}
+                    animate={{ rotate: 0 }}
+                    exit={{ rotate: 90 }}
                     transition={{ duration: 0.3 }}
                     className="absolute inset-0 flex items-center justify-center"
                 >
