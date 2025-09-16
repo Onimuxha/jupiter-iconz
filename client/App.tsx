@@ -11,9 +11,9 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Playground from "./pages/Playground";
 import Docs from "./pages/Docs";
+import { IconExplorer } from "@/components/site/IconExplorer/IconExplorer";
 import { StarsBackground } from "./components/ui/stars-background.tsx";
 import { ShootingStars } from "./components/ui/shooting-stars.tsx";
-
 
 const queryClient = new QueryClient();
 
@@ -23,6 +23,10 @@ const router = createBrowserRouter(
     {
       path: "/",
       element: <PageTransition><Index /></PageTransition>,
+    },
+    {
+      path: "/icons",
+      element: <PageTransition><IconExplorer /></PageTransition>,
     },
     {
       path: "/playground",
@@ -55,7 +59,6 @@ const App = () => (
       <ShootingStars />
       <StarsBackground />
     </div>
-
   </QueryClientProvider>
 );
 

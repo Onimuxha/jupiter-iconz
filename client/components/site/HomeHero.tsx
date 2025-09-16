@@ -48,6 +48,7 @@ export function HomeHero() {
             })}
           </motion.div>
         </div>
+        <a href="/icons">asdf</a>
       </div>
     </section>
   );
