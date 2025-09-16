@@ -1,6 +1,6 @@
 {
   "name": "jupiter-iconz",
-  "version": "1.0.21",
+  "version": "1.0.24",
   "private": false,
   "type": "module",
   "main": "dist/index.js",

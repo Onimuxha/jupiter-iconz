@@ -19,7 +19,6 @@ const all: Record<string, ReturnType<typeof createIcon>> = {};
 });
 // -----------------------------------------------------------------------------------------------------------
 
-// Programming iconz
 export const ReactIcon = all["React"];
 export const TypeScript = all["TypeScript"];
 export const NodeJS = all["NodeJS"];
@@ -30,7 +29,6 @@ export const Slack = all["Slack"];
 export const AlpineJs = all["AlpineJs"];
 export const ThreeJs = all["ThreeJs"];
 
-//Apps iconz
 export const NestJs = all["NestJs"];
 export const MeteorJs = all["MeteorJs"];
 export const JestJs = all["JestJs"];
@@ -44,7 +42,6 @@ export const BackboneJs = all["BackboneJs"];
 export const ReduxJs = all["ReduxJs"];
 export const Jquery = all["Jquery"];
 
-// Design tools iconz
 export const Figma = all["Figma"];
 export const Photoshop = all["Photoshop"];
 
@@ -59,7 +56,6 @@ export const Categories = {
   Other,
 };
 
-// Combine all icon data
 const allCategories = [
   ...Programming,
   ...Apps,
