@@ -7,13 +7,13 @@ import "./global.css";
 
 import { createRoot } from "react-dom/client";
 import { PageTransition } from "@/components/site/PageTransition";
-import Index from "./pages/Index";
+import { HomeHero } from "@/components/site/HomeHero";
 import NotFound from "./pages/NotFound";
 import Playground from "./pages/Playground";
 import Docs from "./pages/Docs";
-import { IconExplorer } from "@/components/site/IconExplorer/IconExplorer";
 import { StarsBackground } from "./components/ui/stars-background.tsx";
 import { ShootingStars } from "./components/ui/shooting-stars.tsx";
+import { IconExplorer } from "./components/site/IconExplorer/IconExplorer.tsx";
 
 const queryClient = new QueryClient();
 
@@ -22,7 +22,7 @@ const router = createBrowserRouter(
   [
     {
       path: "/",
-      element: <PageTransition><Index /></PageTransition>,
+      element: <PageTransition><HomeHero /></PageTransition>,
     },
     {
       path: "/icons",
