@@ -7,6 +7,7 @@ import { FlipWords } from "../ui/flip-words.tsx";
 import { SiteHeader } from "./SiteHeader";
 import { SiteFooter } from "./SiteFooter";
 import { IconArrowRight, IconInvoice, IconBolt, IconShield, IconPalette } from "@tabler/icons-react";
+import { HeroGeometric } from "../ui/shap-loading-hero.tsx";
 
 const heroList = ["React", "GrokFill", "C", "NestJs", "CodeIgniter", "Figma", "Slack", "Chrome", "AtlassianBitbucket", "Telegram", "AdobeInDesign", "VK"] as const;
 const words = ["Beautiful.", "Categorized.", "Code.", "Modern."];
@@ -15,12 +16,14 @@ export function HomeHero() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-muted/40">
       <SiteHeader />
-
       <main>
-        {/* Hero Section */}
-        <section className="border-b border-border/60 bg-[radial-gradient(60%_80%_at_50%_0%,hsl(var(--accent)_/_24%),transparent)] pt-28">
-          <div className="mx-auto max-w-6xl px-4 py-12 md:py-20">
+        <section className="relative border-b border-border/60 bg-[radial-gradient(60%_80%_at_50%_0%,hsl(var(--accent)_/_24%),transparent)] pt-28 overflow-hidden">
+          {/* Hero background graphic */}
+          <HeroGeometric className="absolute inset-0 w-full h-full z-0 pointer-events-none" />
+
+          <div className="relative z-10 mx-auto max-w-6xl px-4 py-12 md:py-20">
             <div className="grid items-center gap-10 md:grid-cols-2">
+              {/* Left column */}
               <div>
                 <h1 className="text-balance text-4xl font-medium md:text-7xl">
                   Every icon you need.
@@ -30,13 +33,13 @@ export function HomeHero() {
                   A modern, accessible icon set with original brand colors, full TypeScript support, and delightful animations. Built for React, Vite, and Tailwind with class-based dark mode.
                 </p>
 
+                {/* Buttons */}
                 <div className="space-y-6">
                   <CodeBlock
                     language="bash"
                     filename="terminal"
                     code={`npm install jupiter-iconz`}
                   />
-
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -60,6 +63,7 @@ export function HomeHero() {
                 </div>
               </div>
 
+              {/* Icon mosaic */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.98 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -70,7 +74,10 @@ export function HomeHero() {
                 {heroList.map((name) => {
                   const Comp = icons[name];
                   return (
-                    <div key={name} className="flex items-center justify-center rounded-xl border border-white/20 bg-white/10 p-6 shadow-[inset_0_1px_0_0_hsla(0,0%,100%,0.2)] backdrop-blur-md dark:bg-white/5 hover:bg-white/20 dark:hover:bg-white/10 transition-colors">
+                    <div
+                      key={name}
+                      className="flex items-center justify-center rounded-xl border border-white/20 bg-white/10 p-6 shadow-[inset_0_1px_0_0_hsla(0,0%,100%,0.2)] backdrop-blur-md dark:bg-white/5 hover:bg-white/20 dark:hover:bg-white/10 transition-colors"
+                    >
                       <Comp size={48} aria-label={name} />
                     </div>
                   );
@@ -79,6 +86,7 @@ export function HomeHero() {
             </div>
           </div>
         </section>
+
 
         {/* Features Section */}
         <section className="py-24 bg-white/50 dark:bg-gray-950/50">

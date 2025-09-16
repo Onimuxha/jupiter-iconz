@@ -1,11 +1,12 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createRoot } from "react-dom/client";
+import { createBrowserRouter, RouterProvider, useLocation } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
+
 import "./global.css";
 
-import { createRoot } from "react-dom/client";
 import { PageTransition } from "@/components/site/PageTransition";
 import { HomeHero } from "@/components/site/HomeHero";
 import NotFound from "./pages/NotFound";
@@ -17,34 +18,60 @@ import { IconExplorer } from "./components/site/IconExplorer/IconExplorer.tsx";
 
 const queryClient = new QueryClient();
 
-// Create router with future flags enabled
+import { useMemo } from "react";
+import { Outlet } from "react-router-dom";
+
+function AppLayout() {
+  const location = useLocation();
+
+  const showBackground = useMemo(() => location.pathname !== "/", [location]);
+
+  return (
+    <>
+      {showBackground && (
+        <div className="pointer-events-none fixed inset-0 z-50 select-none">
+          <ShootingStars />
+          <StarsBackground />
+        </div>
+      )}
+      <Outlet />
+    </>
+  );
+}
+
 const router = createBrowserRouter(
   [
     {
       path: "/",
-      element: <PageTransition><HomeHero /></PageTransition>,
-    },
-    {
-      path: "/icons",
-      element: <PageTransition><IconExplorer /></PageTransition>,
-    },
-    {
-      path: "/playground",
-      element: <PageTransition><Playground /></PageTransition>,
-    },
-    {
-      path: "/docs",
-      element: <PageTransition><Docs /></PageTransition>,
-    },
-    {
-      path: "*",
-      element: <PageTransition><NotFound /></PageTransition>,
+      element: <AppLayout />,
+      children: [
+        {
+          index: true,
+          element: <PageTransition><HomeHero /></PageTransition>,
+        },
+        {
+          path: "icons",
+          element: <PageTransition><IconExplorer /></PageTransition>,
+        },
+        {
+          path: "playground",
+          element: <PageTransition><Playground /></PageTransition>,
+        },
+        {
+          path: "docs",
+          element: <PageTransition><Docs /></PageTransition>,
+        },
+        {
+          path: "*",
+          element: <PageTransition><NotFound /></PageTransition>,
+        },
+      ],
     },
   ],
   {
     future: {
-      v7_normalizeFormMethod: true
-    }
+      v7_normalizeFormMethod: true,
+    },
   }
 );
 
@@ -55,10 +82,6 @@ const App = () => (
       <Sonner />
       <RouterProvider router={router} />
     </TooltipProvider>
-    <div className="pointer-events-none fixed inset-0 z-50 select-none">
-      <ShootingStars />
-      <StarsBackground />
-    </div>
   </QueryClientProvider>
 );
 
