@@ -2,7 +2,7 @@
 import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
-import { Check, Copy } from "lucide-react";
+import { IconChecks, IconCopy } from "@tabler/icons-react";
 
 type CodeBlockProps = {
   language: string;
@@ -85,12 +85,12 @@ export const CodeBlock = ({
             >
               {copied ? (
                 <>
-                  <Check size={16} className="text-green-500" />
+                  <IconChecks size={16} className="text-green-500" />
                   <span className="hidden sm:inline">Copied!</span>
                 </>
               ) : (
                 <>
-                  <Copy size={16} />
+                  <IconCopy size={16} />
                   <span className="hidden sm:inline">Copy</span>
                 </>
               )}
@@ -108,12 +108,12 @@ export const CodeBlock = ({
             >
               {copied ? (
                 <>
-                  <Check size={16} className="text-green-500" />
+                  <IconChecks size={16} className="text-green-500" />
                   <span className="hidden sm:inline">Copied!</span>
                 </>
               ) : (
                 <>
-                  <Copy size={16} />
+                  <IconCopy size={16} />
                   <span className="hidden sm:inline">Copy</span>
                 </>
               )}

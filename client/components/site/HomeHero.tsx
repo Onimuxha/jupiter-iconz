@@ -6,7 +6,7 @@ import { icons } from "../../../packages/jupiter-icons/src/index.ts";
 import { FlipWords } from "../ui/flip-words.tsx";
 import { SiteHeader } from "./SiteHeader";
 import { SiteFooter } from "./SiteFooter";
-import { ArrowRight, Check, Star, Zap, Shield, Palette } from "lucide-react";
+import { IconArrowRight, IconInvoice, IconBolt, IconShield, IconPalette } from "@tabler/icons-react";
 
 const heroList = ["React", "GrokFill", "C", "NestJs", "CodeIgniter", "Figma", "Slack", "Chrome", "AtlassianBitbucket", "Telegram", "AdobeInDesign", "VK"] as const;
 const words = ["Beautiful.", "Categorized.", "Code.", "Modern."];
@@ -51,13 +51,13 @@ export function HomeHero() {
                     <Button asChild size="lg" className="group">
                       <Link to="/icons">
                         Browse All Icons
-                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                        <IconArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                       </Link>
                     </Button>
 
                     <Button variant="outline" size="lg" className="group">
                       <Link to="/docs" className="flex items-center">
-                        <Star className="mr-2 h-4 w-4" />
+                        <IconInvoice className="mr-2 h-4 w-4" />
                         View Documentation
                       </Link>
                     </Button>
@@ -105,7 +105,7 @@ export function HomeHero() {
                 className="text-center p-8 rounded-2xl bg-white dark:bg-gray-900/50 shadow-lg border border-gray-200 dark:border-gray-700"
               >
                 <div className="w-12 h-12 mx-auto mb-6 rounded-xl bg-blue-500/10 flex items-center justify-center">
-                  <Zap className="w-6 h-6 text-blue-500" />
+                  <IconBolt className="w-6 h-6 text-blue-500" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Lightning Fast</h3>
                 <p className="text-gray-600 dark:text-gray-400">
@@ -120,7 +120,7 @@ export function HomeHero() {
                 className="text-center p-8 rounded-2xl bg-white dark:bg-gray-900/50 shadow-lg border border-gray-200 dark:border-gray-700"
               >
                 <div className="w-12 h-12 mx-auto mb-6 rounded-xl bg-green-500/10 flex items-center justify-center">
-                  <Shield className="w-6 h-6 text-green-500" />
+                  <IconShield className="w-6 h-6 text-green-500" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Type Safe</h3>
                 <p className="text-gray-600 dark:text-gray-400">
@@ -135,7 +135,7 @@ export function HomeHero() {
                 className="text-center p-8 rounded-2xl bg-white dark:bg-gray-900/50 shadow-lg border border-gray-200 dark:border-gray-700"
               >
                 <div className="w-12 h-12 mx-auto mb-6 rounded-xl bg-purple-500/10 flex items-center justify-center">
-                  <Palette className="w-6 h-6 text-purple-500" />
+                  <IconPalette className="w-6 h-6 text-purple-500" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Brand Perfect</h3>
                 <p className="text-gray-600 dark:text-gray-400">
@@ -218,24 +218,22 @@ export function HomeHero() {
                   <Button asChild size="lg" className="group">
                     <Link to="/icons">
                       Explore All Icons
-                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      <IconArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </Link>
                   </Button>
                 </div>
               </div>
+              <CodeBlock
+                language="jsx"
+                filename="App.tsx"
+                code={`# Import and use in your React app
+import { React, GitHub, Twitter } from 'jupiter-iconz'
 
-              <div className="bg-gray-900 dark:bg-gray-800 rounded-2xl p-6 font-mono text-sm">
-                <div className="text-gray-400 mb-4"># Install Jupiter Icons</div>
-                <div className="text-green-400 mb-6">npm install jupiter-iconz</div>
-
-                <div className="text-gray-400 mb-2"># Import and use in your React app</div>
-                <div className="text-blue-400 mb-1">import <span className="text-yellow-400">{"{ React, GitHub, Twitter }"}</span> <span className="text-blue-400">from</span> <span className="text-green-300">'jupiter-iconz'</span></div>
-                <div className="text-gray-300 mt-4">
-                  <div className="mb-2">{"<React size={24} className=\"text-blue-500\" />"}</div>
-                  <div className="mb-2">{"<GitHub size={32} />"}</div>
-                  <div>{"<Twitter size={20} className=\"text-sky-500\" />"}</div>
-                </div>
-              </div>
+<React size={24} className="text-blue-500" />
+<GitHub size={32} />
+<Twitter size={20} className="text-sky-500" />`}
+                highlightLines={[2, 5]}
+              />
             </div>
           </div>
         </section>

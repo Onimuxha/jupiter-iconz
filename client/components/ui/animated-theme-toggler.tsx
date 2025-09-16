@@ -1,6 +1,6 @@
 "use client";
 
-import { MoonStar, SunDim } from "lucide-react";
+import { IconMoonStars, IconSunWind } from "@tabler/icons-react";
 import { useEffect, useRef, useState } from "react";
 import { flushSync } from "react-dom";
 import { cn } from "@/lib/utils";
@@ -75,7 +75,7 @@ export const AnimatedThemeToggler = ({ className }: Props) => {
                     transition={{ duration: 0.3 }}
                     className="absolute inset-0 flex items-center justify-center"
                 >
-                    {isDarkMode ? <SunDim className="w-6 h-6 text-amber-400" /> : <MoonStar className="w-6 h-6 text-indigo-800" />}
+                    {isDarkMode ? <IconSunWind className="w-6 h-6 text-amber-400" /> : <IconMoonStars className="w-6 h-6 text-indigo-800" />}
                 </motion.span>
             </AnimatePresence>
         </button>

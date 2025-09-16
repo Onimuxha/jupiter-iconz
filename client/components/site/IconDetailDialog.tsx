@@ -3,7 +3,7 @@ import { useMemo, useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
-import { Download, Copy, Check } from "lucide-react";
+import { IconDownload, IconCopy, IconChecks } from '@tabler/icons-react';
 import { toast } from "sonner";
 import { motion } from "framer-motion";
 import { copyText } from "@/lib/copy";
@@ -154,7 +154,7 @@ export function IconDetailDialog(props: IconDetailProps) {
                   size="sm"
                   className="flex-1 rounded-full border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
                 >
-                  {copied ? <Check className="w-4 h-4 mr-2" /> : <Copy className="w-4 h-4 mr-2" />}
+                  {copied ? <IconChecks className="w-4 h-4 mr-2" /> : <IconCopy className="w-4 h-4 mr-2" />}
                   Copy
                 </Button>
                 <Button
@@ -162,7 +162,7 @@ export function IconDetailDialog(props: IconDetailProps) {
                   variant="ghost"
                   size="sm"
                   className="flex-1 rounded-full border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">
-                  <Download className="w-4 h-4 mr-2" />
+                  <IconDownload className="w-4 h-4 mr-2" />
                   Download
                 </Button>
               </div>
