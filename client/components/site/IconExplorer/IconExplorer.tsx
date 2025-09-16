@@ -120,8 +120,9 @@ export function IconExplorer() {
       <main className="pt-28">
         <div className="mx-auto max-w-7xl px-4 py-12">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 dark:text-white sm:text-6xl lg:text-7xl">Jupiter Icons</h1>
-            <p className="mt-6 text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <h1 className="text-balance text-4xl font-medium md:text-7xl">Jupiter Icons</h1>
+            {/* <p className="mt-4 max-w-prose text-muted-foreground mb-8"></p> */}
+            <p className="mt-6 text-xl  max-w-prose text-muted-foreground text-gray-600 dark:text-gray-300 mx-auto">
               Premium icon collection designed for modern applications. Over 200+ carefully crafted icons with consistent styling, original brand colors, and seamless integration.
             </p>
           </div>

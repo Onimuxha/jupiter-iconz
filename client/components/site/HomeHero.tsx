@@ -22,16 +22,11 @@ export function HomeHero() {
           <div className="mx-auto max-w-6xl px-4 py-12 md:py-20">
             <div className="grid items-center gap-10 md:grid-cols-2">
               <div>
-                <motion.h1
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5 }}
-                  className="text-balance text-4xl font-medium md:text-7xl"
-                >
+                <h1 className="text-balance text-4xl font-medium md:text-7xl">
                   Every icon you need.
                   <FlipWords words={words} />
-                </motion.h1>
-                <p className="mt-4 max-w-prose text-muted-foreground mb-8">
+                </h1>
+                <p className="mt-4 text-xl max-w-prose text-muted-foreground mb-8">
                   A modern, accessible icon set with original brand colors, full TypeScript support, and delightful animations. Built for React, Vite, and Tailwind with class-based dark mode.
                 </p>
 
