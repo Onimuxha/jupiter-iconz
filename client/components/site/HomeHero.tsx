@@ -9,8 +9,8 @@ import { HeroGeometric } from "../ui/shap-loading-hero.tsx";
 import { IconArrowRight, IconBook, IconBolt, IconShield, IconPalette } from "@tabler/icons-react";
 
 const heroList = [
-  "React", "GrokFill", "C", "NestJs", "CodeIgniter",
-  "Figma", "Slack", "Chrome", "AtlassianBitbucket",
+  "BehanceFill", "GrokFill", "C", "NestJs", "CodeIgniter",
+  "Brainly", "Slack", "Chrome", "AtlassianBitbucket",
   "Telegram", "AdobeInDesign", "VK"
 ] as const;
 
@@ -70,9 +70,9 @@ export function HomeHero() {
         {/* Hero Section  */}
         <section className="min-h-screen relative border-b border-border/60 bg-[radial-gradient(60%_80%_at_50%_0%,hsl(var(--accent)_/_24%),transparent)] pt-28 overflow-hidden">
           <HeroGeometric className="absolute inset-0 w-full h-full z-0 pointer-events-none" />
-          <div className="relative z-10 mx-auto max-w-6xl px-4 py-12 md:py-20 grid items-center gap-10 md:grid-cols-2">
+          <div className="relative z-10 mx-auto max-w-7xl px-4 py-12 md:py-20 grid items-center gap-10 md:grid-cols-2">
             <div>
-              <h1 className="text-4xl md:text-7xl font-medium text-balance">
+              <h1 className="text-5xl md:text-7xl font-medium text-balance">
                 Every icon you need.<FlipWords words={words} className="text-[#94c748] dark:text-[#94c748]" />
               </h1>
               <p className="mt-4 text-xl max-w-prose text-muted-foreground mb-8">
@@ -163,7 +163,7 @@ export function HomeHero() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="text-center p-8 rounded-2xl bg-white dark:bg-gray-900/50 shadow-lg border border-gray-200 dark:border-gray-700"
               >
-                <div className={`w-12 h-12 mx-auto mb-6 rounded-xl bg-${color}-500/10 flex items-center justify-center`}>
+                <div className={`w-12 h-12 mx-auto mb-6 rounded-xl bg-black/5 dark:bg-white/10 flex items-center justify-center`}>
                   <Icon className={`w-6 h-6 text-${color}-500`} />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">{title}</h3>
