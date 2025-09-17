@@ -1,3 +1,4 @@
+
 import type { IconData } from "../types";
 
 export const iconsData: IconData[] = [
