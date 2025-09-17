@@ -19,7 +19,6 @@ import { categories, iconsMap } from "./iconUtils";
 import { SiteHeader } from "../SiteHeader";
 import { SiteFooter } from "../SiteFooter";
 
-// ✨ Feature data
 const features = [
   {
     iconColor: "text-blue-500",
