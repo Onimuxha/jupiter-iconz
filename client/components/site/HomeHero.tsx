@@ -67,7 +67,7 @@ export function HomeHero() {
     <div className="min-h-screen bg-gradient-to-b from-background to-muted/40">
       <SiteHeader />
       <main>
-        {/* Hero Section */}
+        {/* Hero Section  */}
         <section className="min-h-screen relative border-b border-border/60 bg-[radial-gradient(60%_80%_at_50%_0%,hsl(var(--accent)_/_24%),transparent)] pt-28 overflow-hidden">
           <HeroGeometric className="absolute inset-0 w-full h-full z-0 pointer-events-none" />
           <div className="relative z-10 mx-auto max-w-6xl px-4 py-12 md:py-20 grid items-center gap-10 md:grid-cols-2">
