@@ -1,6 +1,6 @@
 "use client";
 
-import { IconMoonStars, IconSunWind } from "@tabler/icons-react";
+import { IconMoonStars, IconSun } from "@tabler/icons-react";
 import { useEffect, useRef, useState } from "react";
 import { flushSync } from "react-dom";
 import { cn } from "@/lib/utils";
@@ -69,13 +69,13 @@ export const AnimatedThemeToggler = ({ className }: Props) => {
             <AnimatePresence mode="wait" initial={false}>
                 <motion.span
                     key={isDarkMode ? "sun" : "moon"}
-                    initial={{ rotate: -90 }}
+                    initial={{ rotate: -91 }}
                     animate={{ rotate: 0 }}
                     exit={{ rotate: 90 }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
                     className="absolute inset-0 flex items-center justify-center"
                 >
-                    {isDarkMode ? <IconSunWind className="w-6 h-6 text-amber-400" /> : <IconMoonStars className="w-6 h-6 text-indigo-800" />}
+                    {isDarkMode ? <IconSun size={25} className="text-amber-400" /> : <IconMoonStars size={25} className="text-indigo-800" />}
                 </motion.span>
             </AnimatePresence>
         </button>

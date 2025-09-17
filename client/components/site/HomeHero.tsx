@@ -6,13 +6,7 @@ import { FlipWords } from "../ui/flip-words.tsx";
 import { SiteHeader } from "./SiteHeader";
 import { SiteFooter } from "./SiteFooter";
 import { HeroGeometric } from "../ui/shap-loading-hero.tsx";
-import {
-  IconArrowRight,
-  IconInvoice,
-  IconBolt,
-  IconShield,
-  IconPalette,
-} from "@tabler/icons-react";
+import { IconArrowRight, IconBook, IconBolt, IconShield, IconPalette } from "@tabler/icons-react";
 
 const heroList = [
   "React", "GrokFill", "C", "NestJs", "CodeIgniter",
@@ -116,7 +110,7 @@ export function HomeHero() {
                       <span className="absolute inset-0 rounded-full bg-[radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                     </span>
                     <div className="relative z-10 flex items-center gap-2">
-                      <IconInvoice className="h-4 w-4" />
+                      <IconBook className="h-4 w-4" />
                       <span>View Documentation</span>
                     </div>
                     <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-[#94c748]/0 via-[#94c748] to-[#94c748]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-40" />

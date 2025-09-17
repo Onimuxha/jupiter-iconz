@@ -163,7 +163,6 @@ import
 
         {/* Icon Explorer */}
         <section className="mx-auto max-w-7xl px-4 py-12">
-          {/* Heading */}
           <div className="text-center mb-8">
             <h3 className="text-4xl font-medium text-center text-gray-900 dark:text-white mb-4">Browse Icons</h3>
             <p className="text-lg text-gray-600 dark:text-gray-300">Use filters to find exactly what you need.</p>

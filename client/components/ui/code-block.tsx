@@ -3,6 +3,7 @@ import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { IconChecks, IconCopy } from "@tabler/icons-react";
+import { CopyButton } from "./copy-button";
 
 type CodeBlockProps = {
   language: string;
@@ -78,46 +79,14 @@ export const CodeBlock = ({
         {!tabsExist && filename && (
           <div className="flex justify-between items-center px-4 py-3 bg-slate-800 border-b border-slate-700">
             <div className="text-sm text-slate-400 font-sans truncate">{filename}</div>
-            <button
-              onClick={copyToClipboard}
-              className="flex items-center gap-2 text-sm text-slate-400 hover:text-slate-200 transition-colors font-sans flex-shrink-0 ml-2"
-              title={copied ? "Copied!" : "Copy to clipboard"}
-            >
-              {copied ? (
-                <>
-                  <IconChecks size={16} className="text-green-500" />
-                  <span className="hidden sm:inline">Copied!</span>
-                </>
-              ) : (
-                <>
-                  <IconCopy size={16} />
-                  <span className="hidden sm:inline">Copy</span>
-                </>
-              )}
-            </button>
+           <CopyButton content={code ?? ""} variant="glass" size="md" />
           </div>
         )}
 
         {/* Copy button for tabs */}
         {tabsExist && (
           <div className="flex justify-end px-4 py-2 bg-slate-800 border-b border-slate-700">
-            <button
-              onClick={copyToClipboard}
-              className="flex items-center gap-2 text-sm text-slate-400 hover:text-slate-200 transition-colors font-sans"
-              title={copied ? "Copied!" : "Copy to clipboard"}
-            >
-              {copied ? (
-                <>
-                  <IconChecks size={16} className="text-green-500" />
-                  <span className="hidden sm:inline">Copied!</span>
-                </>
-              ) : (
-                <>
-                  <IconCopy size={16} />
-                  <span className="hidden sm:inline">Copy</span>
-                </>
-              )}
-            </button>
+            <CopyButton content={tabs[activeTab].code} variant="glass" size="md" />
           </div>
         )}
       </div>

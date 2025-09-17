@@ -1,28 +1,30 @@
+import "./global.css";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider, useLocation } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
-
-import "./global.css";
-
 import { PageTransition } from "@/components/site/PageTransition";
 import { HomeHero } from "@/components/site/HomeHero";
-import NotFound from "./pages/NotFound";
-import Playground from "./pages/Playground";
-import Docs from "./pages/Docs";
 import { StarsBackground } from "./components/ui/stars-background.tsx";
 import { ShootingStars } from "./components/ui/shooting-stars.tsx";
 import { IconExplorer } from "./components/site/IconExplorer/IconExplorer.tsx";
+import { useMemo, useEffect } from "react";
+import { Outlet } from "react-router-dom";
+
+import NotFound from "./pages/NotFound";
+import Playground from "./pages/Playground";
+import Docs from "./pages/Docs";
 
 const queryClient = new QueryClient();
 
-import { useMemo } from "react";
-import { Outlet } from "react-router-dom";
-
 function AppLayout() {
   const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   const showBackground = useMemo(() => location.pathname !== "/", [location]);
 

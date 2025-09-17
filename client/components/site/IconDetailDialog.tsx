@@ -155,9 +155,11 @@ export function IconDetailDialog(props: IconDetailProps) {
                     "dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]"
                   )}
                 />
-                <div className="backdrop-blur-lg bg-gray-500/30 dark:bg-white/10 rounded-xl px-6 py-4 shadow-inner border border-white/20 dark:border-white/10 relative z-10">
+                <div
+                  className="backdrop-blur-lg bg-white/60 dark:bg-white/5 rounded-xl px-6 py-4 border border-white/30 dark:border-white/10 shadow-[inset_0_2px_6px_rgba(0,0,0,0.15)] dark:shadow-[inset_0_2px_6px_rgba(255,255,255,0.08)] relative z-10">
                   <Component size={size} />
                 </div>
+
               </div>
 
               <div className="flex gap-4">
