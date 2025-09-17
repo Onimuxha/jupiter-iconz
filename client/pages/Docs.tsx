@@ -1,5 +1,4 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Button } from "@/components/ui/button";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { CodeBlock } from "@/components/ui/code-block";
@@ -154,7 +153,7 @@ export default function App() {
           </a>
 
           <a href="/playground">
-            <Button
+            {/* <Button
               className="
       border border-gray-300 dark:border-gray-700
       bg-white dark:bg-gray-800
@@ -164,9 +163,9 @@ export default function App() {
     "
             >
               Open Playground
-            </Button>
+            </Button> */}
+            OPen playground
           </a>
-
 
         </motion.div>
       </main>

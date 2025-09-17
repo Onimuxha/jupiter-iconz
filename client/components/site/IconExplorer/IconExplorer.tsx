@@ -1,8 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import { IconSearch, IconChevronDown, IconLayoutGrid, IconListDetails, IconFileTypeTsx, IconBolt, IconMoon, IconPalette } from "@tabler/icons-react";
+import { IconSearch, IconChevronDown, IconLayoutGrid, IconListDetails, IconFileTypeTsx, IconBolt, IconMoon, IconPalette, IconRestore } from "@tabler/icons-react";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent } from "@/components/ui/tabs";
 import Box from "@mui/material/Box";
 import { cn } from "@/lib/utils";
@@ -66,13 +65,14 @@ const FeatureCard = ({
   desc: string;
   icon: React.ElementType;
 }) => (
-  <div className="text-center p-6 rounded-2xl bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-white/10">
-    <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-white/10 flex items-center justify-center">
+  <div className="text-center p-6 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10">
+    <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-black/5 dark:bg-white/10 flex items-center justify-center">
       <Icon className={`w-6 h-6 ${iconColor}`} />
     </div>
     <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{title}</h3>
     <p className="text-sm text-gray-600 dark:text-gray-400">{desc}</p>
   </div>
+
 );
 
 
@@ -94,6 +94,7 @@ export function IconExplorer() {
     const savedTab = localStorage.getItem("selectedCategory");
     return urlTab || savedTab || "All";
   });
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useEffect(() => {
     localStorage.setItem("selectedCategory", tab);
@@ -137,7 +138,7 @@ export function IconExplorer() {
 
           {/* Quick Start */}
           <div className="mt-12 bg-gray-50 dark:bg-gray-900/50 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
-            <h3 className="text-xl font-semibold text-center text-gray-900 dark:text-white mb-4">Quick Start</h3>
+            <h3 className="text-4xl font-medium text-center text-gray-900 dark:text-white mb-10">Quick Start</h3>
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                 <li>✅ Tree-shakable imports</li>
@@ -164,7 +165,7 @@ import
         <section className="mx-auto max-w-7xl px-4 py-12">
           {/* Heading */}
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Browse Icons</h2>
+            <h3 className="text-4xl font-medium text-center text-gray-900 dark:text-white mb-4">Browse Icons</h3>
             <p className="text-lg text-gray-600 dark:text-gray-300">Use filters to find exactly what you need.</p>
           </div>
 
@@ -174,30 +175,29 @@ import
               <IconSearch className="absolute left-5 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
               <Input
                 placeholder="Search icons..."
-                className="pl-12 bg-white/50 dark:bg-gray-900/50"
+                className="pl-12 bg-white/50 dark:bg-gray-900/50 capitalize"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
               />
             </div>
             <div className="flex items-center gap-2">
               {[{ mode: "grid", icon: IconLayoutGrid }, { mode: "list", icon: IconListDetails }].map(({ mode, icon: Icon }) => (
-                <Button
+                <button
                   key={mode}
-                  variant="ghost"
                   onClick={() => setViewMode(mode as "grid" | "list")}
-                  className={cn("h-8 px-4", viewMode === mode ? "bg-gray-300 dark:bg-gray-700" : "")}
+                  className={cn("p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700", viewMode === mode ? "bg-gray-300 dark:bg-gray-700" : "bg-transparent")}
+                  title={`Switch to ${mode} view`}
                 >
-                  <Icon size={20} />
-                </Button>
+                  <Icon className="w-5 h-5" />
+                </button>
               ))}
             </div>
           </div>
 
           <div className="flex flex-col lg:flex-row gap-4 lg:items-center lg:justify-between mb-4">
-            {/* Slider */}
             <div className="flex items-center gap-4">
-              <span className="text-sm font-medium">Size</span>
-              <Box sx={{ width: 300 }}>
+              <span className="text-sm font-medium whitespace-nowrap">Size</span>
+              <Box sx={{ width: 300 }} className="flex-1">
                 <Slider
                   min={16}
                   max={55}
@@ -206,26 +206,57 @@ import
                   valueLabelDisplay="auto"
                 />
               </Box>
-              <span className="text-sm text-gray-500 dark:text-gray-400">{size}px</span>
-            </div>
+              <span className="text-sm text-gray-500 dark:text-gray-400 text-right tabular-nums">
+                {size}px
+              </span>
+              <button
+                type="button"
+                onClick={() => setSize(40)}
+                title="Reset size"
+                className="group p-2 rounded-md text-gray-500 hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300"
+              >
+                <IconRestore
+                  size={20}
+                  className="rotate-180 transition-all duration-300 group-hover:rotate-0"
+                />
+              </button>
 
+            </div>
             {/* Dropdown */}
-            <DropdownMenu>
+            <DropdownMenu open={dropdownOpen} onOpenChange={(open) => setDropdownOpen(open)}>
               <DropdownMenuTrigger asChild>
-                <Button variant="glass" className="rounded-full px-4">
+                <button
+                  className={cn(
+                    "group inline-flex items-center rounded-full px-4 py-2 text-sm font-medium transition-all duration-300",
+                    "bg-zinc-900/10 dark:bg-zinc-800/40 backdrop-blur border border-white/30 dark:border-zinc-700",
+                  )}
+                >
                   {tab === "DesignTools" ? "Design" : tab}
-                  <IconChevronDown className="ml-2 w-4 h-4" />
-                </Button>
+                  <IconChevronDown
+                    className={cn(
+                      "ml-2 h-4 w-4 transition-transform duration-300",
+                      dropdownOpen ? "rotate-180" : "rotate-0"
+                    )}
+                  />
+                </button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-48 p-1 rounded-xl">
+              <DropdownMenuContent className="w-48 p-1 mt-2 rounded-xl border border-white/10 dark:border-zinc-800 bg-zinc-500/10 dark:bg-zinc-900/50 backdrop-blur shadow-xl">
                 {categories.map((category) => (
-                  <DropdownMenuItem key={category} onSelect={() => setTab(category)}>
+                  <DropdownMenuItem
+                    key={category}
+                    onSelect={() => {
+                      setTab(category);
+                      setDropdownOpen(false);
+                    }}
+                    className="flex items-center gap-2 rounded-md px-3 py-2 cursor-pointer text-sm text-zinc-800 dark:text-zinc-200 hover:text-white hover:bg-zinc-900/50 dark:hover:bg-zinc-50/10 transition-colors"
+                  >
                     {iconsMap[category]}
-                    {category === "DesignTools" ? "Design" : category}
+                    <span>{category === "DesignTools" ? "Design" : category}</span>
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
+
           </div>
 
           {/* Results */}

@@ -1,9 +1,8 @@
 import * as React from 'react';
 import { useMemo, useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
-import { IconDownload, IconCopy, IconChecks } from '@tabler/icons-react';
+import { IconDownload, IconCopy, IconChecks, IconRestore } from '@tabler/icons-react';
 import { toast } from "sonner";
 import { motion } from "framer-motion";
 import { copyText } from "@/lib/copy";
@@ -30,7 +29,7 @@ export function IconDetailDialog(props: IconDetailProps) {
   const [size, setSize] = useState(48);
   const [copied, setCopied] = useState(false);
 
-  const jsxCode = `<${name} size={24} />`; // Remove the import statement
+  const jsxCode = `<${name} size={${size}} />`;
   const svgMin = useMemo(() => svgContent.trim(), [svgContent]);
 
   const downloadSvg = () => {
@@ -104,31 +103,47 @@ export function IconDetailDialog(props: IconDetailProps) {
                   <span className="text-sm font-medium">Size</span>
                   <span className="text-sm text-gray-500">{size}px</span>
                 </div>
-                <Box sx={{
-                  width: 300,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center'
-                }}>
-                  <Slider
-                    defaultValue={50}
-                    aria-label="Default"
-                    id="size"
-                    min={16}
-                    max={100}
-                    value={size}
-                    onChange={(_, value) => setSize(typeof value === "number" ? value : value[0])}
-                    valueLabelDisplay="auto"
+                <div className="flex items-center gap-3">
+                  <Box
                     sx={{
-                      '& .MuiSlider-thumb': {
-                        marginTop: 0,
-                      },
-                      '& .MuiSlider-track': {
-                        marginTop: 0,
-                      }
+                      width: 300,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
                     }}
-                  />
-                </Box>
+                  >
+                    <Slider
+                      defaultValue={50}
+                      aria-label="Default"
+                      id="size"
+                      min={16}
+                      max={100}
+                      value={size}
+                      onChange={(_, value) => setSize(typeof value === "number" ? value : value[0])}
+                      valueLabelDisplay="auto"
+                      sx={{
+                        "& .MuiSlider-thumb": {
+                          marginTop: 0,
+                        },
+                        "& .MuiSlider-track": {
+                          marginTop: 0,
+                        },
+                      }}
+                    />
+                  </Box>
+                  <button
+                    type="button"
+                    onClick={() => setSize(40)}
+                    title="Reset size"
+                    className="group p-2 rounded-md text-gray-500 hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300"
+                  >
+                    <IconRestore
+                      size={20}
+                      className="rotate-180 transition-transform duration-300 group-hover:rotate-0"
+                    />
+                  </button>
+
+                </div>
               </div>
 
               <div className="flex items-center justify-center h-40 bg-gray-50 dark:bg-gray-900 rounded-lg border relative overflow-hidden">
@@ -140,33 +155,27 @@ export function IconDetailDialog(props: IconDetailProps) {
                     "dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]"
                   )}
                 />
-                <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-gray-50/80 dark:bg-gray-900/80 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
                 <div className="backdrop-blur-lg bg-gray-500/30 dark:bg-white/10 rounded-xl px-6 py-4 shadow-inner border border-white/20 dark:border-white/10 relative z-10">
                   <Component size={size} />
                 </div>
               </div>
 
-
-              <div className="flex gap-2">
-                <Button
+              <div className="flex gap-4">
+                <button
                   onClick={handleCopy}
-                  variant="ghost"
-                  size="sm"
-                  className="flex-1 rounded-full border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+                  className="flex-1 flex items-center justify-center gap-2 rounded-full border bg-white/20 dark:bg-gray-900/30 border-white/30 dark:border-gray-700/50 text-zinc-800 dark:text-zinc-200 backdrop-blur-md shadow-sm transition hover:bg-white/30 dark:hover:bg-gray-900/60 hover:shadow-md focus-visible:outline-none px-4 py-2 font-semibold text-sm"
                 >
-                  {copied ? <IconChecks className="w-4 h-4 mr-2" /> : <IconCopy className="w-4 h-4 mr-2" />}
+                  {copied ? <IconChecks size={15} /> : <IconCopy size={15} />}
                   Copy
-                </Button>
-                <Button
+                </button>
+                <button
                   onClick={downloadSvg}
-                  variant="ghost"
-                  size="sm"
-                  className="flex-1 rounded-full border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">
-                  <IconDownload className="w-4 h-4 mr-2" />
+                  className="flex-1 flex items-center justify-center gap-2 rounded-full border bg-white/20 dark:bg-gray-900/30 border-white/30 dark:border-gray-700/50 text-zinc-800 dark:text-zinc-200 backdrop-blur-md shadow-sm transition hover:bg-white/30 dark:hover:bg-gray-900/60 hover:shadow-md focus-visible:outline-none px-4 py-2 font-semibold text-sm"
+                >
+                  <IconDownload size={16} />
                   Download
-                </Button>
+                </button>
               </div>
-
             </div>
 
             {/* Code */}

@@ -1,7 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
-import { IconCircle } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
+import { type ComponentType } from "react";
+
 type ElegantShapeProps = {
   className?: string;
   delay?: number;
@@ -10,13 +11,14 @@ type ElegantShapeProps = {
   rotate?: number;
   gradient?: string;
 };
+
 function ElegantShape({
   className,
   delay = 0,
   width = 400,
   height = 100,
   rotate = 0,
-  gradient = "from-white/[0.08]",
+  gradient = "from-white/[0.08] dark:from-white/[0.04]",
 }: ElegantShapeProps) {
   return (
     <motion.div
@@ -44,13 +46,10 @@ function ElegantShape({
         }}
         transition={{
           duration: 12,
-          repeat: Number.POSITIVE_INFINITY,
+          repeat: Infinity,
           ease: "easeInOut",
         }}
-        style={{
-          width,
-          height,
-        }}
+        style={{ width, height }}
         className="relative"
       >
         <div
@@ -58,16 +57,19 @@ function ElegantShape({
             "absolute inset-0 rounded-full",
             "bg-gradient-to-r to-transparent",
             gradient,
-            "backdrop-blur-[2px] border-2 border-white/[0.15]",
-            "shadow-[0_8px_32px_0_rgba(255,255,255,0.1)]",
+            "backdrop-blur-[2px]",
+            "border-2 border-black/[0.08] dark:border-white/[0.12]",
+            "shadow-[0_8px_32px_0_rgba(0,0,0,0.06)] dark:shadow-[0_8px_32px_0_rgba(255,255,255,0.05)]",
             "after:absolute after:inset-0 after:rounded-full",
-            "after:bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.2),transparent_70%)]"
+            "after:bg-[radial-gradient(circle_at_50%_50%,rgba(0,0,0,0.05),transparent_70%)]",
+            "dark:after:bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.05),transparent_70%)]"
           )}
         />
       </motion.div>
     </motion.div>
   );
 }
+
 type HeroGeometricProps = {
   badge?: string;
   title1?: string;
@@ -75,31 +77,27 @@ type HeroGeometricProps = {
   description?: string;
   className?: string;
 };
-export function HeroGeometric({
-  className,
-}: HeroGeometricProps) {
-  const fadeUpVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: (i: number) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 1,
-        delay: 0.5 + i * 0.2,
-        ease: [0.25, 0.4, 0.25, 1] as const,
-      },
-    }),
-  };
+
+export function HeroGeometric({ className }: HeroGeometricProps) {
   return (
-    <div className={cn("relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#030303]", className)}>
+    <div
+      className={cn(
+        "relative min-h-screen w-full flex items-center justify-center overflow-hidden",
+        "bg-background dark:bg-[#030303]",
+        className
+      )}
+    >
+      {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] blur-3xl" />
+
+      {/* Animated Shapes */}
       <div className="absolute inset-0 overflow-hidden">
         <ElegantShape
           delay={0.3}
           width={600}
           height={140}
           rotate={12}
-          gradient="from-indigo-500/[0.15]"
+          gradient="from-indigo-500/[0.15] dark:from-indigo-400/[0.08]"
           className="left-[-10%] md:left-[-5%] top-[15%] md:top-[20%]"
         />
         <ElegantShape
@@ -107,7 +105,7 @@ export function HeroGeometric({
           width={500}
           height={120}
           rotate={-15}
-          gradient="from-rose-500/[0.15]"
+          gradient="from-rose-500/[0.15] dark:from-rose-400/[0.08]"
           className="right-[-5%] md:right-[0%] top-[70%] md:top-[75%]"
         />
         <ElegantShape
@@ -115,7 +113,7 @@ export function HeroGeometric({
           width={300}
           height={80}
           rotate={-8}
-          gradient="from-violet-500/[0.15]"
+          gradient="from-violet-500/[0.15] dark:from-violet-400/[0.08]"
           className="left-[5%] md:left-[10%] bottom-[5%] md:bottom-[10%]"
         />
         <ElegantShape
@@ -123,7 +121,7 @@ export function HeroGeometric({
           width={200}
           height={60}
           rotate={20}
-          gradient="from-amber-500/[0.15]"
+          gradient="from-amber-500/[0.15] dark:from-amber-400/[0.08]"
           className="right-[15%] md:right-[20%] top-[10%] md:top-[15%]"
         />
         <ElegantShape
@@ -131,12 +129,15 @@ export function HeroGeometric({
           width={150}
           height={40}
           rotate={-25}
-          gradient="from-cyan-500/[0.15]"
+          gradient="from-cyan-500/[0.15] dark:from-cyan-400/[0.08]"
           className="left-[20%] md:left-[25%] top-[5%] md:top-[10%]"
         />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-[#030303]/80 pointer-events-none" />
+
+      {/* Top-to-bottom dark/light fade */}
+      <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-white/80 dark:from-[#030303] dark:via-transparent dark:to-[#030303]/80 pointer-events-none" />
     </div>
   );
 }
+
 export type { HeroGeometricProps, ElegantShapeProps };

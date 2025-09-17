@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Copy } from "lucide-react";
+import { IconCopy } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 
 interface IconCardProps {
@@ -48,7 +48,7 @@ export function IconCard({ name, component: Icon, size, onClick }: IconCardProps
       </div>
       <div className="flex items-center gap-2 text-sm font-medium">
         <span>{name}</span>
-        <Copy className="h-3.5 w-3.5 opacity-60 group-hover:opacity-100" />
+        <IconCopy className="h-3.5 w-3.5 opacity-60 group-hover:opacity-100" />
       </div>
       {copied && (
         <span className="absolute bottom-2 rounded bg-black/70 px-2 py-0.5 text-[10px] text-white dark:bg-white/20">
