@@ -41,8 +41,8 @@ export function SiteHeader() {
                 key={href}
                 to={href}
                 className={`flex items-center gap-1 px-3 py-2 rounded-2xl transition-colors duration-200 ${isActive
-                  ? "bg-white/70 dark:bg-lime-800/60 text-gray-900 dark:text-white"
-                  : "text-gray-700 dark:text-gray-300 hover:bg-white/40 dark:hover:bg-lime-900/50 hover:text-gray-900 dark:hover:text-white"
+                  ? "bg-lime-500/70 dark:bg-lime-500/10 text-lime-800 dark:text-white"
+                  : "text-gray-700 dark:text-gray-300 hover:bg-lime-500/40 dark:hover:bg-lime-900/50 hover:text-lime-600 dark:hover:text-white"
                   }`}
               >
                 <Icon className="h-5 w-5" />
@@ -55,7 +55,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-4">
           <Link
             to="/contact"
-            className="group relative hidden md:inline-flex items-center justify-center gap-2 px-6 py-2 rounded-full border border-lime-500/50 text-lime-500/90 font-medium transition-all duration-300 hover:bg-lime-500/50 hover:text-white"
+            className="group relative hidden md:inline-flex items-center justify-center gap-2 px-6 py-2 rounded-full bg-lime-500/10 text-lime-500/90 font-medium transition-all duration-300 hover:bg-lime-500/50 hover:text-white"
           >
             <IconMessage
               className="w-5 h-5 transition-transform duration-300 group-hover:-translate-x-1"

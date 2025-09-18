@@ -41,9 +41,6 @@ export function IconItem({ name, Comp, size, viewMode, category, keywords }) {
         whileTap={{ scale: 0.97 }}
         onClick={handleOpen}
         className="group w-full flex flex-col items-center gap-3 p-4 rounded-2xl border dark:border-white/20 bg-gray-800/5 dark:bg-gray-800/60">
-        {/* <div className="w-14 h-14 flex items-center justify-center bg-gray-300 dark:bg-gray-700 rounded-xl">
-          <Comp size={Math.min(size, 55)} aria-label={name} />
-        </div> */}
         <div className="inline-flex items-center justify-center rounded-xl p-2 backdrop-blur-lg bg-black/5 dark:bg-white/5 border border-white/30 dark:border-white/10 shadow-[inset_0_2px_6px_rgba(0,0,0,0.15)] dark:shadow-[inset_0_2px_6px_rgba(255,255,255,0.08)] relative z-10">
           <Comp size={size} aria-label={name} />
         </div>
