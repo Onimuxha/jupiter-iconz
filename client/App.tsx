@@ -15,6 +15,7 @@ import { Outlet } from "react-router-dom";
 
 import NotFound from "./pages/NotFound";
 import Docs from "./pages/Docs";
+import ContactPage from "./pages/Contact.tsx";
 
 const queryClient = new QueryClient();
 
@@ -25,7 +26,10 @@ function AppLayout() {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
-  const showBackground = useMemo(() => location.pathname !== "/", [location]);
+  const showBackground = useMemo(() => {
+    return location.pathname !== "/" && location.pathname !== "/contact";
+  }, [location]);
+
 
   return (
     <>
@@ -57,6 +61,10 @@ const router = createBrowserRouter(
         {
           path: "docs",
           element: <PageTransition><Docs /></PageTransition>,
+        },
+        {
+          path: "contact",
+          element: <PageTransition><ContactPage /></PageTransition>,
         },
         {
           path: "*",

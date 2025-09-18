@@ -80,14 +80,14 @@ export function IconDetailDialog(props: IconDetailProps) {
                   <Component size={30} />
                 </div>
                 <div className="flex text-left flex-col">
-                  <span className="text-xl font-light">{name}</span>
-                  <p className="text-sm text-gray-500 dark:text-gray-500">
+                  <span className="text-xl font-medium">{name}</span>
+                  <p className="text-base font-medium text-gray-500 dark:text-gray-400">
                     {keywords.slice(0, 3).join(", ")}
                   </p>
                 </div>
               </div>
               <DialogDescription className="flex gap-2 text-sm font-medium">
-                <span className="px-2 py-1 bg-gray-100/60 dark:bg-gray-800 rounded">
+                <span className="px-2 py-1 bg-gray-100/60 dark:bg-gray-800 rounded-lg">
                   {category}
                 </span>
               </DialogDescription>
@@ -120,7 +120,7 @@ export function IconDetailDialog(props: IconDetailProps) {
                       max={100}
                       value={size}
                       onChange={(_, value) => setSize(typeof value === "number" ? value : value[0])}
-                      valueLabelDisplay="auto"
+                      valueLabelDisplay="off"
                       sx={{
                         "& .MuiSlider-thumb": {
                           marginTop: 0,
@@ -135,7 +135,7 @@ export function IconDetailDialog(props: IconDetailProps) {
                     type="button"
                     onClick={() => setSize(40)}
                     title="Reset size"
-                    className="group p-2 rounded-md text-gray-500 hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300"
+                    className="group p-2 rounded-lg bg-lime-500/10 dark:bg-lime-500/10 backdrop-blur-md shadow-md text-white border border-lime-500/30 hover:shadow-lg transition-colors duration-300"
                   >
                     <IconRestore
                       size={20}
@@ -146,7 +146,7 @@ export function IconDetailDialog(props: IconDetailProps) {
                 </div>
               </div>
 
-              <div className="flex items-center justify-center h-40 bg-gray-50 dark:bg-gray-900 rounded-lg border relative overflow-hidden">
+              <div className="flex items-center justify-center h-40 bg-gray-50 dark:bg-gray-900 rounded-2xl border relative overflow-hidden">
                 <div
                   className={cn(
                     "absolute inset-0",
@@ -156,10 +156,9 @@ export function IconDetailDialog(props: IconDetailProps) {
                   )}
                 />
                 <div
-                  className="backdrop-blur-lg bg-white/60 dark:bg-white/5 rounded-xl px-6 py-4 border border-white/30 dark:border-white/10 shadow-[inset_0_2px_6px_rgba(0,0,0,0.15)] dark:shadow-[inset_0_2px_6px_rgba(255,255,255,0.08)] relative z-10">
+                  className="backdrop-blur-lg bg-white/60 dark:bg-white/5 rounded-2xl px-6 py-4 border border-white/30 dark:border-white/10 shadow-[inset_0_2px_6px_rgba(0,0,0,0.15)] dark:shadow-[inset_0_2px_6px_rgba(255,255,255,0.08)] relative z-10">
                   <Component size={size} />
                 </div>
-
               </div>
 
               <div className="flex gap-4">

@@ -19,12 +19,14 @@ export default function Docs() {
           animate={{ opacity: 1, y: 0 }}
           className="mb-16 text-center"
         >
-          <h1 className="text-5xl font-light tracking-tight text-black dark:text-white mb-4">
-            Documentation
-          </h1>
-          <p className="text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
-            Install, use, and extend a clean SVG icon system for React + TypeScript
-          </p>
+          <div className="max-w-7xl mx-auto px-4 text-center py-8">
+            <h2 className="text-3xl sm:text-6xl font-medium text-gray-900 dark:text-white">
+              Documentation
+            </h2>
+            <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Install, use, and extend a clean SVG icon system for React + TypeScript
+            </p>
+          </div>
         </motion.section>
 
         {/* Tabs */}
@@ -139,18 +141,17 @@ export default function App() {
           <Link
             to="/">
             <button className="group relative inline-flex h-12 overflow-hidden rounded-full p-0.5">
-              <div className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+              <div className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#94c748_0%,#393BB2_50%,#94c748_100%)]" />
               <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-                <IconArrowRight className="mr-2 h-5 w-5 transform transition-transform duration-300 group-hover:translate-x-32" />
-                <span className="transform transition-transform duration-300 group-hover:-translate-x-6">
+                <span className="transform transition-transform duration-300 group-hover:translate-x-6">
                   Back to Home Page
                 </span>
+                <IconArrowRight className="ml-2 h-5 w-5 transform transition-transform duration-300 group-hover:-translate-x-32" />
               </span>
             </button>
           </Link>
         </motion.div>
       </main>
-
       <SiteFooter />
     </div>
   );

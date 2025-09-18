@@ -37,14 +37,14 @@ export const CodeBlock = ({
 
   const tabsExist = tabs.length > 0;
 
-  const copyToClipboard = async () => {
-    const textToCopy = tabsExist ? tabs[activeTab].code : code;
-    if (textToCopy) {
-      await navigator.clipboard.writeText(textToCopy);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    }
-  };
+  // const copyToClipboard = async () => {
+  //   const textToCopy = tabsExist ? tabs[activeTab].code : code;
+  //   if (textToCopy) {
+  //     await navigator.clipboard.writeText(textToCopy);
+  //     setCopied(true);
+  //     setTimeout(() => setCopied(false), 2000);
+  //   }
+  // };
 
   const activeCode = tabsExist ? tabs[activeTab].code : code;
   const activeLanguage = tabsExist
@@ -104,9 +104,9 @@ export const CodeBlock = ({
             fontFamily: "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
             overflow: "visible",
             width: "100%",
-            minWidth: "max-content", // Ensures content doesn't get squeezed
+            minWidth: "max-content",
           }}
-          wrapLines={false} // Allow horizontal scrolling for long lines
+          wrapLines={false}
           showLineNumbers={true}
           lineNumberStyle={{
             minWidth: "2.5rem",

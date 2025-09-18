@@ -21,13 +21,13 @@ const buttonVariants = cva(
         ghost:
           'hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50',
         glass:
-          "bg-white/20 dark:bg-white/10 backdrop-blur-md shadow-md text-white border border-white/30 hover:bg-white/30 hover:shadow-lg transition-colors",
+          "bg-lime-500/10 dark:bg-lime-500/10 backdrop-blur-md shadow-md text-white border border-lime-500/30 hover:shadow-lg transition-colors",
 
       },
       size: {
         default: 'size-8 rounded-lg [&_svg]:size-4',
         sm: 'size-6 [&_svg]:size-3',
-        md: 'size-10 rounded-lg [&_svg]:size-5',
+        md: 'size-10 rounded-xl [&_svg]:size-5',
         lg: 'size-12 rounded-xl [&_svg]:size-6',
       },
     },

@@ -67,13 +67,12 @@ export function IconExplorer() {
       <main className="pt-28">
         <div className="mx-auto max-w-7xl px-4 py-12">
           <div className="mt-12 bg-gray-50 dark:bg-gray-900/50 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
-            <h3 className="text-4xl font-medium text-center text-gray-900 dark:text-white mb-10">Quick Start</h3>
+            <h2 className="text-3xl sm:text-6xl font-medium text-center text-gray-900 dark:text-white mb-10">Quick Start</h2>
             <div className="grid md:grid-cols-2 gap-8 items-center">
-
               <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                 {featureList.map((feature) => (
                   <li key={feature} className="flex items-center">
-                    <IconSquareRoundedCheckFilled className="inline w-5 h-5 mr-2 text-green-500" />
+                    <IconSquareRoundedCheckFilled className="inline w-5 h-5 mr-2 text-lime-500" />
                     <span className="font-medium">{feature}</span>
                   </li>
                 ))}
@@ -97,7 +96,9 @@ import { React } from 'jupiter-iconz'
         {/* Icon Explorer */}
         <section className="mx-auto max-w-7xl px-4 py-12">
           <div className="text-center mb-28">
-            <h1 className="text-balance text-4xl font-medium md:text-7xl">Browse Icons</h1>
+            <h2 className="text-3xl sm:text-6xl font-medium text-gray-900 dark:text-white">
+              Browse Icons
+            </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300">Use filters to find exactly what you need.</p>
           </div>
 
@@ -135,7 +136,7 @@ import { React } from 'jupiter-iconz'
                   max={55}
                   value={size}
                   onChange={(_, v) => setSize(typeof v === "number" ? v : v[0])}
-                  valueLabelDisplay="auto"
+                  valueLabelDisplay="off"
                 />
               </Box>
               <span className="text-sm text-gray-500 dark:text-gray-400 text-right tabular-nums">
@@ -145,11 +146,11 @@ import { React } from 'jupiter-iconz'
                 type="button"
                 onClick={() => setSize(40)}
                 title="Reset size"
-                className="group p-2 rounded-md text-gray-500 hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300"
+                className="group p-2 rounded-lg bg-lime-500/10 dark:bg-lime-500/10 backdrop-blur-md shadow-md text-white border border-lime-500/30 hover:shadow-lg transition-colors duration-300"
               >
                 <IconRestore
                   size={20}
-                  className="rotate-180 transition-all duration-300 group-hover:rotate-0"
+                  className="rotate-180 transition-transform duration-300 group-hover:rotate-0"
                 />
               </button>
 
@@ -172,7 +173,7 @@ import { React } from 'jupiter-iconz'
                   />
                 </button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-48 p-1 mt-2 rounded-xl border border-white/10 dark:border-zinc-800 bg-zinc-500/10 dark:bg-zinc-900/50 backdrop-blur shadow-xl">
+              <DropdownMenuContent className="w-48 p-1 mt-2 rounded-2xl border border-white/10 dark:border-zinc-800 bg-zinc-500/10 dark:bg-zinc-900/50 backdrop-blur shadow-xl">
                 {categories.map((category) => (
                   <DropdownMenuItem
                     key={category}
@@ -180,7 +181,7 @@ import { React } from 'jupiter-iconz'
                       setTab(category);
                       setDropdownOpen(false);
                     }}
-                    className="flex items-center gap-2 rounded-md px-3 py-2 cursor-pointer text-sm text-zinc-800 dark:text-zinc-200 hover:text-white hover:bg-zinc-900/50 dark:hover:bg-zinc-50/10 transition-colors"
+                    className="flex items-center gap-2 rounded-xl px-5 py-2 cursor-pointer text-sm text-zinc-800 dark:text-zinc-200 hover:text-white hover:bg-zinc-900/50 dark:hover:bg-zinc-50/10 transition-colors"
                   >
                     {iconsMap[category]}
                     <span>{category === "DesignTools" ? "Design" : category}</span>

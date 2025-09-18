@@ -3,7 +3,7 @@ import { useLocation, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { AnimatedThemeToggler } from "../ui/animated-theme-toggler";
 
-import { IconHome, IconBook, IconPhoneCall, IconIcons, IconMenu4, IconX } from "@tabler/icons-react";
+import { IconHome, IconBook, IconIcons, IconMenu4, IconX, IconMessage } from "@tabler/icons-react";
 
 export function SiteHeader() {
   const { pathname } = useLocation();
@@ -21,7 +21,7 @@ export function SiteHeader() {
         initial={{ y: -30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="backdrop-blur-lg bg-white/20 dark:bg-black/20 border border-white/30 dark:border-white/10 rounded-2xl shadow-lg py-5 px-9 flex items-center justify-between"
+        className="backdrop-blur-md bg-white/20 dark:bg-black/20 border border-white/30 dark:border-white/10 rounded-2xl shadow-lg py-5 px-9 flex items-center justify-between"
       >
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
@@ -40,9 +40,9 @@ export function SiteHeader() {
               <Link
                 key={href}
                 to={href}
-                className={`flex items-center gap-1 px-3 py-2 rounded-lg transition-colors duration-200 ${isActive
-                  ? "bg-white/70 dark:bg-gray-800/60 text-gray-900 dark:text-white"
-                  : "text-gray-700 dark:text-gray-300 hover:bg-white/40 dark:hover:bg-gray-900/50 hover:text-gray-900 dark:hover:text-white"
+                className={`flex items-center gap-1 px-3 py-2 rounded-2xl transition-colors duration-200 ${isActive
+                  ? "bg-white/70 dark:bg-lime-800/60 text-gray-900 dark:text-white"
+                  : "text-gray-700 dark:text-gray-300 hover:bg-white/40 dark:hover:bg-lime-900/50 hover:text-gray-900 dark:hover:text-white"
                   }`}
               >
                 <Icon className="h-5 w-5" />
@@ -55,10 +55,14 @@ export function SiteHeader() {
         <div className="flex items-center gap-4">
           <Link
             to="/contact"
-            className="hidden md:inline-flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-b from-blue-500 to-blue-600 text-white font-medium shadow-md hover:shadow-lg hover:brightness-110 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="group relative hidden md:inline-flex items-center justify-center gap-2 px-6 py-2 rounded-full border border-lime-500/50 text-lime-500/90 font-medium transition-all duration-300 hover:bg-lime-500/50 hover:text-white"
           >
-            <IconPhoneCall className="h-5 w-5" />
-            <span>Contact</span>
+            <IconMessage
+              className="w-5 h-5 transition-transform duration-300 group-hover:-translate-x-1"
+            />
+            <span className="transition-transform duration-300 group-hover:translate-x-1">
+              Contact
+            </span>
           </Link>
 
           <AnimatedThemeToggler />
@@ -104,10 +108,14 @@ export function SiteHeader() {
           })}
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-b from-blue-500 to-blue-600 text-white font-medium shadow-md hover:shadow-lg hover:brightness-110 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="group relative inline-flex items-center justify-start gap-2 px-6 py-2 rounded-full border border-lime-500 text-lime-500 font-medium transition-all duration-300 hover:bg-lime-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-lime-400"
           >
-            <IconPhoneCall className="h-5 w-5" />
-            <span>Contact</span>
+            <IconMessage
+              className="w-5 h-5 transition-transform duration-300 group-hover:-translate-x-1"
+            />
+            <span className="transition-transform duration-300 group-hover:translate-x-1">
+              Contact
+            </span>
           </Link>
         </motion.div>
       )}
