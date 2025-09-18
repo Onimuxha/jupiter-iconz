@@ -6,15 +6,14 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { PageTransition } from "@/components/site/PageTransition";
-import { HomeHero } from "@/components/site/HomeHero";
+import { HomeHero } from "@/pages/HomeHero.tsx";
 import { StarsBackground } from "./components/ui/stars-background.tsx";
 import { ShootingStars } from "./components/ui/shooting-stars.tsx";
-import { IconExplorer } from "./components/site/IconExplorer/IconExplorer.tsx";
+import { IconExplorer } from "./pages/IconExplorer.tsx";
 import { useMemo, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 
 import NotFound from "./pages/NotFound";
-import Playground from "./pages/Playground";
 import Docs from "./pages/Docs";
 
 const queryClient = new QueryClient();
@@ -54,10 +53,6 @@ const router = createBrowserRouter(
         {
           path: "icons",
           element: <PageTransition><IconExplorer /></PageTransition>,
-        },
-        {
-          path: "playground",
-          element: <PageTransition><Playground /></PageTransition>,
         },
         {
           path: "docs",

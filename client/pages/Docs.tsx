@@ -3,7 +3,9 @@ import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { CodeBlock } from "@/components/ui/code-block";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Highlighter } from "@/components/ui/highlighter";
+import { IconArrowRight } from "@tabler/icons-react";
 
 export default function Docs() {
   return (
@@ -134,39 +136,18 @@ export default function App() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
         >
-          <a
-            href="/"
-            className="
-    inline-flex items-center gap-2
-    px-4 py-2 md:text-base
-    text-gray-800 dark:text-gray-100
-    bg-gray-100 dark:bg-gray-800
-    hover:bg-gray-200 dark:hover:bg-gray-700
-    border border-gray-300 dark:border-gray-700
-    rounded-md
-    transition-all duration-200
-    shadow-sm
-  "
-          >
-            <span className="text-base">←</span>
-            Back to Home
-          </a>
-
-          <a href="/playground">
-            {/* <Button
-              className="
-      border border-gray-300 dark:border-gray-700
-      bg-white dark:bg-gray-800
-      hover:bg-gray-100 dark:hover:bg-gray-700
-      text-gray-800 dark:text-gray-100 rounded-md
-      shadow-sm
-    "
-            >
-              Open Playground
-            </Button> */}
-            OPen playground
-          </a>
-
+          <Link
+            to="/">
+            <button className="group relative inline-flex h-12 overflow-hidden rounded-full p-0.5">
+              <div className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+              <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
+                <IconArrowRight className="mr-2 h-5 w-5 transform transition-transform duration-300 group-hover:translate-x-32" />
+                <span className="transform transition-transform duration-300 group-hover:-translate-x-6">
+                  Back to Home Page
+                </span>
+              </span>
+            </button>
+          </Link>
         </motion.div>
       </main>
 
