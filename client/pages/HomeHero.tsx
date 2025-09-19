@@ -109,21 +109,26 @@ const steps = [
 ];
 
 export function HomeHero() {
-  const [downloads, setDownloads] = useState<number>(0);
+  const [totalDownloads, setTotalDownloads] = useState<number>(0);
 
   useEffect(() => {
-    const fetchDownloads = async () => {
+    const fetchTotalDownloads = async () => {
       try {
-        const response = await fetch('https://api.npmjs.org/downloads/point/last-week/jupiter-iconz');
+        const startDate = "2024-01-01";
+        const endDate = new Date().toISOString().split('T')[0];
+        
+        const response = await fetch(
+          `https://api.npmjs.org/downloads/point/${startDate}:${endDate}/jupiter-iconz`
+        );
         const data: NpmStats = await response.json();
-        setDownloads(data.downloads);
+        setTotalDownloads(data.downloads);
       } catch (error) {
         console.error('Error fetching npm stats:', error);
       }
     };
 
-    fetchDownloads();
-    const interval = setInterval(fetchDownloads, 3600000);
+    fetchTotalDownloads();
+    const interval = setInterval(fetchTotalDownloads, 3600000);
     return () => clearInterval(interval);
   }, []);
 
@@ -131,7 +136,7 @@ export function HomeHero() {
     { value: Object.keys(icons).length, label: "Premium Icons" },
     { value: categories.length, label: "Categories" },
     { value: 100, suffix: "%", label: "Open Source" },
-    { value: downloads, label: "Downloads" },
+    { value: totalDownloads, label: "Total Downloads" },
   ];
 
   return (
