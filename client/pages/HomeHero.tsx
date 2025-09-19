@@ -1,14 +1,28 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { CodeBlock } from "@/components/ui/code-block";
+import { SEO } from "@/components/SEO";
 import { icons } from "../../packages/jupiter-icons/src/index.ts";
 import { FlipWords } from "../components/ui/flip-words.tsx";
 import { SiteHeader } from "../components/site/SiteHeader.tsx";
 import { SiteFooter } from "../components/site/SiteFooter.tsx";
 import { HeroBackground } from "../components/ui/shap-loading-hero.tsx";
-import { IconArrowRight, IconBook, IconBolt, IconPalette, IconTextResize, IconTargetArrow, IconLayersIntersect, IconCarambola } from "@tabler/icons-react";
+import {
+  IconArrowRight,
+  IconBook,
+  IconBolt,
+  IconPalette,
+  IconTextResize,
+  IconTargetArrow,
+  IconLayersIntersect,
+  IconCarambola,
+} from "@tabler/icons-react";
 import { categories } from "../components/site/IconExplorer/iconUtils.tsx";
-import { Terminal, TypingAnimation, AnimatedSpan } from "../components/ui/terminal.tsx";
+import {
+  Terminal,
+  TypingAnimation,
+  AnimatedSpan,
+} from "../components/ui/terminal.tsx";
 import { NumberTicker } from "../components/ui/number-ticker.tsx";
 import pkg from "../../packages/jupiter-icons/package.json";
 import { useState, useEffect } from "react";
@@ -28,7 +42,9 @@ const heroList = [
   "VK",
 ] as const;
 export async function getStaticProps() {
-  const res = await fetch("https://api.npmjs.org/downloads/point/last-week/jupiter-iconz");
+  const res = await fetch(
+    "https://api.npmjs.org/downloads/point/last-week/jupiter-iconz",
+  );
   const data = await res.json();
 
   return {
@@ -96,16 +112,17 @@ interface NpmStats {
 const steps = [
   {
     title: "Install the package",
-    description: "Run 'npm install jupiter-iconz' in your project directory."
+    description: "Run 'npm install jupiter-iconz' in your project directory.",
   },
   {
     title: "Import icons",
-    description: "Import any icon from 'jupiter-iconz' and use it in your components."
+    description:
+      "Import any icon from 'jupiter-iconz' and use it in your components.",
   },
   {
     title: "Customize",
-    description: "Adjust size, color, and stroke to fit your design system."
-  }
+    description: "Adjust size, color, and stroke to fit your design system.",
+  },
 ];
 
 export function HomeHero() {
@@ -115,15 +132,15 @@ export function HomeHero() {
     const fetchTotalDownloads = async () => {
       try {
         const startDate = "2024-01-01";
-        const endDate = new Date().toISOString().split('T')[0];
-        
+        const endDate = new Date().toISOString().split("T")[0];
+
         const response = await fetch(
-          `https://api.npmjs.org/downloads/point/${startDate}:${endDate}/jupiter-iconz`
+          `https://api.npmjs.org/downloads/point/${startDate}:${endDate}/jupiter-iconz`,
         );
         const data: NpmStats = await response.json();
         setTotalDownloads(data.downloads);
       } catch (error) {
-        console.error('Error fetching npm stats:', error);
+        console.error("Error fetching npm stats:", error);
       }
     };
 
@@ -141,6 +158,8 @@ export function HomeHero() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-muted/40">
+      <SEO />
+      <SEO />
       <SiteHeader />
       <main>
         <section className="min-h-screen relative pt-24 overflow-hidden">

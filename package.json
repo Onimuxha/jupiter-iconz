@@ -29,6 +29,7 @@
     "lucide-react": "^0.544.0",
     "motion": "^12.23.12",
     "ogl": "^1.0.11",
+    "react-helmet-async": "^2.0.5",
     "react-syntax-highlighter": "^15.6.6",
     "rough-notation": "^0.5.1",
     "shiki": "^3.12.2",

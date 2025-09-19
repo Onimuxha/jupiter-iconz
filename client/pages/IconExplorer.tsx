@@ -18,6 +18,7 @@ import { IconGrid } from "../components/site/IconExplorer/IconGrid";
 import { categories, iconsMap } from "../components/site/IconExplorer/iconUtils";
 import { SiteHeader } from "../components/site/SiteHeader";
 import { SiteFooter } from "../components/site/SiteFooter";
+import { SEO } from "@/components/SEO";
 
 const featureList = [
   "Tree-shakable imports",
@@ -81,6 +82,7 @@ export function IconExplorer() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-muted/40">
+      <SEO title="Icon Explorer" description="Browse and search through our extensive collection of modern, accessible icons with brand colors and animations." />
       <SiteHeader />
       <main className="pt-24">
         <div className="mx-auto max-w-7xl px-4 py-12">

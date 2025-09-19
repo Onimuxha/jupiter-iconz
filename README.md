@@ -65,6 +65,49 @@ Props supported by every icon component:
 - `aria-label?: string`
 - `onClick?: (e: React.MouseEvent) => void`
 
+## SEO Implementation
+
+The project includes a pre-configured SEO setup using `react-helmet-async`. To add SEO to your pages:
+
+1. Import the SEO component:
+```tsx
+import { SEO } from "@/components/SEO";
+```
+
+2. Use it in your pages with custom metadata:
+```tsx
+function YourPage() {
+  return (
+    <>
+      <SEO 
+        title="Your Page Title" 
+        description="Your page description for search engines"
+        image="/path-to-social-image.png"    // Optional: Social media preview image
+        canonical="https://your-site/path"   // Optional: Canonical URL
+        type="website"                       // Optional: og:type (default: website)
+      />
+      {/* Your page content */}
+    </>
+  );
+}
+```
+
+3. Default SEO values are pre-configured for:
+- Base title suffix: "| Jupiter Icons"
+- Default description
+- Open Graph metadata
+- Twitter Cards
+- Basic PWA metadata
+
+The SEO component automatically handles:
+- Title formatting
+- Meta descriptions
+- Open Graph tags
+- Twitter Card metadata
+- Canonical URLs
+- Mobile viewport settings
+- Theme color
+
 ## Library authoring
 
 Icons are defined by category files under:
