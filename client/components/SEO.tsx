@@ -19,7 +19,7 @@ export function SEO({
   url = 'https://jupiter-iconz.vercel.app',
   type = 'website',
   canonical,
-  keywords = 'icon library, react icons, developer icons, brand icons, jupiter icons, svg icons',
+  keywords = 'icon library, react icons, developer icons, brand icons, jupiter iconz, svg icons, website icons, animated icons, accessible icons',
   author = 'Jupiter Icons',
   children,
 }: SEOProps) {
