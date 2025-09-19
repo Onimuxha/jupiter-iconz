@@ -63,13 +63,13 @@ export default function Docs() {
                   <CodeBlock
                     language="jsx"
                     filename="App.tsx"
-                    code={`import { Photoshop, VSCode } from "jupiter-iconz";
+                    code={`import { Icon } from "jupiter-iconz";
 
 export default function App() {
   return (
     <div>
-      <Photoshop size={24} />
-      <VSCode size={48} className="ml-2" />
+      <Icon name="Photoshop" size={24} />
+      <Icon name="VSCode" size={48} className="ml-2" />
     </div>
 );`}
                     highlightLines={[2, 5]}
@@ -85,16 +85,16 @@ export default function App() {
                   <CodeBlock
                     language="jsx"
                     filename="Example.tsx"
-                    code={`<GitHubDark size={32} className="dark:invert" /> `}
+                    code={`<Icon name="GitHubDark" size={32} className="dark:invert" /> `}
                   />
                 </Card>
-                <p className="capitalize">recommanded to use <Highlighter action="underline" color="#FF9800">Dark vision</Highlighter> for dark mode and light mode for better visibility</p>
+                <p className="capitalize">recommanded to use <Highlighter action="underline" color="#FF9800">Dark Icon</Highlighter> good for dark mode and light mode for better visibility</p>
 
                 <Card title="Sizing and accessibility">
                   <CodeBlock
                     language="jsx"
                     filename="Example.tsx"
-                    code={`<Photoshop size={32} aria-label="Adobe Photoshop" />`}
+                    code={`<Icon name="Photoshop" size={32} aria-label="Adobe Photoshop" />`}
                   />
                 </Card>
 
@@ -102,7 +102,7 @@ export default function App() {
                   <CodeBlock
                     language="jsx"
                     filename="Example.tsx"
-                    code={`<VSCode onClick={() => alert('clicked')} />`}
+                    code={`<Icon name="VSCode" onClick={() => alert('clicked')} />`}
                   />
                 </Card>
 
@@ -110,7 +110,7 @@ export default function App() {
                   <CodeBlock
                     language="jsx"
                     filename="Example.tsx"
-                    code={`<Figma className="opacity-50 hover:opacity-100" />`}
+                    code={`<Icon name="Figma" className="opacity-50 hover:opacity-100" />`}
                   />
                 </Card>
               </div>

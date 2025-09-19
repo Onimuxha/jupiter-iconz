@@ -27,7 +27,7 @@ export function IconItem({ name, Comp, size, viewMode, category, keywords }) {
   const listItemVariants = {
     hidden: {
       opacity: 0,
-      x: -20,
+      x: -30,
       scale: 0.98,
       transition: { duration: 0.2 }
     },
@@ -69,7 +69,7 @@ export function IconItem({ name, Comp, size, viewMode, category, keywords }) {
               {category}
             </div>
             <p className="text-sm text-gray-600 dark:text-gray-400 truncate">
-              {category} • {keywords.slice(0, 9).join(", ")}
+              {keywords.slice(0, 3).join(", ")}
             </p>
           </div>
         </motion.button>

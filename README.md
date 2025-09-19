@@ -45,13 +45,13 @@ pnpm start        # Starts the built server
 Once published to npm as `jupiter-iconz`:
 
 ```tsx
-import { Photoshop, VSCode } from "jupiter-iconz";
+import { Icon } from "jupiter-iconz";
 
 export default function Example() {
   return (
     <div>
-      <Photoshop size={24} aria-label="Adobe Photoshop" />
-      <VSCode size={48} className="align-middle" />
+      <Icon name="Photoshop" size={24} aria-label="Adobe Photoshop" />
+      <Icon name="VSCode" size={48} className="align-middle" />
     </div>
   );
 }
@@ -172,3 +172,4 @@ npm publish ./packages/jupiter-iconz --access public
 ## License
 
 This project is licensed under the [Socheath License](./LICENSE).
+..

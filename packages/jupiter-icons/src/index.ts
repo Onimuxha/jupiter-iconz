@@ -13,51 +13,6 @@ import { iconsData as Other } from "./categories/Other";
 export type { IconData };
 export { createIcon };
 
-const all: Record<string, ReturnType<typeof createIcon>> = {};
-[...Programming, ...Apps, ...DesignTools, ...AI, ...Frameworks, ...Tools, ...Other].forEach((icon) => {
-  all[icon.name] = createIcon(icon.name, icon.svgContent);
-});
-// -----------------------------------------------------------------------------------------------------------
-// Programming
-export const TypeScript = all["TypeScript"];
-export const HTML5 = all["HTML5"];
-export const CSS3 = all["CSS3"];
-export const SASS = all["SASS"];
-export const Vitest = all["Vitest"];
-export const JavaScript = all["JavaScript"];
-export const ApacheKafkaDark = all["ApacheKafkaDark"];
-export const ApacheKafkaLight = all["ApacheKafkaLight"];
-export const Python = all["Python"];
-export const PHP = all["PHP"];
-export const SolidityDark = all["SolidityDark"];
-export const SolidityLight = all["SolidityLight"];
-
-export const ReactIcon = all["React"];
-export const NodeJS = all["NodeJS"];
-export const GitHub = all["GitHub"];
-export const Chrome = all["Chrome"];
-export const VSCode = all["VSCode"];
-export const Slack = all["Slack"];
-export const AlpineJs = all["AlpineJs"];
-export const ThreeJs = all["ThreeJs"];
-
-export const NestJs = all["NestJs"];
-export const MeteorJs = all["MeteorJs"];
-export const JestJs = all["JestJs"];
-export const ElectronJs = all["ElectronJs"];
-export const NextJs = all["NextJs"];
-
-export const GatsbyJs = all["GatsbyJs"];
-export const NuxtJs = all["NuxtJs"];
-export const ExpressJs = all["ExpressJs"];
-export const BackboneJs = all["BackboneJs"];
-export const ReduxJs = all["ReduxJs"];
-export const Jquery = all["Jquery"];
-
-export const Figma = all["Figma"];
-export const Photoshop = all["Photoshop"];
-
-// -----------------------------------------------------------------------------------------------------------
 export const Categories = {
   Programming,
   Apps,
@@ -78,9 +33,13 @@ const allCategories = [
   ...Other,
 ];
 
-export const allIconsData: IconData[] = allCategories;
+const icons = allCategories.reduce<Record<string, ReturnType<typeof createIcon>>>((acc, icon) => {
+  acc[icon.name] = createIcon(icon.name, icon.svgContent);
+  return acc;
+}, {});
 
-export const icons = all;
+export const allIconsData: IconData[] = allCategories;
+export { icons };
 export type IconName = keyof typeof icons;
 
 export interface DynamicIconProps {
@@ -95,6 +54,6 @@ export interface DynamicIconProps {
 
 export function Icon({ name, ...rest }: DynamicIconProps) {
   const Comp = icons[name];
-  if (!Comp) return null as any;
-  return React.createElement(Comp as any, rest as any);
+  if (!Comp) return null;
+  return React.createElement(Comp, rest);
 }

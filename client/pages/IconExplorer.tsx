@@ -103,8 +103,8 @@ export function IconExplorer() {
 npm install jupiter-iconz
 
 // Import & Use
-import { React } from 'jupiter-iconz'
-<React size={24} />`}
+import { Icon } from 'jupiter-iconz'
+<Icon name="React" size={24} />`}
                 highlightLines={[2, 5]}
               />
             </div>
