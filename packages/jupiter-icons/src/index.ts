@@ -18,9 +18,21 @@ const all: Record<string, ReturnType<typeof createIcon>> = {};
   all[icon.name] = createIcon(icon.name, icon.svgContent);
 });
 // -----------------------------------------------------------------------------------------------------------
+// Programming
+export const TypeScript = all["TypeScript"];
+export const HTML5 = all["HTML5"];
+export const CSS3 = all["CSS3"];
+export const SASS = all["SASS"];
+export const Vitest = all["Vitest"];
+export const JavaScript = all["JavaScript"];
+export const ApacheKafkaDark = all["ApacheKafkaDark"];
+export const ApacheKafkaLight = all["ApacheKafkaLight"];
+export const Python = all["Python"];
+export const PHP = all["PHP"];
+export const SolidityDark = all["SolidityDark"];
+export const SolidityLight = all["SolidityLight"];
 
 export const ReactIcon = all["React"];
-export const TypeScript = all["TypeScript"];
 export const NodeJS = all["NodeJS"];
 export const GitHub = all["GitHub"];
 export const Chrome = all["Chrome"];
