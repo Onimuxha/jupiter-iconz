@@ -171,4 +171,4 @@ npm publish ./packages/jupiter-iconz --access public
 
 ## License
 
-You own your icon SVGs and trademarks. Provide attribution or licenses where required by brand owners before publishing.
+This project is licensed under the [Socheath License](./LICENSE).

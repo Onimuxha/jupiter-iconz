@@ -1,6 +1,6 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, useRef } from "react"; // Add useRef
 import { useSearchParams } from "react-router-dom";
-import { IconSearch, IconChevronDown, IconLayoutGrid, IconListDetails, IconFileTypeTsx, IconBolt, IconMoon, IconPalette, IconRestore, IconSquareRoundedCheckFilled } from "@tabler/icons-react";
+import { IconSearch, IconChevronDown, IconLayoutGrid, IconListDetails, IconFileTypeTsx, IconBolt, IconMoon, IconPalette, IconRestore, IconSquareRoundedCheckFilled, IconSlash } from "@tabler/icons-react";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent } from "@/components/ui/tabs";
 import Box from "@mui/material/Box";
@@ -41,6 +41,7 @@ export function IconExplorer() {
     return urlTab || savedTab || "All";
   });
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const searchInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     localStorage.setItem("selectedCategory", tab);
@@ -60,6 +61,23 @@ export function IconExplorer() {
       return inCat && (q.length === 0 || text.includes(q));
     });
   }, [allData, query, tab]);
+
+  // Add keyboard shortcut handler
+  useEffect(() => {
+    function handleKeyPress(e: KeyboardEvent) {
+      if (
+        e.key === "/" &&
+        document.activeElement?.tagName !== "INPUT" &&
+        document.activeElement?.tagName !== "TEXTAREA"
+      ) {
+        e.preventDefault();
+        searchInputRef.current?.focus();
+      }
+    }
+
+    document.addEventListener("keydown", handleKeyPress);
+    return () => document.removeEventListener("keydown", handleKeyPress);
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-muted/40">
@@ -105,13 +123,17 @@ import { React } from 'jupiter-iconz'
           {/* Filters */}
           <div className="flex flex-col sm:flex-row gap-4 mb-6 justify-between items-center">
             <div className="relative flex-1 max-w-md">
-              <IconSearch className="absolute left-5 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
+              <IconSearch size={20} className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-400" />
               <Input
+                ref={searchInputRef}
                 placeholder="Search icons..."
-                className="pl-12 bg-white/50 dark:bg-gray-900/50 capitalize"
+                className="pl-12 pr-16 bg-white/50 dark:bg-gray-900/50 capitalize"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
               />
+              <kbd className="absolute text-base right-2 top-1/2 -translate-y-1/2 pointer-events-none hidden sm:inline-flex select-none items-center justify-center w-7 h-7 rounded-full bg-gray-200 dark:bg-gray-700 font-mono text-[10px] font-medium text-gray-600 dark:text-gray-400">
+                <IconSlash size={20} />
+              </kbd>
             </div>
             <div className="flex items-center gap-2">
               {[{ mode: "grid", icon: IconLayoutGrid }, { mode: "list", icon: IconListDetails }].map(({ mode, icon: Icon }) => (

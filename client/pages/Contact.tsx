@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
-import { IconAlertTriangle, IconLoader2, IconPaperclip, IconSend, IconX } from "@tabler/icons-react";
+import { IconAlertTriangle, IconBug, IconIcons, IconLoader2, IconMessage, IconPaperclip, IconQuote, IconSend, IconX } from "@tabler/icons-react";
 import { HeroBackground } from "@/components/ui/shap-loading-hero";
 
 const ContactPage = () => {
@@ -90,10 +90,10 @@ const ContactPage = () => {
   };
 
   const reasons = [
-    { icon: "💡", title: "Request Icons", desc: "Need specific icons? Let us know." },
-    { icon: "🐛", title: "Report Issues", desc: "Found bugs? We're here to help." },
-    { icon: "💬", title: "Feedback", desc: "Share thoughts and suggestions." },
-    { icon: "🤝", title: "Collaborate", desc: "Want to contribute? Let's talk!" }
+    { icon: IconIcons, title: "Request Icons", desc: "Need specific icons? Let us know." },
+    { icon: IconBug, title: "Report Issues", desc: "Found bugs? We're here to help." },
+    { icon: IconMessage, title: "Feedback", desc: "Share thoughts and suggestions." },
+    { icon: IconQuote, title: "Other Inquiries", desc: "Have other questions? Ask away." },
   ];
 
   return (
@@ -109,10 +109,10 @@ const ContactPage = () => {
           >
             <div className="max-w-7xl mx-auto px-4 text-center py-8">
               <h2 className="text-3xl sm:text-6xl font-medium text-gray-900 dark:text-white">
-                Get in Touch
+                Contact
               </h2>
               <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                Send us a message for feedback, icon requests, or any questions.
+                Can't find the icon you're looking for?
               </p>
             </div>
           </motion.section>
@@ -126,8 +126,8 @@ const ContactPage = () => {
               className="space-y-6"
             >
               <div>
-                <h2 className="text-2xl font-medium text-neutral-900 dark:text-neutral-100 mb-2">How can we help?</h2>
-                <p className="text-neutral-600 dark:text-neutral-400 mb-8">Choose from the options below or send us a custom message.</p>
+                <h2 className="text-2xl font-medium text-neutral-900 dark:text-neutral-100 mb-2">How can I help?</h2>
+                <p className="text-neutral-600 dark:text-neutral-400 mb-8">Choose from the options below or send me a custom message.</p>
               </div>
 
               <div className="space-y-4">
@@ -137,10 +137,12 @@ const ContactPage = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: i * 0.1 }}
-                    className="p-6 bg-neutral-50/50 dark:bg-neutral-900/20 rounded-xl border border-neutral-200/50 dark:border-neutral-800/50 hover:border-neutral-300/50 dark:hover:border-neutral-700/50 transition-colors"
+                    className="p-6 bg-neutral-100 dark:bg-neutral-100/10 rounded-xl border border-lime-200/50 dark:border-lime-500/30 hover:border-neutral-300/50 dark:hover:border-neutral-700/50 transition-colors"
                   >
                     <div className="flex items-start gap-4">
-                      <div className="text-2xl">{item.icon}</div>
+                      <div className="w-12 h-12 bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center text-neutral-700 dark:text-neutral-300">
+                        <item.icon size={24} />
+                      </div>
                       <div>
                         <h3 className="font-medium text-neutral-900 dark:text-neutral-100 mb-1">{item.title}</h3>
                         <p className="text-sm text-neutral-600 dark:text-neutral-400">{item.desc}</p>

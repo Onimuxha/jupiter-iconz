@@ -11,6 +11,7 @@ import { categories } from "../components/site/IconExplorer/iconUtils.tsx";
 import { Terminal, TypingAnimation, AnimatedSpan } from "../components/ui/terminal.tsx";
 import { NumberTicker } from "../components/ui/number-ticker.tsx";
 import pkg from "../../packages/jupiter-icons/package.json";
+import { useState, useEffect } from "react";
 
 const heroList = [
   "BehanceFill",
@@ -26,6 +27,17 @@ const heroList = [
   "AdobeInDesign",
   "VK",
 ] as const;
+export async function getStaticProps() {
+  const res = await fetch("https://api.npmjs.org/downloads/point/last-week/jupiter-iconz");
+  const data = await res.json();
+
+  return {
+    props: {
+      downloadsLastWeek: data.downloads,
+    },
+    revalidate: 3600,
+  };
+}
 
 const words = ["Beautiful.", "Better.", "Modern.", "Scalable.", "Accessible."];
 
@@ -74,33 +86,58 @@ interface Stat {
   label: string;
 }
 
-const stats: Stat[] = [
-  { value: Object.keys(icons).length, label: "Premium Icons" },
-  { value: categories.length, label: "Categories" },
-  { value: 100, suffix: "%", label: "Fully Scalable" },
-  { value: 100, suffix: "%", label: "Open Source" },
-];
+interface NpmStats {
+  downloads: number;
+  start: string;
+  end: string;
+  package: string;
+}
+
 const steps = [
   {
-    title: "Install the Package",
-    description: "Add Jupiter Icons to your project with a single command.",
+    title: "Install the package",
+    description: "Run 'npm install jupiter-iconz' in your project directory."
   },
   {
-    title: "Import & Use",
-    description: "Import icons individually for optimal bundle size.",
+    title: "Import icons",
+    description: "Import any icon from 'jupiter-iconz' and use it in your components."
   },
   {
     title: "Customize",
-    description: "Adjust size, colors, and styling to match your design.",
-  },
+    description: "Adjust size, color, and stroke to fit your design system."
+  }
 ];
 
 export function HomeHero() {
+  const [downloads, setDownloads] = useState<number>(0);
+
+  useEffect(() => {
+    const fetchDownloads = async () => {
+      try {
+        const response = await fetch('https://api.npmjs.org/downloads/point/last-week/jupiter-iconz');
+        const data: NpmStats = await response.json();
+        setDownloads(data.downloads);
+      } catch (error) {
+        console.error('Error fetching npm stats:', error);
+      }
+    };
+
+    fetchDownloads();
+    const interval = setInterval(fetchDownloads, 3600000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const stats: Stat[] = [
+    { value: Object.keys(icons).length, label: "Premium Icons" },
+    { value: categories.length, label: "Categories" },
+    { value: 100, suffix: "%", label: "Open Source" },
+    { value: downloads, label: "Downloads" },
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-muted/40">
       <SiteHeader />
       <main>
-        {/* Hero Section  */}
         <section className="min-h-screen relative pt-24 overflow-hidden">
           <HeroBackground className="absolute inset-0 w-full h-full z-0 pointer-events-none" />
           <div className="relative z-10 mx-auto max-w-7xl px-4 py-12 md:py-20 grid items-center gap-10 md:grid-cols-2">
@@ -266,7 +303,6 @@ export function HomeHero() {
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto px-4">
-            {/* Left: Steps with animation */}
             <div className="space-y-6">
               {steps.map((step, i) => (
                 <motion.div

@@ -133,7 +133,7 @@ export function IconDetailDialog(props: IconDetailProps) {
                   </Box>
                   <button
                     type="button"
-                    onClick={() => setSize(40)}
+                    onClick={() => setSize(48)}
                     title="Reset size"
                     className="group p-2 rounded-lg bg-lime-500/10 dark:bg-lime-500/10 backdrop-blur-md shadow-md text-white border border-lime-500/30 hover:shadow-lg transition-colors duration-300"
                   >
@@ -155,8 +155,7 @@ export function IconDetailDialog(props: IconDetailProps) {
                     "dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]"
                   )}
                 />
-                <div
-                  className="backdrop-blur-lg bg-white/60 dark:bg-white/5 rounded-2xl px-6 py-4 border border-white/30 dark:border-white/10 shadow-[inset_0_2px_6px_rgba(0,0,0,0.15)] dark:shadow-[inset_0_2px_6px_rgba(255,255,255,0.08)] relative z-10">
+                <div className="inline-flex items-center justify-center rounded-xl p-4 backdrop-blur-lg bg-black/5 dark:bg-white/5 border border-white/30 dark:border-white/10 shadow-[inset_0_2px_6px_rgba(0,0,0,0.15)] dark:shadow-[inset_0_2px_6px_rgba(255,255,255,0.08)] relative z-10">
                   <Component size={size} />
                 </div>
               </div>
