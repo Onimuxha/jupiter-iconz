@@ -64,7 +64,7 @@ export function IconExplorer() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-muted/40">
       <SiteHeader />
-      <main className="pt-28">
+      <main className="pt-24">
         <div className="mx-auto max-w-7xl px-4 py-12">
           <div className="mt-12 bg-gray-50 dark:bg-gray-900/50 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
             <h2 className="text-3xl sm:text-6xl font-medium text-center text-gray-900 dark:text-white mb-10">Quick Start</h2>

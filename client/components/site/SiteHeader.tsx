@@ -41,7 +41,7 @@ export function SiteHeader() {
                 key={href}
                 to={href}
                 className={`flex items-center gap-1 px-3 py-2 rounded-2xl transition-colors duration-200 ${isActive
-                  ? "bg-lime-500/70 dark:bg-lime-500/10 text-lime-800 dark:text-white"
+                  ? "border border-lime-500/50 text-lime-800 dark:text-white"
                   : "text-gray-700 dark:text-gray-300 hover:bg-lime-500/40 dark:hover:bg-lime-900/50 hover:text-lime-600 dark:hover:text-white"
                   }`}
               >

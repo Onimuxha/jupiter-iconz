@@ -6,22 +6,9 @@ import { FlipWords } from "../components/ui/flip-words.tsx";
 import { SiteHeader } from "../components/site/SiteHeader.tsx";
 import { SiteFooter } from "../components/site/SiteFooter.tsx";
 import { HeroBackground } from "../components/ui/shap-loading-hero.tsx";
-import {
-  IconArrowRight,
-  IconBook,
-  IconBolt,
-  IconPalette,
-  IconTextResize,
-  IconTargetArrow,
-  IconLayersIntersect,
-  IconCarambola,
-} from "@tabler/icons-react";
+import { IconArrowRight, IconBook, IconBolt, IconPalette, IconTextResize, IconTargetArrow, IconLayersIntersect, IconCarambola } from "@tabler/icons-react";
 import { categories } from "../components/site/IconExplorer/iconUtils.tsx";
-import {
-  Terminal,
-  TypingAnimation,
-  AnimatedSpan,
-} from "../components/ui/terminal.tsx";
+import { Terminal, TypingAnimation, AnimatedSpan } from "../components/ui/terminal.tsx";
 import { NumberTicker } from "../components/ui/number-ticker.tsx";
 import pkg from "../../packages/jupiter-icons/package.json";
 
@@ -40,7 +27,7 @@ const heroList = [
   "VK",
 ] as const;
 
-const words = ["Beautiful.", "Code.", "Modern.", "Scalable.", "Accessible."];
+const words = ["Beautiful.", "Better.", "Modern.", "Scalable.", "Accessible."];
 
 const features = [
   {
@@ -114,11 +101,11 @@ export function HomeHero() {
       <SiteHeader />
       <main>
         {/* Hero Section  */}
-        <section className="min-h-screen relative pt-28 overflow-hidden">
+        <section className="min-h-screen relative pt-24 overflow-hidden">
           <HeroBackground className="absolute inset-0 w-full h-full z-0 pointer-events-none" />
           <div className="relative z-10 mx-auto max-w-7xl px-4 py-12 md:py-20 grid items-center gap-10 md:grid-cols-2">
             <div>
-              <p className="mt-2 inline-block rounded-full bg-lime-500/10 px-3 py-1 text-sm font-medium text-lime-600 dark:text-lime-400">
+              <p className="mt-2 inline-block rounded-full bg-lime-500/10 px-3 py-1 text-sm font-medium border border-lime-500/50 text-lime-600 dark:text-lime-400">
                 v{pkg.version}
               </p>
               <h1 className="text-5xl md:text-7xl font-semibold text-balance">
@@ -249,7 +236,7 @@ export function HomeHero() {
                 <NumberTicker
                   value={value}
                   suffix={suffix}
-                  className="whitespace-pre-wrap text-8xl font-medium tracking-tighter text-lime-500 dark:text-lime-500"
+                  className="whitespace-pre-wrap text-7xl font-medium tracking-tighter text-lime-500 dark:text-lime-500"
                 />
                 <div className="text-sm text-gray-600 dark:text-gray-400">
                   {label}
@@ -352,7 +339,7 @@ export function HomeHero() {
                   - package.json
                 </AnimatedSpan>
                 <TypingAnimation className="text-muted-foreground">
-                  Success! Project initialization completed.
+                  Project initialization completed.
                 </TypingAnimation>
                 <TypingAnimation className="text-muted-foreground">
                   You may now add components.
