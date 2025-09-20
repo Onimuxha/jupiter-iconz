@@ -81,12 +81,12 @@ export function IconExplorer() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-muted/40">
+    <div className="min-h-screen">
       <SEO title="Icon Explorer" description="Browse and search through our extensive collection of modern, accessible icons with brand colors and animations." />
       <SiteHeader />
       <main className="pt-24">
         <div className="mx-auto max-w-7xl px-4 py-12">
-          <div className="mt-12 bg-gray-50 dark:bg-gray-900/50 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
+          <div className="mt-12 bg-gray-50 dark:bg-gray-900/50 rounded-2xl p-8 border border-gray-200 dark:border-gray-700 backdrop-blur-sm shadow-lg">
             <h2 className="text-3xl sm:text-6xl font-medium text-center text-gray-900 dark:text-white mb-10">Quick Start</h2>
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
@@ -133,8 +133,10 @@ import { Icon } from 'jupiter-iconz'
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
               />
-              <kbd className="absolute text-base right-2 top-1/2 -translate-y-1/2 pointer-events-none hidden sm:inline-flex select-none items-center justify-center w-7 h-7 rounded-full bg-lime-500/30 dark:bg-lime-500/30 text-gray-600 dark:text-gray-100">
-                <IconSlash size={20} />
+              <kbd
+                className="absolute right-2 top-1/2 -translate-y-1/2 hidden sm:flex h-7 w-7 items-center justify-center rounded-full bg-lime-500/20 text-lime-700 dark:bg-lime-400/20 dark:text-lime-100 text-base pointer-events-none select-none shadow-sm"
+              >
+                <IconSlash size={18} />
               </kbd>
             </div>
             <div className="flex items-center gap-2">

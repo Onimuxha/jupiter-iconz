@@ -6,7 +6,7 @@ const StarsBackground = lazy(() => import('./stars-background').then(mod => ({ d
 export default function LazyBackground() {
   return (
     <Suspense fallback={null}>
-      <div className="pointer-events-none fixed inset-0 z-50 select-none">
+      <div className="pointer-events-none fixed inset-0 -z-10 select-none">
         <ShootingStars />
         <StarsBackground />
       </div>
