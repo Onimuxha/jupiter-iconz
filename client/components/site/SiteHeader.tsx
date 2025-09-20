@@ -49,7 +49,6 @@ export function SiteHeader() {
             );
           })}
         </nav>
-hell0
         <div className="flex items-center gap-4">
           <Link
             to="/contact"
