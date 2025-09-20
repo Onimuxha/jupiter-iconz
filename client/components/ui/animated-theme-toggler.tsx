@@ -66,7 +66,6 @@ export const AnimatedThemeToggler = ({ className }: Props) => {
             onClick={changeTheme}
             className={cn("relative w-8 h-8", className)}
             aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
-            title={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
         >
             <AnimatePresence mode="wait" initial={false}>
                 <motion.span

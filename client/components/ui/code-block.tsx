@@ -2,7 +2,6 @@
 import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
-import { IconChecks, IconCopy } from "@tabler/icons-react";
 import { CopyButton } from "./copy-button";
 
 type CodeBlockProps = {
@@ -10,11 +9,11 @@ type CodeBlockProps = {
   filename: string;
   highlightLines?: number[];
 } & (
-  | {
+    | {
       code: string;
       tabs?: never;
     }
-  | {
+    | {
       code?: never;
       tabs: Array<{
         name: string;
@@ -23,7 +22,7 @@ type CodeBlockProps = {
         highlightLines?: number[];
       }>;
     }
-);
+  );
 
 export const CodeBlock = ({
   language,
@@ -55,28 +54,27 @@ export const CodeBlock = ({
               <button
                 key={index}
                 onClick={() => setActiveTab(index)}
-                className={`flex-shrink-0 px-4 py-2 text-sm font-medium transition-colors border-b-2 font-sans ${
-                  activeTab === index
+                className={`flex-shrink-0 px-4 py-2 text-sm font-medium transition-colors border-b-2 font-sans ${activeTab === index
                     ? "text-white border-blue-500 bg-slate-900"
                     : "text-slate-400 hover:text-slate-200 border-transparent hover:bg-slate-700"
-                }`}
+                  }`}
               >
                 {tab.name}
               </button>
             ))}
           </div>
         )}
-        
+
         {!tabsExist && filename && (
           <div className="flex justify-between items-center px-4 py-3 bg-slate-800 border-b border-slate-700">
             <div className="text-sm text-slate-400 font-sans truncate">{filename}</div>
-           <CopyButton content={code ?? ""} variant="glass" size="md" />
+            <CopyButton content={code ?? ""} variant="glass" size="default" />
           </div>
         )}
 
         {tabsExist && (
           <div className="flex justify-end px-4 py-2 bg-slate-800 border-b border-slate-700">
-            <CopyButton content={tabs[activeTab].code} variant="glass" size="md" />
+            <CopyButton content={tabs[activeTab].code} variant="glass" size="default" />
           </div>
         )}
       </div>
