@@ -133,7 +133,7 @@ import { Icon } from 'jupiter-iconz'
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
               />
-              <kbd className="absolute text-base right-2 top-1/2 -translate-y-1/2 pointer-events-none hidden sm:inline-flex select-none items-center justify-center w-7 h-7 rounded-full bg-gray-200 dark:bg-gray-700 font-mono text-[10px] font-medium text-gray-600 dark:text-gray-400">
+              <kbd className="absolute text-base right-2 top-1/2 -translate-y-1/2 pointer-events-none hidden sm:inline-flex select-none items-center justify-center w-7 h-7 rounded-full bg-lime-500/30 dark:bg-lime-500/30 text-gray-600 dark:text-gray-100">
                 <IconSlash size={20} />
               </kbd>
             </div>

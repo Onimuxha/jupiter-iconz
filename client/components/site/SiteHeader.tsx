@@ -3,14 +3,14 @@ import { useLocation, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { AnimatedThemeToggler } from "../ui/animated-theme-toggler";
 
-import { IconHome, IconBook, IconIcons, IconMenu4, IconX, IconMessage } from "@tabler/icons-react";
+import { IconSmartHome, IconBook, IconIcons, IconMenu4, IconX, IconMessage } from "@tabler/icons-react";
 
 export function SiteHeader() {
   const { pathname } = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const links = [
-    { href: "/", label: "Home", Icon: IconHome },
+    { href: "/", label: "Home", Icon: IconSmartHome },
     { href: "/icons", label: "Icons", Icon: IconIcons },
     { href: "/docs", label: "Docs", Icon: IconBook },
   ];

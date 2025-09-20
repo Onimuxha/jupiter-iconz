@@ -9,21 +9,6 @@ export function IconItem({ name, Comp, size, viewMode, category, keywords }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, amount: 0.2 });
 
-  const gridItemVariants = {
-    hidden: {
-      opacity: 0,
-      y: 20,
-      scale: 0.95,
-      transition: { duration: 0.2 }
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: { duration: 0.4 }
-    }
-  };
-
   const listItemVariants = {
     hidden: {
       opacity: 0,
@@ -84,7 +69,6 @@ export function IconItem({ name, Comp, size, viewMode, category, keywords }) {
         ref={ref}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
-        variants={gridItemVariants}
         whileHover={{
           y: -4,
           scale: 1.03,
