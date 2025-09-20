@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { AnimatedThemeToggler } from "../ui/animated-theme-toggler";
-import { cn } from "@/lib/utils";
 
 import { IconSmartHome, IconBook, IconIcons, IconMenu4, IconX, IconMessage } from "@tabler/icons-react";
 
@@ -26,8 +25,8 @@ export function SiteHeader() {
       >
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <OptimizedImage
-            src="/jupiterDark.png"
+          <img
+            src="/jupiterDark.avif"
             alt="Jupiter Icons"
             className="h-10 w-10 dark:invert hover:scale-105 transition-transform duration-200"
           />
@@ -129,40 +128,4 @@ interface OptimizedImageProps extends React.ImgHTMLAttributes<HTMLImageElement> 
   alt: string;
   className?: string;
   sizes?: string;
-}
-
-export function OptimizedImage({ 
-  src, 
-  alt, 
-  className, 
-  sizes = '(max-width: 40px) 40px',
-  ...props 
-}: OptimizedImageProps) {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  // Generate srcSet for different viewport sizes
-  const srcSet = `
-    ${src}?w=40 40w,
-    ${src}?w=80 80w
-  `;
-
-  return (
-    <img
-      src={src}
-      alt={alt}
-      srcSet={srcSet}
-      sizes={sizes}
-      width={40}
-      height={40}
-      loading="eager"
-      decoding="async"
-      onLoad={() => setIsLoaded(true)}
-      className={cn(
-        'transition-opacity duration-200',
-        isLoaded ? 'opacity-100' : 'opacity-0',
-        className
-      )}
-      {...props}
-    />
-  );
 }
