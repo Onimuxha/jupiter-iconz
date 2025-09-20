@@ -6,6 +6,7 @@ import { HelmetProvider } from "react-helmet-async";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { lazy, Suspense, useEffect, useMemo, useState, StrictMode } from "react";
 import { Loading } from "@/components/ui/loading";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 // Lazy imports
 const LazyBackground = lazy(() => import("./components/ui/LazyBackground"));
@@ -78,12 +79,10 @@ const router = createBrowserRouter(
   }
 );
 
-// Main App wrapper
 const App = () => {
   const [showToasters, setShowToasters] = useState(false);
 
   useEffect(() => {
-    // Defer loading of toasters until after mount
     setShowToasters(true);
   }, []);
 
@@ -98,6 +97,7 @@ const App = () => {
             </Suspense>
           )}
           <RouterProvider router={router} />
+          <SpeedInsights />
         </TooltipProvider>
       </QueryClientProvider>
     </HelmetProvider>
