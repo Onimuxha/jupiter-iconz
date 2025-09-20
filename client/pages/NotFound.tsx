@@ -1,7 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import FuzzyText from "@/components/ui/FuzzyText";
 
 const NotFound = () => {
   const location = useLocation();
@@ -34,14 +33,6 @@ const NotFound = () => {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
         />
-
-        <motion.h1
-          className="text-6xl font-extrabold text-white mb-4 relative"
-          animate={{ opacity: [1, 0.9, 1] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
-          <FuzzyText baseIntensity={0.2}>404</FuzzyText>
-        </motion.h1>
 
         <p className="text-lg text-gray-300 mb-6">
           Lost in space? The page you’re looking for drifted away.
