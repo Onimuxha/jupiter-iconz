@@ -2,7 +2,6 @@ import { defineConfig, Plugin } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { createServer } from "./server";
-import { visualizer } from 'rollup-plugin-visualizer';
 
 export default defineConfig(({ mode }) => ({
   server: {
@@ -24,9 +23,7 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     react(),
-    expressPlugin(),
-    ...(mode === 'production' ? [visualizer({ filename: './dist/stats.html', open: true })] : [])
-
+    expressPlugin()
   ],
   resolve: {
     alias: {
