@@ -65,6 +65,8 @@ export const AnimatedThemeToggler = ({ className }: Props) => {
             ref={buttonRef}
             onClick={changeTheme}
             className={cn("relative w-8 h-8", className)}
+            aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+            title={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
         >
             <AnimatePresence mode="wait" initial={false}>
                 <motion.span
@@ -75,9 +77,14 @@ export const AnimatedThemeToggler = ({ className }: Props) => {
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                     className="absolute inset-0 flex items-center justify-center"
                 >
-                    {isDarkMode ? <IconSun size={25} className="text-amber-400" /> : <IconMoonStars size={25} className="text-indigo-800" />}
+                    {isDarkMode ? (
+                        <IconSun size={25} className="text-amber-400" />
+                    ) : (
+                        <IconMoonStars size={25} className="text-indigo-800" />
+                    )}
                 </motion.span>
             </AnimatePresence>
         </button>
     );
+
 };

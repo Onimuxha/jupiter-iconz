@@ -37,15 +37,6 @@ export const CodeBlock = ({
 
   const tabsExist = tabs.length > 0;
 
-  // const copyToClipboard = async () => {
-  //   const textToCopy = tabsExist ? tabs[activeTab].code : code;
-  //   if (textToCopy) {
-  //     await navigator.clipboard.writeText(textToCopy);
-  //     setCopied(true);
-  //     setTimeout(() => setCopied(false), 2000);
-  //   }
-  // };
-
   const activeCode = tabsExist ? tabs[activeTab].code : code;
   const activeLanguage = tabsExist
     ? tabs[activeTab].language || language
@@ -83,7 +74,6 @@ export const CodeBlock = ({
           </div>
         )}
 
-        {/* Copy button for tabs */}
         {tabsExist && (
           <div className="flex justify-end px-4 py-2 bg-slate-800 border-b border-slate-700">
             <CopyButton content={tabs[activeTab].code} variant="glass" size="md" />

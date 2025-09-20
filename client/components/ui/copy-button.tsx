@@ -91,6 +91,8 @@ function CopyButton({
   return (
     <motion.button
       data-slot="copy-button"
+      aria-label={localIsCopied ? "Copied!" : "Copy code to clipboard"}
+      title={localIsCopied ? "Copied!" : "Copy code"}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       className={cn(buttonVariants({ variant, size }), className)}
