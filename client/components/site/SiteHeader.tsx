@@ -23,7 +23,6 @@ export function SiteHeader() {
         transition={{ duration: 0.5, ease: "easeOut" }}
         className="backdrop-blur-md bg-white/20 dark:bg-black/20 border border-white/30 dark:border-white/10 rounded-2xl shadow-lg py-5 px-9 flex items-center justify-between"
       >
-        {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <img
             src="/jupiterDark.avif"
@@ -31,7 +30,7 @@ export function SiteHeader() {
             className="h-10 w-10 dark:invert hover:scale-105 transition-transform duration-200"
           />
         </Link>
-
+ss
         {/* Nav links (desktop) */}
         <nav className="hidden lg:flex items-center gap-6">
           {links.map(({ href, label, Icon }) => {
