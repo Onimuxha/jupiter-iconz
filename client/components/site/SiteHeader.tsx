@@ -30,7 +30,6 @@ export function SiteHeader() {
             className="h-10 w-10 dark:invert hover:scale-105 transition-transform duration-200"
           />
         </Link>
-ss
         {/* Nav links (desktop) */}
         <nav className="hidden lg:flex items-center gap-6">
           {links.map(({ href, label, Icon }) => {
