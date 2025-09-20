@@ -72,7 +72,6 @@ export function SEO({
       
       {/* Chrome for Android */}
       <meta name="mobile-web-app-capable" content="yes" />
-      <link rel="manifest" href="/manifest.json" />
 
       {children}
     </Helmet>
