@@ -20,8 +20,12 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     outDir: "dist/spa",
+    sourcemap: mode === 'development',
   },
-  plugins: [react(), expressPlugin()],
+  plugins: [
+    react(),
+    expressPlugin()
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./client"),
@@ -30,6 +34,9 @@ export default defineConfig(({ mode }) => ({
     },
   },
   base: '/',
+  define: {
+    'process.env.NODE_ENV': JSON.stringify(mode),
+  },
 }));
 
 function expressPlugin(): Plugin {
