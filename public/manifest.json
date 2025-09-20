@@ -12,12 +12,6 @@
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
-    },
-    {
-      "src": "/jupiterDark.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
     }
   ]
 }

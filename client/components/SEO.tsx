@@ -13,18 +13,18 @@ interface SEOProps {
 }
 
 export function SEO({
-  title = 'Jupiter Icons - Modern Icon Library for React',
+  title = 'Jupiter Iconz',
   description = 'A modern, accessible icon set with original brand colors, full TypeScript support, and delightful animations.',
-  image = '/jupiterDark.png',
+  image = '/jupiterLight.png',
   url = 'https://jupiter-iconz.vercel.app',
   type = 'website',
   canonical,
   keywords = 'icon library, react icons, developer icons, brand icons, jupiter iconz, svg icons, website icons, animated icons, accessible icons',
-  author = 'Jupiter Icons',
+  author = 'Jupiter Iconz',
   children,
 }: SEOProps) {
-  const siteTitle = title.includes('Jupiter Icons') ? title : `${title} | Jupiter Icons`;
-  
+  const siteTitle = title.includes('Jupiter Iconz') ? title : `${title} | Jupiter Iconz`;
+
   return (
     <Helmet>
       {/* Basic metadata */}
@@ -62,7 +62,7 @@ export function SEO({
       {/* Chrome, Firefox, Edge */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
       <link rel="icon" type="image/png" href="/jupiterLight.png" />
-      <link rel="icon" type="image/png" href="/jupiterDark.png" media="(prefers-color-scheme: dark)" />
+      <link rel="icon" type="image/png" href="/jupiterLight.png" media="(prefers-color-scheme: dark)" />
       
       {/* Microsoft Edge */}
       <meta name="msapplication-TileColor" content="#94c748" />
